@@ -20,9 +20,8 @@
 	            <tr>
 	                <td  style="max-width: 80px"><img src="../../imagen/tiposservicios/{{$s->foto}}" class="img-responsive"></td>
 	                <td>{{$s->Nombre}} </td>
-	                <td>{{$s->precio}}</td>
-	                <td>{{$s->Descripcion}} </td>
-	                <td>{{$s->precio}}</td>
+	                <td>{{$s->Descripcion}}</td>
+	                <td>{{$s->precio}} </td>
 	                <td>
 	                	<button class="btn btn-success">E</button>
 	                	<button class="btn btn-danger">X</button>

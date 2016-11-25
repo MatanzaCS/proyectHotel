@@ -8,7 +8,7 @@ class Tiposervicio extends Model
 {
     public $timestamps = false;
 
-    public $table ="Tipohabitacions"
+    //public $table ="Tipohabitacions"
     
     protected $fillable = ['Nombre', 'Descripcion', 'precio','foto'];
 }

@@ -18,7 +18,7 @@ class TipoServicioController extends Controller
     {
         $tipos = Tiposervicio::all();
         $general[] =$tipos;
-        return view('gestor.tiposer.lista')->with('datos', $general);
+        return view('gestor.tiposer.list')->with('datos', $general);
     }
 
     /**

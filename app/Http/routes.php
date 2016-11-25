@@ -31,6 +31,11 @@ Route::group(['prefix'=> '/admin', 'middleware' => [ 'web', 'auth' ]], function(
 
 	Route::resource('habitaciones','HabitacionController');
 
+	Route::resource('tiposer','TipoServicioController');
+	Route::get('tiposer/editar', 'TipoHabController@vista');
+	Route::get('tipohser/editar/{id}', 'TipoServicioController@editardatos');
+
+
 	Route::resource('tipohab', 'TipoHabController');
 	Route::get('tipohab/editar', 'TipoHabController@vista');
 	Route::get('tipohab/editar/{id}', 'TipoHabController@editardatos');
