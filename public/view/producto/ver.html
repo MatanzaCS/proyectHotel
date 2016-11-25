@@ -1,0 +1,58 @@
+<div ng-controller="productoController" ng-init="get()">
+	<h1>Listado de Productos/Servicios</h1>
+	<div>
+		<table class="table table-hover">
+			<thead>
+				<tr>
+					<th>#</th>
+					<th>Descripción</th>
+					<th>Valor Unitario</th>
+					<th>Código</th>
+					<th>Acción</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="x in data">
+					<td>{{$index+1}}</td>
+					<td>{{x.descripcion}}</td>
+					<td>{{x.valor_unitario}}</td>
+					<td>{{x.codigo}}</td>
+					<td>
+						<button ng-click="dataUpdate(x);" class="btn"> <span class="glyphicon glyphicon-pencil" data-toggle="modal" data-target="#updateModal" aria-hidden="true"></span></button>
+						<button ng-click="destroy(x.id);" class="btn"> <span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div class="modal fade" tabindex="-1" role="dialog" id="updateModal">
+	  	<div class="modal-dialog" role="document">
+	    	<div class="modal-content">
+	      		<div class="modal-header">
+	        		<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        		<h4 class="modal-title">Editar</h4>
+	      		</div>
+	      		<form ng-submit="update()">
+		      		<div class="modal-body">
+					  	<div class="form-group">
+					    	<label for="descripcion">Descripción</label>
+					    	<textarea class="form-control" rows="3" placeholder="Descripción del producto o servicio" ng-model="descripcion" required></textarea>
+					  	</div>
+					  	<div class="form-group">
+					    	<label for="val_unit">Valor Unitario</label>
+					    	<input type="number" class="form-control" name="valor_unitario" placeholder="Valor unitario del producto o servicio no inlcuído IGV"  ng-pattern="/^[0-9]+(\.[0-9]{1,2})?$/" step="0.01" id="valor_unitario" ng-model="valor_unitario" required />
+					  	</div>
+					  	<div class="form-group">
+					    	<label for="codigo">Código (opcional)</label>
+					    	<input type="text" class="form-control" id="codigo" placeholder="Código del producto o servicio" ng-model="codigo">
+					  	</div>				
+		      		</div>
+			      	<div class="modal-footer">
+			        	<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			        	<button type="submit" class="btn btn-primary">Save changes</button>
+			      	</div>
+		      	</form>
+	    	</div><!-- /.modal-content -->
+	  	</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+</div>
