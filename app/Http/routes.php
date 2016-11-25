@@ -29,6 +29,7 @@ Route::group(['prefix'=> '/admin', 'middleware' => [ 'web', 'auth' ]], function(
 
 	Route::resource('cuentas', 'CuentasController');
 
+	Route::resource('tipohab', 'TipoHabController');
 
 	Route::resource('tipocuentas', 'TipoCuentasController');
 	Route::get('getalltipos', 'TipoCuentasController@getipos');

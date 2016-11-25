@@ -62,9 +62,9 @@
                   </li>
                   <li><a><i class="fa fa-edit"></i> Habitaciones <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="{{ url('cuentas/create') }}">Agregar Cuentas</a></li>
-                      <li><a href="{{ url('cuentas') }}">Listado de cuentas</a></li>
-                      <li><a href="{{ url('tipocuentas') }}">Tipos de cuentas</a></li>
+                      <li><a href="{{ url('cuentas/create') }}">Agregar habitaciones</a></li>
+                      <li><a href="{{ url('cuentas') }}">Listado de habitaciones</a></li>
+                      <li><a href="{{ url('admin/tipohab') }}">Tipos de habitaciones</a></li>
                     </ul>
                   </li>
                   <li><a><i class="fa fa-desktop"></i> Clientes <span class="fa fa-chevron-down"></span></a>
