@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Tipohabitacion;
 use App\Habitacion;
 
 use App\Http\Requests;
@@ -17,8 +17,10 @@ class HabitacionController extends Controller
      */
     public function index()
     {
-             $tipos = Habitacion::all();
-        $general[] =$tipos;
+        $habitaciones = Habitacion::all();
+        $tipos = Tipohabitacion::all();
+        $general[] = $habitaciones;
+        $general[] = $tipos;
         return view('gestor.habitaciones.lista')->with('datos', $general);
     }
 
@@ -29,7 +31,10 @@ class HabitacionController extends Controller
      */
     public function create()
     {
-        //
+
+        $tipos = Tipohabitacion::all();
+        $general[] = $tipos;
+        return view('gestor.habitaciones.create')->with('datos',$general);
     }
 
     /**
@@ -40,7 +45,10 @@ class HabitacionController extends Controller
      */
     public function store(Request $request)
     {
-        //
+         
+        $tipos = new Habitacion($request->all());
+        $tipos->save();
+        return redirect('admin');
     }
 
     /**

@@ -16,11 +16,17 @@
 				</tr>
 			</thead>
 			<tbody>
-				 @foreach ($datos[0] as $s)
+		@foreach ($datos[0] as $s)
 	            <tr>
-	                <td  style="max-width: 80px"><img src="../../imagen/tipohabitaciones/{{$s->foto}}" class="img-responsive"></td>
-	                <td>{{$s->numero}} </td>
+                    @foreach ($datos[1] as $o)
+                        @if ($o->id == $s->TipoHabitacion_id)
+                            <td width="90s"><img src="../imagen/tiposHabitaciones/{{$o->foto}}" class="img-responsive"></td>
+                        @endif
+                    @endforeach
+                    
+			        <td>{{$s->numero}} </td>
 	                <td>{{$s->piso}}</td>
+
                     <td>{{$s->estado}}</td>
 	                <td>
 	                	<button class="btn btn-success">E</button>
