@@ -21,7 +21,7 @@
 	                <td>{{$s->Nombre}} </td>
 	                <td>{{$s->precio_habitacion}}</td>
 	                <td>
-	                	<button class="btn btn-success">E</button>
+	                	<a class="btn btn-success" href="{{ url('admin/tipohab/editar/') }}">E</a>
 	                	<button class="btn btn-danger">X</button>
 	                </td>
 	            </tr>

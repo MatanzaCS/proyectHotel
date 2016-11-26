@@ -96,4 +96,14 @@ class TipoHabController extends Controller
     {
         //
     }
+    public function vista()
+    {
+        return view('gestor.tipohab.create');
+        
+    }
+    public function editardatos($id)
+    {
+
+        
+    }
 }
