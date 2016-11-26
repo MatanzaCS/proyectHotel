@@ -63,7 +63,7 @@
                   <li><a><i class="fa fa-edit"></i> Habitaciones <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="{{ url('cuentas/create') }}">Agregar habitaciones</a></li>
-                      <li><a href="{{ url('cuentas') }}">Listado de habitaciones</a></li>
+                      <li><a href="{{ url('admin/habitaciones') }}">Listado de habitaciones</a></li>
                       <li><a href="{{ url('admin/tipohab') }}">Tipos de habitaciones</a></li>
                     </ul>
                   </li>

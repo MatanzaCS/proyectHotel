@@ -29,7 +29,7 @@ Route::group(['prefix'=> '/admin', 'middleware' => [ 'web', 'auth' ]], function(
 
 	Route::resource('cuentas', 'CuentasController');
 
-
+	Route::resource('habitaciones','HabitacionController');
 
 	Route::resource('tipohab', 'TipoHabController');
 	Route::get('tipohab/editar', 'TipoHabController@vista');
