@@ -91,9 +91,21 @@ class HabitacionController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
+
+
+
+       public function vista()
+    {
+
+        
+    }
     public function destroy($id)
     {
-        //
+      
+      $habitaciones = Habitacion::find($id);
+      $habitaciones->delete(); 
+      return redirect('admin/habitaciones');
     }
 
 }

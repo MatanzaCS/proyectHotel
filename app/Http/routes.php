@@ -30,7 +30,13 @@ Route::group(['prefix'=> '/admin', 'middleware' => [ 'web', 'auth' ]], function(
 	Route::resource('cuentas', 'CuentasController');
 
 	Route::resource('habitaciones','HabitacionController');
-
+	//ruta eliminar habitaciones
+	Route::get('habitaciones/{id}/destroy',[
+		'uses'	=>	'HabitacionController@destroy',
+		'as'	=>	'admin.habitaciones.destroy'  
+	]);
+	
+	
 	Route::resource('tiposer','TipoServicioController');
 	Route::get('tiposer/editar', 'TipoHabController@vista');
 	Route::get('tipohser/editar/{id}', 'TipoServicioController@editardatos');
@@ -39,9 +45,6 @@ Route::group(['prefix'=> '/admin', 'middleware' => [ 'web', 'auth' ]], function(
 	Route::resource('tipohab', 'TipoHabController');
 	Route::get('tipohab/editar', 'TipoHabController@vista');
 	Route::get('tipohab/editar/{id}', 'TipoHabController@editardatos');
-
-
-
 
 
 	Route::resource('tipocuentas', 'TipoCuentasController');
