@@ -6,7 +6,7 @@
 -->
 <html>
     <head>
-        <title>Arcana by HTML5 UP</title>
+        <title>Hostal Keymar Spa</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
@@ -21,7 +21,7 @@
                 <div id="header">
 
                     <!-- Logo -->
-                        <h1><a href="index.html" id="logo">Arcana <em>by HTML5 UP</em></a></h1>
+                        <h1><a href="index.html" id="logo">Hostal Keymar Spa</a></h1>
 
                     <!-- Nav -->
                         <nav id="nav">
@@ -29,7 +29,7 @@
                                 <li class="current"><a href="{{ url('/') }}">Incio</a></li>
                                 <li><a href="{{ url('/habitaciones') }}">Habitaciones</a></li>
                                 <li><a href="{{ url('/servicios') }}">Servicios</a></li>
-                                <li><a href="{{ url('/spa') }}">Spa</a></li>
+                                <li><a href="{{ url('/Spa') }}">Spa</a></li>
                                 <li><a href="no-sidebar.html">Contactos</a></li>
                             </ul>
                         </nav>
