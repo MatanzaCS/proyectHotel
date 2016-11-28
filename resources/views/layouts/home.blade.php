@@ -26,11 +26,11 @@
                     <!-- Nav -->
                         <nav id="nav">
                             <ul>
-                                <li class="current"><a href="{{ url('/') }}">Home</a></li>
+                                <li class="current"><a href="{{ url('/') }}">Incio</a></li>
                                 <li><a href="{{ url('/habitaciones') }}">Habitaciones</a></li>
-                                <li><a href="right-sidebar.html">Right Sidebar</a></li>
-                                <li><a href="two-sidebar.html">Two Sidebar</a></li>
-                                <li><a href="no-sidebar.html">No Sidebar</a></li>
+                                <li><a href="{{ url('/servicios') }}">Servicios</a></li>
+                                <li><a href="{{ url('/spa') }}">Spa</a></li>
+                                <li><a href="no-sidebar.html">Contactos</a></li>
                             </ul>
                         </nav>
 

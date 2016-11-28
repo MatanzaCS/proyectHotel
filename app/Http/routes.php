@@ -17,6 +17,18 @@ Route::get('/', function () {
 Route::get('/habitaciones', function () {
 	    return view('index.habitaciones');
 	});
+Route::get('/', function () {
+	    return view('index.inicio');
+	});
+Route::get('/habitaciones', function () {
+	    return view('index.habitaciones');
+	});
+Route::get('/servicios', function () {
+	    return view('index.servicios');
+	});
+Route::get('/Spa', function () {
+	    return view('index.Spa');
+	});
 
 
 
