@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <h2>Crear Cuenta</h2>
-    <form class="row" method="POST" action="{{ url('cuentas') }}" style="max-width: 350px">{{ csrf_field() }}
+    <form class="row" method="POST" action="" style="max-width: 350px">{{ csrf_field() }}
         <div class="form-group">
             <label for="codigo">Codigo</label>
             <input type="text" id="codigo" name="codigo" class="form-control" />

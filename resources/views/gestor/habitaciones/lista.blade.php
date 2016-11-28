@@ -4,7 +4,7 @@
 
 	<div>
 	<h1>Lista de Habitaciones</h1>
-	<a class="btn btn-primary" href="{{ url('admin/tipohab/create') }}"> Mostrar</a>
+	<a class="btn btn-primary" href="{{ url('admin/habitaciones/create') }}"> Crear</a>
 		<table class="table">
 			<thead>
 				<tr>
@@ -29,8 +29,8 @@
 
                     <td>{{$s->estado}}</td>
 	                <td>
-	                	<button class="btn btn-success">E</button>
-	                	<a onclick="return confirm('¿Seguro que desea eliminarlo?')" class="btn btn-danger" href="{{ route('admin.habitaciones.destroy', $s->id) }}"   >X</a>
+	    			   <a class="btn btn-info" href="{{route('admin.habitaciones.edit', $s->id)}}"   >E</a>
+	                   <a onclick="return confirm('¿Seguro que desea eliminarlo?')" class="btn btn-danger" href="{{ route('admin.habitaciones.destroy', $s->id) }}"   >X</a>
 	 		   
 	                </td>
 	            </tr>
