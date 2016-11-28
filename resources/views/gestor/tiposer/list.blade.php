@@ -4,7 +4,7 @@
 
 	<div>
 	<h1>Tipos de Servicio</h1>
-	<a class="btn btn-primary" href="{{ url('admin/tipohab/create') }}"> Crear</a>
+	<a class="btn btn-primary" href="{{ url('admin/tiposer/create') }}"> Crear</a>
 		<table class="table">
 			<thead>
 				<tr>
