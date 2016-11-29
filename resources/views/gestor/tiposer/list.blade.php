@@ -23,7 +23,7 @@
 	                <td>{{$s->Descripcion}}</td>
 	                <td>{{$s->precio}} </td>
 	                <td>
-	                	<button class="btn btn-success">E</button>
+	                	<button class="btn btn-success" href="{{ url('admin/tiposer/editar/') }}">E</button>
 	                	<button class="btn btn-danger">X</button>
 	                </td>
 	            </tr>

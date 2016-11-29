@@ -77,8 +77,8 @@
                   </li>
                   <li><a><i class="fa fa-bar-chart-o"></i> Servicios <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="{{ url('admin/servicios/create') }}">Agregar Servicio</a></li>
-                      <li><a href="{{('admin/Servicio')}}">Lista de Servicios</a></li>
+                      <li><a href="{{ url('admin/tiposer/create') }}">Agregar Servicio</a></li>
+                      <li><a href="{{('admin/tiposer')}}">Lista de Servicios</a></li>
                       <li><a href="{{ url('admin/tiposer') }}">Tipos de servicio</a></li>
                     </ul>
                   </li>

@@ -17,6 +17,18 @@ Route::get('/', function () {
 Route::get('/habitaciones', function () {
 	    return view('index.habitaciones');
 	});
+Route::get('/', function () {
+	    return view('index.inicio');
+	});
+Route::get('/habitaciones', function () {
+	    return view('index.habitaciones');
+	});
+Route::get('/servicios', function () {
+	    return view('index.servicios');
+	});
+Route::get('/Spa', function () {
+	    return view('index.Spa');
+	});
 
 
 
@@ -31,7 +43,14 @@ Route::group(['prefix'=> '/admin', 'middleware' => [ 'web', 'auth' ]], function(
 
 	Route::resource('habitaciones','HabitacionController');
 
-	Route::resource('servicios','servicioController');
+	Route::resource('Servicios','servicioController');
+
+	Route::get('habitaciones/{id}/destroy',[
+		'uses'	=>	'HabitacionController@destroy',
+		'as'	=>	'admin.habitaciones.destroy'  
+	]);
+	//Route::put('habitaciones/update/{id}','HabitacionController@update');
+
 
 	Route::resource('tiposer','TipoServicioController');
 	Route::get('tiposer/editar', 'TipoHabController@vista');
@@ -43,11 +62,10 @@ Route::group(['prefix'=> '/admin', 'middleware' => [ 'web', 'auth' ]], function(
 	Route::get('tipohab/editar/{id}', 'TipoHabController@editardatos');
 
 
-
-
-
 	Route::resource('tipocuentas', 'TipoCuentasController');
 	Route::get('getalltipos', 'TipoCuentasController@getipos');
+
+
 
 	Route::resource('proveedor', 'ProveedorController');
 	Route::get('getalltipos', 'TipoCuentasController@getipos');

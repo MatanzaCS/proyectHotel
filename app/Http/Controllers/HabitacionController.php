@@ -1,11 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
 use App\Tipohabitacion;
 use App\Habitacion;
-
 use App\Http\Requests;
 
 class HabitacionController extends Controller
@@ -48,7 +46,7 @@ class HabitacionController extends Controller
          
         $tipos = new Habitacion($request->all());
         $tipos->save();
-        return redirect('admin');
+        return redirect('admin/habitaciones/create');
     }
 
     /**
@@ -59,7 +57,7 @@ class HabitacionController extends Controller
      */
     public function show($id)
     {
-        //
+        
     }
 
     /**
@@ -70,7 +68,12 @@ class HabitacionController extends Controller
      */
     public function edit($id)
     {
-        //
+
+        $habitaciones= Habitacion::find($id);
+      
+        //return view('gestor.habitaciones.edit',['habitaciones'=>$habitaciones]);
+       return view('gestor.habitaciones.edit')->with('habitaciones',$habitaciones);
+        
     }
 
     /**
@@ -82,7 +85,15 @@ class HabitacionController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+
+        $habitaciones=Habitacion::findorFail($id);
+        $habitaciones =update($request->all());
+        $habitaciones->update();
+         return redirect('admin/habitaciones');
+      
+
+    
+ 
     }
 
     /**
@@ -91,9 +102,23 @@ class HabitacionController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
+
+
+
+       public function vista()
+    {
+
+        
+    }
     public function destroy($id)
     {
-        //
+      
+      $habitaciones = Habitacion::find($id);
+      $habitaciones->delete(); 
+      return redirect('admin/habitaciones');
+     
     }
 
 }
+ 

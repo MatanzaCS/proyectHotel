@@ -49,7 +49,7 @@ class TipoHabController extends Controller
         $tipos = new Tipohabitacion($request->all());
         $tipos->foto = $name;
         $tipos->save();
-        return redirect('admin');
+        return redirect('admin/tipohab/create');
     }
 
     /**
