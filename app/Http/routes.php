@@ -43,12 +43,22 @@ Route::group(['prefix'=> '/admin', 'middleware' => [ 'web', 'auth' ]], function(
 
 	Route::resource('habitaciones','HabitacionController');
 
-	Route::resource('Servicios','servicioController');
-
 	Route::get('habitaciones/{id}/destroy',[
 		'uses'	=>	'HabitacionController@destroy',
 		'as'	=>	'admin.habitaciones.destroy'  
 	]);
+	
+	Route::resource('Servicios','servicioController');
+	Route::get('Servicios/edit', 'TipoHabController@vista');
+	Route::get('Servicios/editar/{id}', 'servicioController@editardatos');
+
+
+
+	Route::get('Servicios/{id}/destroy',[
+		'uses'	=>	'servicioController@destroy',
+		'as'	=>	'admin.Servicios.destroy'  
+	]);
+	
 	//Route::put('habitaciones/update/{id}','HabitacionController@update');
 
 

@@ -10,10 +10,7 @@
 @endif
 
 
-
 User::destroy($id);
-
-
 
 $user = User::find($id);
 $user->delete();

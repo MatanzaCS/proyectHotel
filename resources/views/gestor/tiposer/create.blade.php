@@ -22,7 +22,7 @@
             <input type="file" name="foto" class="" />
         </div>
         
-        <button type="submit">Guardar</button>
+        <button type="submit" href="{{ url('admin/tiposer') }}">Guardar</button>
     </form>
 </div>
 @endsection

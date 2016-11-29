@@ -4,13 +4,14 @@
 
 	<div>
 	<h1>Lista de Servicios</h1>
-	<a class="btn btn-primary" href="{{ url('admin/tiposer/create') }}"> Mostrar</a>
+	<a class="btn btn-primary" href="{{ url('admin/Servicios/create') }}"> Mostrar</a>
 		<table class="table">
 			<thead>
 				<tr>
                     <th>Imagen</th>
-					<th>Numero</th>
-					<th>piso</th>
+					<th>Nombre</th>
+					<th>Servicio</th>
+					<th>reserva</th>
 					<th>estado</th>
 					
 				</tr>
@@ -19,18 +20,27 @@
 		@foreach ($datos[0] as $s)
 	            <tr>
                     @foreach ($datos[1] as $o)
-                        @if ($o->id == $s->TipoHabitacion_id)
-                            <td width="90s"><img src="../imagen/tiposHabitaciones/{{$o->foto}}" class="img-responsive"></td>
+                        @if ($o->id == $s->TipoServicio_id)
+                            <td width="90s"><img src="../imagen/tiposservicios/{{$o->foto}}" class="img-responsive"></td>
                         @endif
                     @endforeach
                     
-			        <td>{{$s->numero}} </td>
-	                <td>{{$s->piso}}</td>
+                   <!-- @foreach ($datos[1] as $j)
+                        @if ($j->id == $s->reserva_id)
+                            <td width="90s"><img src="../imagen/tiporeserva/{{$j->foto}}" class="img-responsive"></td>
+                        @endif
+                    @endforeach-->
+			        <td>{{$s->Nombre}} </td>
+	                <td>{{$s->Servicio}}</td>
+	                <td>{{$s->reserva}}</td>
 
                     <td>{{$s->estado}}</td>
 	                <td>
-	                	<button class="btn btn-success">E</button>
-	                	<button class="btn btn-danger">X</button>
+	               		 <a class="btn btn-info" href="{{route('admin.Servicios.edit', $s->id)}}"   >E</a>
+	                  	 <a onclick="return confirm('¿Seguro que desea eliminarlo?')" class="btn btn-danger" href="{{ route('admin.Servicios.destroy', $s->id) }}"   >X</a>
+	 		   
+	                	<!--<button class="btn btn-success">E</button>
+	                	<button class="btn btn-danger">X</button>-->
 	                </td>
 	            </tr>
 	            @endforeach

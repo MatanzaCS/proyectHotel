@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
+
+use App\Http\Requests;
 use App\Tipohabitacion;
 use App\Habitacion;
-use App\Http\Requests;
+
 
 class HabitacionController extends Controller
 {

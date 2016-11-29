@@ -20,11 +20,11 @@ class servicioController extends Controller
      */
     public function index()
     {
-        $servicios = Servicio::all();
+        $Servicios = Servicio::all();
         $tipos = Tiposervicio::all();
-        $general[] = $servicios;
+        $general[] = $Servicios;
         $general[] = $tipos;
-        return view('gestor.servicios.lista')->with('datos', $general);
+        return view('gestor.Servicios.lista')->with('datos', $general);
     }
 
     /**
@@ -51,7 +51,7 @@ class servicioController extends Controller
          
         $tipos = new Servicio($request->all());
         $tipos->save();
-        return redirect('admin');
+        return redirect('admin/Servicios/create');
     }
 
     /**
@@ -73,7 +73,12 @@ class servicioController extends Controller
      */
     public function edit($id)
     {
-        //
+        // editar servicios
+
+        $Servicios= Servicio::find($id);
+      
+        //return view('gestor.habitaciones.edit',['habitaciones'=>$habitaciones]);
+       return view('gestor.Servicios.edit')->with('habitaciones',$Servicios);
     }
 
     /**
@@ -85,7 +90,11 @@ class servicioController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        //modificar datos
+        $Servicios=Servicio::findorFail($id);
+        $Servicios =update($request->all());
+        $Servicios->update();
+         return redirect('admin/Servicios');
     }
 
     /**
