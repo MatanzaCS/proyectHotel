@@ -70,6 +70,13 @@ Route::group(['prefix'=> '/admin', 'middleware' => [ 'web', 'auth' ]], function(
 	Route::resource('tipohab', 'TipoHabController');
 	Route::get('tipohab/editar', 'TipoHabController@vista');
 	Route::get('tipohab/editar/{id}', 'TipoHabController@editardatos');
+	Route::resource('tipohab','TipoHabController');
+
+		Route::get('tipohab/{id}/destroy',[
+		'uses'	=>	'TipoHabController@destroy',
+		'as'	=>	'admin.tipohab.destroy'  
+	]);
+
 
 
 	Route::resource('tipocuentas', 'TipoCuentasController');
@@ -81,6 +88,13 @@ Route::group(['prefix'=> '/admin', 'middleware' => [ 'web', 'auth' ]], function(
 	Route::get('getalltipos', 'TipoCuentasController@getipos');
 
 	
+	Route::get('reportes','ReportesController@create');
+
+
+
+	
+
+
 	Route::get('/', function () {
 	    return view('welcome');
 	});

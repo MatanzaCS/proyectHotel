@@ -3,10 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Tipohabitacion;
+
 use App\Http\Requests;
 
-class TipoHabController extends Controller
+class ReportesController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,9 +15,8 @@ class TipoHabController extends Controller
      */
     public function index()
     {
-        $tipos = Tipohabitacion::all();
-        $general[] =$tipos;
-        return view('gestor.tipohab.lista')->with('datos', $general);
+        $reportes = Reportes::all();
+        return view('gestor.reportes.crear');
     }
 
     /**
@@ -27,9 +26,8 @@ class TipoHabController extends Controller
      */
     public function create()
     {
-         return view('gestor.tipohab.create');
+        return view('gestor.reportes.crear');  
     }
-
     /**
      * Store a newly created resource in storage.
      *
@@ -38,18 +36,7 @@ class TipoHabController extends Controller
      */
     public function store(Request $request)
     {
-         if($request->file('foto'))
-        {
-            $file = $request -> file('foto');
-            $name = 'tipohabitacion_'. time() . '.' .$file->getClientOriginalExtension();
-            $path=public_path() . "/imagen/tiposHabitaciones/";
-            $file -> move($path,$name);
-        }
-
-        $tipos = new Tipohabitacion($request->all());
-        $tipos->foto = $name;
-        $tipos->save();
-        return redirect('admin/tipohab/create');
+        //
     }
 
     /**
@@ -62,6 +49,7 @@ class TipoHabController extends Controller
     {
         //
     }
+    
 
     /**
      * Show the form for editing the specified resource.
@@ -94,20 +82,6 @@ class TipoHabController extends Controller
      */
     public function destroy($id)
     {
-             
-      $tipos = Tipohabitacion::find($id);
-      $tipos->delete(); 
-      return redirect('admin/tipohab');
-    }
-    
-    public function vista()
-    {
-        return view('gestor.tipohab.create');
-        
-    }
-    public function editardatos($id)
-    {
-
-        
+        //
     }
 }
