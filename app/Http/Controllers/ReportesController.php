@@ -28,7 +28,6 @@ class ReportesController extends Controller
     {
         return view('gestor.reportes.crear');  
     }
-
     /**
      * Store a newly created resource in storage.
      *
@@ -50,6 +49,7 @@ class ReportesController extends Controller
     {
         //
     }
+    
 
     /**
      * Show the form for editing the specified resource.

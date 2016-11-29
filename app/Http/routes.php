@@ -81,6 +81,10 @@ Route::group(['prefix'=> '/admin', 'middleware' => [ 'web', 'auth' ]], function(
 	Route::get('reportes','ReportesController@create');
 
 
+
+	
+
+
 	Route::get('/', function () {
 	    return view('welcome');
 	});
