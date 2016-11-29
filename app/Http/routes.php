@@ -71,6 +71,9 @@ Route::group(['prefix'=> '/admin', 'middleware' => [ 'web', 'auth' ]], function(
 	Route::get('getalltipos', 'TipoCuentasController@getipos');
 
 	
+	Route::get('reportes','ReportesController@create');
+
+
 	Route::get('/', function () {
 	    return view('welcome');
 	});
