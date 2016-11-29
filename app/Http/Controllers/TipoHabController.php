@@ -94,8 +94,12 @@ class TipoHabController extends Controller
      */
     public function destroy($id)
     {
-        //
+             
+      $tipos = Tipohabitacion::find($id);
+      $tipos->delete(); 
+      return redirect('admin/tipohab');
     }
+    
     public function vista()
     {
         return view('gestor.tipohab.create');
