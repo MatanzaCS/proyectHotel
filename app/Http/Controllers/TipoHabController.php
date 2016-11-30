@@ -71,7 +71,12 @@ class TipoHabController extends Controller
      */
     public function edit($id)
     {
-        //
+        
+        $tipos=Tipohabitacion::find($id);
+      
+        //return view('gestor.habitaciones.edit',['habitaciones'=>$habitaciones]);
+       return view('gestor.tipohab.edit')->with('tipos',$tipos);
+        
     }
 
     /**
@@ -83,7 +88,15 @@ class TipoHabController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+                  
+           $tipos=Tipohabitacion::find($id);
+            $tipos =fill($request->all());
+            $tipos->save();
+         return redirect('admin/tipohab');
+      
+
+
+
     }
 
     /**
@@ -99,7 +112,7 @@ class TipoHabController extends Controller
       $tipos->delete(); 
       return redirect('admin/tipohab');
     }
-    
+
     public function vista()
     {
         return view('gestor.tipohab.create');

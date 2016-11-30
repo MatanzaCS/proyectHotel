@@ -69,7 +69,7 @@ Route::group(['prefix'=> '/admin', 'middleware' => [ 'web', 'auth' ]], function(
 
 	Route::resource('tipohab', 'TipoHabController');
 	Route::get('tipohab/editar', 'TipoHabController@vista');
-	Route::get('tipohab/editar/{id}', 'TipoHabController@editardatos');
+
 	Route::resource('tipohab','TipoHabController');
 
 		Route::get('tipohab/{id}/destroy',[
