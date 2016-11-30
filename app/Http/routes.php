@@ -29,7 +29,12 @@ Route::get('/servicios', function () {
 Route::get('/Spa', function () {
 	    return view('index.Spa');
 	});
-
+Route::get('/contactos', function () {
+	    return view('index.contactos');
+	});
+Route::get('/nosotros', function () {
+	    return view('index.nosotros');
+	});
 
 
 Route::auth();
