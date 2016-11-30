@@ -89,7 +89,7 @@
                   <li><a><i class="fa fa-bar-chart-o"></i> Reportes <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="{{ url('admin/reportes') }}">Reporte del Dia -- Chart JS</a></li>
-                      <li><a href="{{ url('admin/reportes/create2') }}">Reporte de la Semana -- Chart JS2</a></li>
+                      <li><a href="{{ url('admin/reportes') }}">Reporte de la Semana -- Chart JS2</a></li>
                       <li><a href="morisjs.html">Reporte del Mes -- Moris JS</a></li>
                       <li><a href="echarts.html">Reporte del Año -- ECharts</a></li>
                       <li><a href="other_charts.html">Other Charts</a></li>

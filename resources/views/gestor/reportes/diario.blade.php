@@ -18,7 +18,7 @@ $(function () {
             x: -20 //center
         },
         subtitle: {
-            text: 'Semanal',
+            text: 'Reporte Diario',
             x: -20
         },
         xAxis: {
@@ -36,7 +36,7 @@ $(function () {
             }]
         },
         tooltip: {
-            valueSuffix: '°C'
+            valueSuffix: ''
         },
         legend: {
             layout: 'vertical',
@@ -97,7 +97,7 @@ $(function () {
             type: 'pie'
         },
         title: {
-            text: 'Browser market shares. January, 2015 to May, 2015'
+            text: 'Reporte Diario'
         },
         tooltip: {
             pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
@@ -119,16 +119,17 @@ $(function () {
         series: [{
             name: 'Brands',
             data: [
-                { name: 'Microsoft Internet Explorer', y: 56.33 },
+                { name: 'Lunes', y: 56.33 },
                 {
-                    name: 'Chrome',
+                    name: 'Martes',
                     y: 24.03,
                     sliced: true,
                     selected: true
                 },
-                { name: 'Firefox', y: 10.38 },
-                { name: 'Safari', y: 4.77 }, { name: 'Opera', y: 0.91 },
-                { name: 'Proprietary or Undetectable', y: 0.2 }
+                { name: 'Miercoles', y: 10.38 },
+                { name: 'Jueves', y: 4.77 }, { name: 'Viernes', y: 0.91 },
+                { name: 'Sabado', y: 0.2 },
+                { name: 'Domingo', y: 4.77 }
             ]
         }]
     });

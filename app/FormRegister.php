@@ -4,18 +4,16 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Reportes extends Model
+class FormRegister extends Model
 {
-    protected $table='reservas';
+    protected $table='users';
     
     protected $primaryKey='id';
 
     public $timestamps='false';
 
     protected $fillable=[
-        'fecha_reserva',
-        'fecha_ingresa',
-        'fecha_salida',
-        'estado'
+        'username',
+        'password'
     ];
 }
