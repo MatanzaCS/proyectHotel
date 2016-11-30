@@ -23,8 +23,10 @@
 	                <td>{{$s->Descripcion}}</td>
 	                <td>{{$s->precio}} </td>
 	                <td>
-	                	<button class="btn btn-success" href="{{ url('admin/tiposer/editar/') }}">E</button>
-	                	<button class="btn btn-danger">X</button>
+	               		  <a class="btn btn-info" href="{{route('admin.tiposer.edit', $s->id)}}"   >E</a>
+	                  	 <a onclick="return confirm('¿Seguro que desea eliminarlo?')" class="btn btn-danger" href="{{ route('admin.tiposer.destroy', $s->id) }}"   >X</a>
+	                	<!--<button class="btn btn-success" href="{{ url('admin/tiposer/editar/') }}">E</button>
+	                	<button class="btn btn-danger">X</button>-->
 	                </td>
 	            </tr>
 	            @endforeach

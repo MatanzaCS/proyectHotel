@@ -27,6 +27,7 @@ class servicioController extends Controller
         return view('gestor.Servicios.lista')->with('datos', $general);
     }
 
+
     /**
      * Show the form for creating a new resource.
      *
@@ -35,6 +36,7 @@ class servicioController extends Controller
     public function create()
     {
 
+        $tipos = Servicio::all();
         $tipos = Tiposervicio::all();
         $general[] = $tipos;
         return view('gestor.Servicios.create')->with('datos',$general);
@@ -49,9 +51,10 @@ class servicioController extends Controller
     public function store(Request $request)
     {
          
-        $tipos = new Servicio($request->all());
-        $tipos->save();
-        return redirect('admin/Servicios/create');
+       
+         $tipos = new Servicio($request->all());
+         $tipos->save();
+        return redirect('admin');
     }
 
     /**
@@ -78,7 +81,7 @@ class servicioController extends Controller
         $Servicios= Servicio::find($id);
       
         //return view('gestor.habitaciones.edit',['habitaciones'=>$habitaciones]);
-       return view('gestor.Servicios.edit')->with('habitaciones',$Servicios);
+       return view('gestor.Servicios.edit')->with('Servicios',$Servicios);
     }
 
     /**
@@ -91,7 +94,7 @@ class servicioController extends Controller
     public function update(Request $request, $id)
     {
         //modificar datos
-        $Servicios=Servicio::findorFail($id);
+        $Servicios=Servicios::findorFail($id);
         $Servicios =update($request->all());
         $Servicios->update();
          return redirect('admin/Servicios');

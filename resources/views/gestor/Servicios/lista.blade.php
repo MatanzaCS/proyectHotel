@@ -8,33 +8,32 @@
 		<table class="table">
 			<thead>
 				<tr>
-                    <th>Imagen</th>
-					<th>Nombre</th>
+                    <th>Nombre</th>
+					<th>Fecha</th>
 					<th>Servicio</th>
 					<th>reserva</th>
-					<th>estado</th>
+					<th>Accion</th>
 					
 				</tr>
 			</thead>
 			<tbody>
 		@foreach ($datos[0] as $s)
 	            <tr>
-                    @foreach ($datos[1] as $o)
+                   <!-- @foreach ($datos[1] as $o)
                         @if ($o->id == $s->TipoServicio_id)
                             <td width="90s"><img src="../imagen/tiposservicios/{{$o->foto}}" class="img-responsive"></td>
                         @endif
                     @endforeach
                     
-                   <!-- @foreach ($datos[1] as $j)
+                    @foreach ($datos[1] as $j)
                         @if ($j->id == $s->reserva_id)
                             <td width="90s"><img src="../imagen/tiporeserva/{{$j->foto}}" class="img-responsive"></td>
                         @endif
                     @endforeach-->
-			        <td>{{$s->Nombre}} </td>
-	                <td>{{$s->Servicio}}</td>
-	                <td>{{$s->reserva}}</td>
-
-                    <td>{{$s->estado}}</td>
+			        <td>{{$s->nomservicio}}</td>
+			        <td>{{$s->fecha}} </td>
+	                <td>{{$s->TipoServicio_id}}</td>
+	                <td>{{$s->reserva_id}}</td>
 	                <td>
 	               		 <a class="btn btn-info" href="{{route('admin.Servicios.edit', $s->id)}}"   >E</a>
 	                  	 <a onclick="return confirm('¿Seguro que desea eliminarlo?')" class="btn btn-danger" href="{{ route('admin.Servicios.destroy', $s->id) }}"   >X</a>
