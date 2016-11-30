@@ -10,8 +10,8 @@
 				<tr>
                     <th>Nombre</th>
 					<th>Fecha</th>
-					<th>Servicio</th>
-					<th>reserva</th>
+					<th>estado</th>
+					<th>TipoServicio</th>
 					<th>Accion</th>
 					
 				</tr>
@@ -32,8 +32,8 @@
                     @endforeach-->
 			        <td>{{$s->nomservicio}}</td>
 			        <td>{{$s->fecha}} </td>
+	                <td>{{$s->estado}}</td>
 	                <td>{{$s->TipoServicio_id}}</td>
-	                <td>{{$s->reserva_id}}</td>
 	                <td>
 	               		 <a class="btn btn-info" href="{{route('admin.Servicios.edit', $s->id)}}"   >E</a>
 	                  	 <a onclick="return confirm('¿Seguro que desea eliminarlo?')" class="btn btn-danger" href="{{ route('admin.Servicios.destroy', $s->id) }}"   >X</a>

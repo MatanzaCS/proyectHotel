@@ -9,6 +9,6 @@ class Servicio extends Model
     //atributos de servicio
     public $timestamps = false;
 
-    protected $fillable =['nomservicio','fecha','TipoServicio_id','reserva_id'];
+    protected $fillable =['nomservicio','fecha','estado','TipoServicio_id'];
 
 }

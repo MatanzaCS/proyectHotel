@@ -5,16 +5,20 @@
     <h2>Crear Servicio</h2>
     <form class="row" method="POST" action="{{ url('admin/Servicios') }}"  style="max-width: 350px">{{ csrf_field() }}
         <div class="form-group">
-            <label for="Nombre">Nombre</label>
-            <input type="text" id="Nombre" name="numero" class="form-control" />
+            <label for="nomservicio">Nombre</label>
+            <input type="text" id="nomservicio " name="nomservicio" class="form-control" />
         </div>
         <div class="form-group">
-            <label for="Descripcion">fecha</label>
-            <input type="text" id="Descripcion" name="piso" class="form-control" />
+            <label for="fecha">fecha</label>
+            <input type="text" id="fecha" name="fecha" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label for="estado">estadoestado</label>
+            <input type="text" id="estado" name="estado" class="form-control" />
         </div>
         
         <div class="form-group"> 
-            <label for="tipoServicio">Tipos Servicio</label>
+            <label for="tiposervicio">Tipos Servicio</label>
             <select name="TipoServicio_id" class="form-control">
             @foreach($datos[0] as $a)
                 <option value="{{$a->id}}">{{$a->Nombre}}</option>
@@ -22,14 +26,6 @@
             </select>
         </div>
 
-        <div class="form-group">
-            <label for="reserva_id">reserva</label>
-            <select name="reserva_id" class="form-control">
-                @foreach($datos[0] as $s)
-                    <option value="{{$a->id}}">{{$s->Nombre}}</option>
-                @endforeach
-            </select>              
-        </div>
         
         <button type="submit">Guardar</button>
     </form>

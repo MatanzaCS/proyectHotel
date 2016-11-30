@@ -29,7 +29,12 @@ Route::get('/servicios', function () {
 Route::get('/Spa', function () {
 	    return view('index.Spa');
 	});
-
+Route::get('/contactos', function () {
+	    return view('index.contactos');
+	});
+Route::get('/nosotros', function () {
+	    return view('index.nosotros');
+	});
 
 
 Route::auth();
@@ -56,8 +61,25 @@ Route::group(['prefix'=> '/admin', 'middleware' => [ 'web', 'auth' ]], function(
 	]);
 	
 	//Route::put('habitaciones/update/{id}','HabitacionController@update');
+	// tipo de documento 
+	Route::resource('tipodoc','tipoDocController');
+	Route::get('tipodoc/editar/{id}', 'tipoDocController@editardatos');
+	Route::get('procedencia/{id}/destroy',[
+		'uses'	=>	'tipoDocController@destroy',
+		'as'	=>	'admin.tipodoc.destroy'
+		]);
 
+	//route:Controller Procedencia
+	Route::resource('procedencia','ProcedenciaController');
+	
+	Route::get('procepencia/editar', 'ProcedenciaController@vista');
+	Route::get('procepencia/editar/{id}', 'ProcedenciaController@editardatos');
+	Route::get('procedencia/{id}/destroy',[
+		'uses'	=>	'ProcedenciaController@destroy',
+		'as'	=>	'admin.procedencia.destroy'
+		]);
 
+	//route: Controller tipoServicio
 	Route::resource('tiposer','TipoServicioController');
 	Route::get('tiposer/editar', 'TipoServicioController@vista');
 	Route::get('tiposer/editar/{id}', 'TipoServicioController@editardatos');
@@ -66,7 +88,7 @@ Route::group(['prefix'=> '/admin', 'middleware' => [ 'web', 'auth' ]], function(
 		'as'	=>	'admin.tiposer.destroy'
 		]);
 
-
+	//route: Controller tipoHabitacion
 	Route::resource('tipohab', 'TipoHabController');
 	Route::get('tipohab/editar', 'TipoHabController@vista');
 
