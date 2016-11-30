@@ -1,0 +1,26 @@
+.cont-reserva{
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 20px;
+	width: 250px;
+	height: 200px;
+	color: white;
+	padding-top: 15px;
+	border-radius: 0px 0px 4px 4px;
+	background-color: rgba(20,20,20,.6);
+}
+.btn-reserva{
+	border: none;
+	padding: 7px 15px;
+	color: white;
+	background-color: #1565c0;
+}
+.inp{
+	display: inline-block;
+	margin-right: 15px;
+
+}
+.form-group{
+	margin-bottom: 10px;
+}
