@@ -22,7 +22,7 @@
         </div>
         
         <div class="form-group"> 
-            <label for="cliente_id"> Cliente</label>
+            <label for="cliente"> Cliente</label>
             <select name="cliente_id" class="form-control">
             @foreach($datos[0] as $a)
                 <option value="{{$a->id}}">{{$a->Nombre}}</option>

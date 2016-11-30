@@ -27,7 +27,9 @@ class ProcedenciaController extends Controller
      */
     public function create()
     {
-         return view('gestor.procedencia.create');
+        $tipos = Procedencia::all();
+        $general[] = $tipos;
+        return view('gestor.procedencia.create')->with('datos',$general);
     }
 
     /**

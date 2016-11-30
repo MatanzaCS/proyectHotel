@@ -4,10 +4,10 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class TipoDocumento extends Model
+class tipoDocumento extends Model
 {
-    //tipo documento nuevo
-        public $timestamps = false;
+    //
+  public $timestamps = false;
     
     protected $fillable = ['Nombre'];
 }

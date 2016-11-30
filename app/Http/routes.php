@@ -63,11 +63,12 @@ Route::group(['prefix'=> '/admin', 'middleware' => [ 'web', 'auth' ]], function(
 	//Route::put('habitaciones/update/{id}','HabitacionController@update');
 	// tipo de documento 
 	Route::resource('tipodoc','tipoDocController');
-	
-	Route::get('tipodoc/{id}/destroy',[
+	Route::get('tipodoc/editar/{id}', 'tipoDocController@editardatos');
+	Route::get('procedencia/{id}/destroy',[
 		'uses'	=>	'tipoDocController@destroy',
-		'as'	=>	'admin.tipodoc.destroy'  
-	]);
+		'as'	=>	'admin.tipodoc.destroy'
+		]);
+
 	//route:Controller Procedencia
 	Route::resource('procedencia','ProcedenciaController');
 	

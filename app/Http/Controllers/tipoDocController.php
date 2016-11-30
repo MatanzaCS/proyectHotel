@@ -3,19 +3,19 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\TipoDocumento;
+use App\tipoDocumento;
 use App\Http\Requests;
 
 class tipoDocController extends Controller
 {
-    /**
+ /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        $tipos = TipoDocumento::all();
+        $tipos = tipoDocumento::all();
         $general[] =$tipos;
         return view('gestor.tipodoc.lista')->with('datos', $general);
     }
@@ -27,7 +27,9 @@ class tipoDocController extends Controller
      */
     public function create()
     {
-         return view('gestor.tipodoc.create');
+        $tipos = tipoDocumento::all();
+        $general[] = $tipos;
+        return view('gestor.tipodoc.create')->with('datos',$general);
     }
 
     /**
@@ -38,8 +40,8 @@ class tipoDocController extends Controller
      */
     public function store(Request $request)
     {
-      
-        $tipos = new TipoDocumento($request->all());
+         
+        $tipos = new Procedencia($request->all());
         $tipos->save();
         return redirect('admin/tipodoc/create');
     }
