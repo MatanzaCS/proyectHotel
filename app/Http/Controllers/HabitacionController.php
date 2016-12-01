@@ -89,11 +89,16 @@ class HabitacionController extends Controller
     public function update(Request $request, $id)
     {
 
-        $habitaciones=Habitacion::findorFail($id);
+        /*$habitaciones=Habitacion::findorFail($id);
         $habitaciones =update($request->all());
         $habitaciones->update();
-         return redirect('admin/habitaciones');
-      
+         return redirect('admin/habitaciones');*/
+
+        $habitaciones = Habitacion::find($id);
+        $data = Input::all();
+        $habitaciones->filla($data);
+        $habitaciones->save();
+        return redirect('admin/habitaciones');
 
     
  

@@ -4,7 +4,7 @@
 @section('content')
 <div class="container">
     <h2>Editar habitacion numero {{$habitaciones->numero}}</h2>
-    <form class="row" action="{{route('admin.habitaciones.update',$habitaciones->id)}}"  method="PUT" cept-charset="UTF-8" enctype="multipart/form-data" style="max-width: 350px">
+    <form class="row" action="{{route('admin.habitaciones.update',$habitaciones->id)}}" model="habitaciones" method="PUT" cept-charset="UTF-8" enctype="multipart/form-data" style="max-width: 350px">
     {{ csrf_field() }}
         <div class="form-group">
             <label for="Nombre">numero</label>

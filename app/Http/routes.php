@@ -53,6 +53,24 @@ Route::group(['prefix'=> '/admin', 'middleware' => [ 'web', 'auth' ]], function(
 		'as'	=>	'admin.habitaciones.destroy'  
 	]);
 	
+	//route: Controller tipoHabitacion
+	Route::resource('tipohab', 'TipoHabController');
+	Route::get('tipohab/editar', 'TipoHabController@vista');
+
+	Route::resource('tipohab','TipoHabController');
+		Route::get('tipohab/{id}/destroy',[
+		'uses'	=>	'TipoHabController@destroy',
+		'as'	=>	'admin.tipohab.destroy'  
+	]);
+
+
+
+
+
+
+
+
+
 	Route::resource('Servicios','servicioController');
 	
 	Route::get('Servicios/{id}/destroy',[
@@ -87,17 +105,6 @@ Route::group(['prefix'=> '/admin', 'middleware' => [ 'web', 'auth' ]], function(
 		'uses'	=>	'tipoServicioController@destroy',
 		'as'	=>	'admin.tiposer.destroy'
 		]);
-
-	//route: Controller tipoHabitacion
-	Route::resource('tipohab', 'TipoHabController');
-	Route::get('tipohab/editar', 'TipoHabController@vista');
-
-	Route::resource('tipohab','TipoHabController');
-
-		Route::get('tipohab/{id}/destroy',[
-		'uses'	=>	'TipoHabController@destroy',
-		'as'	=>	'admin.tipohab.destroy'  
-	]);
 
 
 
