@@ -11,21 +11,21 @@
         <div class="form-group">
             <label for="departamento">Departamento</label>
             <input type="text" id="departamento" name="departamento" class="form-control" />
-        </div>Departamento
-        <div class="form-group">
-            <label for="region">Region</label>
-            <input type="text" id="region" name="region" class="form-control" />
         </div>
         <div class="form-group">
             <label for="Ciudad">Ciudad</label>
             <input type="text" id="Ciudad" name="Ciudad" class="form-control" />
         </div>
         
+        <div class="form-group">
+            <label for="Direccion">Direccion</label>
+            <input type="text" id="Direccion" name="Direccion" class="form-control" />
+        </div>
         <div class="form-group"> 
-            <label for="cliente"> Cliente</label>
+            <label for="cliente_id"> Cliente</label>
             <select name="cliente_id" class="form-control">
             @foreach($datos[0] as $a)
-                <option value="{{$a->id}}">{{$a->Nombre}}</option>
+                <option value="{{$a->id}}">{{$a->fechain}}</option>
             @endforeach
             </select> 
         </div>

@@ -35,6 +35,15 @@ Route::get('/contactos', function () {
 Route::get('/nosotros', function () {
 	    return view('index.nosotros');
 	});
+// route de la fecha
+Route::post('/test/save', ['as' => 'save-date',
+                           'uses' => 'DateController@showDate', 
+                            function () {
+                                return '';
+                            }]);
+
+
+
 
 
 Route::auth();
@@ -79,12 +88,12 @@ Route::group(['prefix'=> '/admin', 'middleware' => [ 'web', 'auth' ]], function(
 	]);
 	
 	//Route::put('habitaciones/update/{id}','HabitacionController@update');
-	// tipo de documento 
-	Route::resource('tipodoc','tipoDocController');
-	Route::get('tipodoc/editar/{id}', 'tipoDocController@editardatos');
-	Route::get('procedencia/{id}/destroy',[
-		'uses'	=>	'tipoDocController@destroy',
-		'as'	=>	'admin.tipodoc.destroy'
+	// controlador de cliente
+	Route::resource('cliente','ClienteController');
+	
+	Route::get('cliente/{id}/destroy',[
+		'uses'	=>	'ClienteController@destroy',
+		'as'	=>	'admin.cliente.destroy'
 		]);
 
 	//route:Controller Procedencia

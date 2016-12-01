@@ -13,7 +13,7 @@
             <input type="text" id="fecha" name="fecha" class="form-control" />
         </div>
         <div class="form-group">
-            <label for="estado">estadoestado</label>
+            <label for="estado">estado</label>
             <input type="text" id="estado" name="estado" class="form-control" />
         </div>
         

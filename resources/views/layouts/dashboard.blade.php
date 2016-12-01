@@ -73,10 +73,10 @@
                   </li>
                   <li><a><i class="fa fa-desktop"></i> Clientes <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="general_elements.html">General Elements</a></li>
-                      <li><a href="media_gallery.html">Media Gallery</a></li>
+                      <li><a href="{{ url('admin/cliente/create') }}">Agregar Cliente</a></li>
+                      <li><a href="{{ url('admin/cliente') }}">Lista Clientes</a></li>
                       <li><a href="{{ url('admin/tipodoc') }}">docuemtnos</a></li>
-                      <li><a href="{{ url('admin/tipodoc') }}">TipoDocumentos</a></li>
+                      <li><a href="{{ url('admin/cliente') }}">Clientes</a></li>
                       <li><a href="{{ url('admin/procedencia') }}">Procedencias</a></li>
                     </ul>
                   </li>

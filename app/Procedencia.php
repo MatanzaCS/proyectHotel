@@ -9,5 +9,5 @@ class Procedencia extends Model
     //
     public $timestamps = false;
   
-    protected $fillable = ['Pais','departamento','region','Ciudad'];
+    protected $fillable = ['Pais','departamento','Ciudad','Direccion','cliente_id'];
 }
