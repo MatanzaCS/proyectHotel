@@ -58,20 +58,20 @@
               <div class="menu_section">
                 <h3>General</h3>
                 <ul class="nav side-menu">
-                  <li><a><i class="fa fa-home"></i> Reservas <span class="fa fa-chevron-down"></span></a>
+                  <li><a><i class="fa fa-calendar"></i> Reservas <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="#/Productos">Listado</a></li>
                       <li><a href="#/Tipo">Crear</a></li>
                     </ul>
                   </li>
-                  <li><a><i class="fa fa-edit"></i> Habitaciones <span class="fa fa-chevron-down"></span></a>
+                  <li><a><i class="fa fa-bed"></i> Habitaciones <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="{{ url('admin/habitaciones/create') }}">Agregar habitaciones</a></li>
                       <li><a href="{{ url('admin/habitaciones') }}">Listado de habitaciones</a></li>
                       <li><a href="{{ url('admin/tipohab') }}">Tipos de habitaciones</a></li>
                     </ul>
                   </li>
-                  <li><a><i class="fa fa-desktop"></i> Clientes <span class="fa fa-chevron-down"></span></a>
+                  <li><a><i class="fa fa-user"></i> Clientes <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="{{ url('admin/cliente/create') }}">Agregar Cliente</a></li>
                       <li><a href="{{ url('admin/cliente') }}">Lista Clientes</a></li>
@@ -80,14 +80,14 @@
                       <li><a href="{{ url('admin/procedencia') }}">Procedencias</a></li>
                     </ul>
                   </li>
-                  <li><a><i class="fa fa-bar-chart-o"></i> Servicios <span class="fa fa-chevron-down"></span></a>
+                  <li><a><i class="fa fa-tags"></i> Servicios <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="{{ url('admin/Servicios/create') }}">Agregar Servicio</a></li>
                       <li><a href="{{ url ('admin/Servicios')}}">Lista de Servicios</a></li>
                       <li><a href="{{ url('admin/tiposer') }}">Tipos de servicio</a></li>
                     </ul>
                   </li>
-                  <li><a><i class="fa fa-bar-chart-o"></i> Reportes <span class="fa fa-chevron-down"></span></a>
+                  <li><a><i class="fa fa-pie-chart"></i> Reportes <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="{{ url('admin/reportes') }}">Reporte del Dia -- Chart JS</a></li>
                       <li><a href="{{ url('admin/reportes') }}">Reporte de la Semana -- Chart JS2</a></li>
@@ -96,7 +96,7 @@
                       <li><a href="other_charts.html">Other Charts</a></li>
                     </ul>
                   </li>
-                  <li><a><i class="fa fa-clone"></i>Usuarios <span class="fa fa-chevron-down"></span></a>
+                  <li><a><i class="fa fa-users"></i>Usuarios <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="{{ url('admin/usuarios/create') }}">Crear usuario</a></li>
                       <li><a href="{{ url('admin/usuarios') }}">Usuarios</a></li>
