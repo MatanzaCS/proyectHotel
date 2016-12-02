@@ -6,7 +6,6 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<title>Highcharts Example</title>
-
 		<style type="text/css">
 ${demo.css}
 		</style>
@@ -18,12 +17,12 @@ $(function () {
             x: -20 //center
         },
         subtitle: {
-            text: 'Reporte Diario',
+            text: 'Reporte Mensual',
             x: -20
         },
         xAxis: {
-            categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
-                'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+            categories: ['1-2', '3-4', '5-6', '7-8', '9-10', '11-13',
+                '14-16', '17-19', '20-22', '23-25', '26-28', '29-31']
         },
         yAxis: {
             title: {
@@ -45,26 +44,17 @@ $(function () {
             borderWidth: 0
         },
         series: [{
-            name: 'lunes',
+            name: 'Hab. Personal',
             data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6]
         }, {
-            name: 'martes',
+            name: 'Hab. Doble',
             data: [-0.2, 0.8, 5.7, 11.3, 17.0, 22.0, 24.8, 24.1, 20.1, 14.1, 8.6, 2.5]
         }, {
-            name: 'miercoles',
+            name: 'Hab. Matrimonial',
             data: [-0.9, 0.6, 3.5, 8.4, 13.5, 17.0, 18.6, 17.9, 14.3, 9.0, 3.9, 1.0]
         }, {
-            name: 'jueves',
+            name: 'Hab. Presidencial',
             data: [3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]
-        },{
-            name: 'viernes',
-            data: [3.9, 4.2, 5.7, 3.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]
-        },{
-            name: 'sabado',
-            data: [3.9, 4.2, 5.7, 2.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]
-        },{
-            name: 'domingo',
-            data: [3.9, 4.2, 5.7, 1.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]
         }]
     });
 });
@@ -97,7 +87,7 @@ $(function () {
             type: 'pie'
         },
         title: {
-            text: 'Reporte Diario'
+            text: 'Reporte Mensual'
         },
         tooltip: {
             pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
@@ -119,17 +109,15 @@ $(function () {
         series: [{
             name: 'Brands',
             data: [
-                { name: 'Lunes', y: 56.33 },
+                { name: 'Hab. Personal', y: 56.33 },
                 {
-                    name: 'Martes',
+                    name: 'Hab. Doble',
                     y: 24.03,
                     sliced: true,
                     selected: true
                 },
-                { name: 'Miercoles', y: 10.38 },
-                { name: 'Jueves', y: 4.77 }, { name: 'Viernes', y: 0.91 },
-                { name: 'Sabado', y: 0.2 },
-                { name: 'Domingo', y: 4.77 }
+                { name: 'Hab. Matrimonial', y: 10.38 },
+                { name: 'Hab. DobPresidencial', y: 4.77 }
             ]
         }]
     });
@@ -137,12 +125,9 @@ $(function () {
 		</script>
 	</head>
 	<body>
-
-
 <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
 <br><br><br><br><br><br><br><br><br><br><br><br><br>
 <div id="container2" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div>
-
 	</body>
 </html>
 @endsection

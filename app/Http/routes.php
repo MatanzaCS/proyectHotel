@@ -126,13 +126,15 @@ Route::group(['prefix'=> '/admin', 'middleware' => [ 'web', 'auth' ]], function(
 	Route::get('getalltipos', 'TipoCuentasController@getipos');
 
 	
-	Route::get('reportes','ReportesController@create');
-
-	Route::get('reportes','ReportesController@semanal');
-
-
-
+	//Route::get('reportes/{tipReporte}','ReportesController@tipoReporte');
+	Route::get('reportes','ReportesController@mostrar');
 	
+
+	 
+
+	 
+
+	  
 
 
 	Route::get('/', function () {

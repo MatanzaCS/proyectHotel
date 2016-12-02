@@ -15,14 +15,18 @@ class ReportesController extends Controller
      */
     public function index()
     {
-        $reportes = Reportes::all();
+        //$reportes = Reportes::all();
+       // return view('gestor.reportes.diario');
+    }
+    public function mostrar()
+    {
         return view('gestor.reportes.diario');
     }
-    public function semanal()
+    public function tipoReporte($tipReporte)
     {
         
-        return view('gestor.reportes.semanal');
-    } 
+    }
+
 
     /**
      * Show the form for creating a new resource.
@@ -31,9 +35,10 @@ class ReportesController extends Controller
      */
     public function create()
     {
-        
-        return view('gestor.reportes.diario');  
+        return view('gestor.reportes.diario');
+        //return "sadadsdad"; 
     }
+
     /**
      * Store a newly created resource in storage.
      *
