@@ -11,6 +11,7 @@
 					<th>fecha entrada</th>
 					<th>Fecha salida</th>
 					<th>Persona</th>
+					<th>Procedencia</th>
 					<th>Accion</th>
 				</tr>
 			</thead>
@@ -20,6 +21,8 @@
 	                <td>{{$s->fechain}} </td>
 	                <td>{{$s->fechaout}} </td>
 	                <td>{{$s->persona_id}} </td>
+	                <td>{{$s->procedencia_id}} </td>
+
 	                <td>
 	               		  <a class="btn btn-info" href="{{route('admin.cliente.edit', $s->id)}}">E</a>
 	                  	 <a onclick="return confirm('¿Seguro que desea eliminarlo?')" class="btn btn-danger" href="{{ route('admin.cliente.destroy', $s->id) }}">X</a>

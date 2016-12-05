@@ -12,21 +12,21 @@
             <label for="fechaout">Fecha salida</label>
             <input type="text" id="fechaout" name="fechaout" class="form-control" />
         </div>
-<!--
-        <div class="form-group">
-            <label for="precio_habitacion">estado</label>
-            <select name="estado" class="form-control">
-                <option value="libre">Libre</option>
-                <option value="Mantenimiento">Mantenimiento</option>
-                <option value="Ocupado">Ocupado</option>    
-            </select>             
-        </div>*/-->
 
-       <div class="form-group">
-            <label for="Personas">Personas</label>
+        <div class="form-group">
+            <label for="persona_id">Personas</label>
             <select name="persona_id" class="form-control">
                 @foreach($datos[0] as $a)
-                    <option value="{{$a->id}}">{{$a->Nombre}}</option>
+                    <option value="{{$a->id}}">{{$a->nombre}}</option>
+                @endforeach
+            </select>              
+        </div>
+
+       <div class="form-group">
+            <label for="Procedencia_id">Procedencia</label>
+            <select name="Procedencia_id" class="form-control">
+                @foreach($datos[0] as $b)
+                    <option value="{{$b->id}}">{{$b->Pais}}</option>
                 @endforeach
             </select>              
         </div>

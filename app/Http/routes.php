@@ -76,6 +76,16 @@ Route::group(['prefix'=> '/admin', 'middleware' => [ 'web', 'auth' ]], function(
 
 
 
+// controlador de personas
+	Route::resource('personas', 'personaController');
+	Route::get('personas/editar', 'personaController@vista');
+
+	Route::resource('personas','personaController');
+		Route::get('personas/{id}/destroy',[
+		'uses'	=>	'personaController@destroy',
+		'as'	=>	'admin.personas.destroy'  
+	]);
+
 
 
 
@@ -114,6 +124,16 @@ Route::group(['prefix'=> '/admin', 'middleware' => [ 'web', 'auth' ]], function(
 		'uses'	=>	'tipoServicioController@destroy',
 		'as'	=>	'admin.tiposer.destroy'
 		]);
+//route: Controller TIPO PRODUCTO
+	Route::resource('tipopro', 'tipoproController');
+	Route::get('tipopro/editar', 'tipoproController@vista');
+
+	Route::resource('tipopro','tipoproController');
+		Route::get('tipopro/{id}/destroy',[
+		'uses'	=>	'tipoproController@destroy',
+		'as'	=>	'admin.tipopro.destroy'  
+	]);
+
 
 
 

@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Cliente;
+use App\Procedencia;
+use App\persona;
 use App\Http\Requests;
 
 class ClienteController extends Controller
@@ -16,8 +18,12 @@ class ClienteController extends Controller
      */
     public function index()
     {
+        $Procedencias = Procedencia::all();
+        $personas = persona::all();
         $tipos = Cliente::all();
         $general[] =$tipos;
+        $general[] =$Procedencias;
+        $general[] =$personas; 
         return view('gestor.cliente.lista')->with('datos', $general);
     }
 
@@ -28,9 +34,14 @@ class ClienteController extends Controller
      */
     public function create()
     {
+        $Procedencias= Procedencia::all();
+        $personas = persona::all();
         $tipos = Cliente::all();
+        $general[] = $Procedencias;
+        $general[] = $personas;
         $general[] = $tipos;
         return view('gestor.cliente.create')->with('datos',$general);
+        
     }
 
     /**
@@ -43,8 +54,9 @@ class ClienteController extends Controller
     {
          
         $tipos = new Cliente ($request->all());
+
         $tipos->save();
-        return redirect('admin/cliente/create');
+        return redirect('admin/cliente');
     }
 
     /**

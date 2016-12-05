@@ -43,7 +43,7 @@ class ProcedenciaController extends Controller
          
         $tipos = new Procedencia($request->all());
         $tipos->save();
-        return redirect('admin/procedencia/create');
+        return redirect('admin/procedencia');
     }
 
     /**

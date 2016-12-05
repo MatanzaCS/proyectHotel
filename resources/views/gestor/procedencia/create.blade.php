@@ -21,16 +21,7 @@
             <label for="Direccion">Direccion</label>
             <input type="text" id="Direccion" name="Direccion" class="form-control" />
         </div>
-        <div class="form-group"> 
-            <label for="cliente_id"> Cliente</label>
-            <select name="cliente_id" class="form-control">
-            @foreach($datos[0] as $a)
-                <option value="{{$a->id}}">{{$a->fechain}}</option>
-            @endforeach
-            </select> 
-        </div>
-
-        
+              
         <button type="submit">Guardar</button>
     </form>
 </div>

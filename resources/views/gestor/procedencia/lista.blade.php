@@ -12,7 +12,7 @@
 					<th>Departamento</th>
 					<th>Ciudad</th>
 					<th>Direccion</th>
-					<th>cliente</th>
+				
 					<th>Accion</th>
 				</tr>
 			</thead>
@@ -23,7 +23,7 @@
 	                <td>{{$s->departamento}} </td>
 	                <td>{{$s->Ciudad}} </td>
 	                <td>{{$s->Direccion}}</td>
-	                <td>{{$s->cliente_id}}</td>
+	                
 
 	                <td>
 	               		  <a class="btn btn-info" href="{{route('admin.procedencia.edit', $s->id)}}">E</a>

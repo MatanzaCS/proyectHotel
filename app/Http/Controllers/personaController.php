@@ -3,22 +3,22 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\persona;
 use App\Http\Requests;
-use App\Tiposervicio;
 
-class TipoServicioController extends Controller
+class personaController extends Controller
 {
-    /**
+    //persona
+     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        $tipos = Tiposervicio::all();
-        $general[] =$tipos;
-        return view('gestor.tiposer.list')->with('datos', $general);
+        $personas = persona::all();
+        $general[] = $personas;
+        return view('gestor.personas.lista')->with('datos', $general);
     }
 
     /**
@@ -28,7 +28,9 @@ class TipoServicioController extends Controller
      */
     public function create()
     {
-         return view('gestor.tiposer.create');
+        $tipos = persona::all();
+        $general[] = $tipos;
+        return view('gestor.personas.create')->with('datos',$general);
     }
 
     /**
@@ -39,18 +41,10 @@ class TipoServicioController extends Controller
      */
     public function store(Request $request)
     {
-         if($request->file('foto'))
-        {
-            $file = $request -> file('foto');
-            $name = 'tiposer_'. time() . '.' .$file->getClientOriginalExtension();
-            $path=public_path() . "/imagen/tiposservicios/";
-            $file -> move($path,$name);
-        }
-
-        $tipos = new Tiposervicio($request->all());
-        $tipos->foto = $name;
+         
+        $tipos = new persona($request->all());
         $tipos->save();
-        return redirect('admin/tiposer');
+        return redirect('admin/personas/create');
     }
 
     /**
@@ -61,7 +55,7 @@ class TipoServicioController extends Controller
      */
     public function show($id)
     {
-        //
+        
     }
 
     /**
@@ -72,7 +66,12 @@ class TipoServicioController extends Controller
      */
     public function edit($id)
     {
-        //
+
+        $personas= persona::find($id);
+      
+        //return view('gestor.habitaciones.edit',['habitaciones'=>$habitaciones]);
+       return view('gestor.personas.edit')->with('personas',$personas);
+        
     }
 
     /**
@@ -84,7 +83,20 @@ class TipoServicioController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+
+        /*$habitaciones=Habitacion::findorFail($id);
+        $habitaciones =update($request->all());
+        $habitaciones->update();
+         return redirect('admin/habitaciones');*/
+
+        $personas = persona::find($id);
+        $data = Input::all();
+        $personas->filla($data);
+        $personas->save();
+        return redirect('admin/personas');
+
+    
+ 
     }
 
     /**
@@ -93,8 +105,21 @@ class TipoServicioController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
+
+
+
+       public function vista()
+    {
+
+        
+    }
     public function destroy($id)
     {
-        //
+      
+      $personas = persona::find($id);
+      $personas->delete(); 
+      return redirect('admin/personas');
+     
     }
 }

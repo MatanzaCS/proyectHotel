@@ -54,7 +54,7 @@ class servicioController extends Controller
        
          $tipos = new Servicio($request->all());
          $tipos->save();
-        return redirect('admin');
+        return redirect('admin/Servicios');
     }
 
     /**
