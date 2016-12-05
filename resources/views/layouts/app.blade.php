@@ -10,6 +10,7 @@
     <!-- Fonts -->
     <link href="{{asset('panel/bootstrap/css/bootstrap.min.css')}}" rel='stylesheet' type='text/css'>
     <link href="{{asset('panel/font-awesome/css/font-awesome.min.css')}}" rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
     
     <link href="{{asset('auth/css/style.css')}}" rel='stylesheet' type='text/css'>
 
