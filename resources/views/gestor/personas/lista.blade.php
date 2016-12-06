@@ -13,9 +13,9 @@
 					<th>Edad</th>
 					<th>Genero</th>
 					<th>Telefonos</th>
-					<th>EmailTipoDocumentos</th>
-					<th>TipoDocumentos</th>
-					<th>NumDocumentos</th>
+					<th>Email</th>
+					<th>TipoDoc</th>
+					<th>NumDoc</th>
 					<th>Accion</th>
 					
 				</tr>
@@ -27,8 +27,8 @@
 	                <td>{{$s->apellidos}}</td>
                     <td>{{$s->edad}}</td>
                     <td>{{$s->sexo}} </td>
+                    <td>{{$s->telefono}} </td>
 	                <td>{{$s->email}}</td>
-
                     <td>{{$s->TipoDocumento}}</td>
                     <td>{{$s->numdocumento}} </td>
 	               

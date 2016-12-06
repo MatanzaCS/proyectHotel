@@ -124,16 +124,14 @@ Route::group(['prefix'=> '/admin', 'middleware' => [ 'web', 'auth' ]], function(
 		'uses'	=>	'tipoServicioController@destroy',
 		'as'	=>	'admin.tiposer.destroy'
 		]);
-//route: Controller TIPO PRODUCTO
-	Route::resource('tipopro', 'tipoproController');
-	Route::get('tipopro/editar', 'tipoproController@vista');
-
+	//route: Controller TIPO PRODUCTO
 	Route::resource('tipopro','tipoproController');
-		Route::get('tipopro/{id}/destroy',[
+	Route::get('tipopro/editar', 'tipoproController@vista');
+	Route::get('tipopro/editar/{id}', 'tipoproController@editardatos');
+	Route::get('tipopro/{id}/destroy',[
 		'uses'	=>	'tipoproController@destroy',
-		'as'	=>	'admin.tipopro.destroy'  
-	]);
-
+		'as'	=>	'admin.tipopro.destroy'
+		]);
 
 
 
@@ -149,13 +147,6 @@ Route::group(['prefix'=> '/admin', 'middleware' => [ 'web', 'auth' ]], function(
 	//Route::get('reportes/{tipReporte}','ReportesController@tipoReporte');
 	Route::get('reportes','ReportesController@mostrar');
 	
-
-	 
-
-	 
-
-	  
-
 
 	Route::get('/', function () {
 	    return view('welcome');

@@ -3,7 +3,7 @@
 @section('content')
 
 	<div>
-	<h1>Tipos de Habitacion</h1>
+	<h1>Tipos de Producto</h1>
 	<a class="btn btn-primary" href="{{ url('admin/tipopro/create') }}"> Crear</a>
 		<table class="table">
 			<thead>
@@ -17,7 +17,7 @@
 			<tbody>
 				 @foreach ($datos[0] as $s)
 	            <tr>
-	                <td  style="max-width: 80px"><img src="../../imagen/tipopro/{{$s->foto}}" class="img-responsive"></td>
+	                <td  style="max-width: 80px"><img src="../../imagen/tipoproducto/{{$s->foto}}" class="img-responsive"></td>
 	                <td>{{$s->Nombre}} </td>
 	                <td>{{$s->precio}}</td>
 	                <td>

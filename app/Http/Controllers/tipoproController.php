@@ -8,8 +8,8 @@ use App\Http\Requests;
 
 class tipoproController extends Controller
 {
-    //controlador tipo producto
-	 /**
+    //productos
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
@@ -42,8 +42,8 @@ class tipoproController extends Controller
          if($request->file('foto'))
         {
             $file = $request -> file('foto');
-            $name = 'tipopro_'. time() . '.' .$file->getClientOriginalExtension();
-            $path=public_path() . "/imagen/tipopro/";
+            $name = 'tipoprodu_'. time() . '.' .$file->getClientOriginalExtension();
+            $path=public_path() . "/imagen/tipoproducto/";
             $file -> move($path,$name);
         }
 
@@ -75,7 +75,8 @@ class tipoproController extends Controller
         
         $tipos=TipoProducto::find($id);
       
-        return view('gestor.tipopro.edit')->with('tipos',$tipos);
+        
+       return view('gestor.tipopro.edit')->with('tipos',$tipos);
         
     }
 
