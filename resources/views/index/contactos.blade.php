@@ -1,30 +1,48 @@
 @extends('layouts.home')
 
 @section('content')
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Topografia</title>
-	<link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
-<style>
-	h1{
-		font-family: 'Playfair Display', serif;
-		font-size: 48px;
-	}
-</style>	
+	<title>Contactos</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">	
 </head>
 <body>
-	<div class="container-fluid">
-		<h1>Contactanos</h1>
-		
-	</div>
-	<p>
-		Si tienes alguna pregunta, por favor contáctanos vía email o telefónicamente. Te responderemos tan pronto como sea posible. Esperamos con interés su contacto
-	</p>
-</body>
-</html>
-	
+	<header>
+		<div class="container">
+			<h2><center>CONTÁCTANOS</h2></center>
+		</div>
+	</header>
 
+	<!--Separacion de Texto-->
+
+	<div class="container">
+		<section class="main">
+			<article class="col-xs-12">
+				<p>
+				Si tienes alguna pregunta, por favor contáctanos vía email o telefónicamente. Te responderemos tan pronto como sea posible. Esperamos con interés su contacto.
+				</p>
+			</article>
+		</section>
+	<!--Seccion Mapa-Numeros-->
+	<div class="row">
+			<div class="ol-md-6">
+				<p>
+				Mediante  este  formulario  puede realizar cualquier consulta que  tenga con  respecto al hostal y sus servicios.
+				En este  formulario NO debe solicitar reservas, para ello esta el formulario.
+				</p>
+			</div>
+			<div class="col-md-6">
+				<p>
+					Telefono: 053-470352
+					Celular: 953 660 708
+					E-mail: hostal.keymar@gmail.com
+					Dirección: Av.Simon Bolívar A-2 (Frente al Estadio)
+				</p>
+			</div>	
+		</div>
+	</div>
+</body>	
+</html>
 @endsection

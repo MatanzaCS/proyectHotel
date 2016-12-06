@@ -5,7 +5,7 @@
     <!-- Banner -->
                 <section id="banner">
                     <header>
-                        <h2><em>Viva la experiencia....</em></h2>
+                        <h2><em>Hotel Hostal Keymar Spa Viva la Experiencia ...</em></h2>
                         <a href="#" class="button">Reserve Ahora</a>
                     </header>
                 </section>
