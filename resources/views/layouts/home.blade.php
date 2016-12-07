@@ -12,6 +12,7 @@
         <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
         <link rel="stylesheet" href="{{asset('assets/css/main.css')}}" />
         <link rel="stylesheet" href="{{asset('assets/css/index.css')}}" />
+        <script src="assets/js/jquery.min.js"></script>
         <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
         <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
     </head>
@@ -27,12 +28,12 @@
                     <!-- Nav -->
                         <nav id="nav">
                             <ul>
-                                <li class="current"><a href="{{ url('/') }}">Incio</a></li>
-                                <li><a href="{{ url('/nosotros') }}">Nosotros</a></li>
-                                <li><a href="{{ url('/habitaciones') }}">Habitaciones</a></li>
-                                <li><a href="{{ url('/servicios') }}">Servicios</a></li>
-                                <li><a href="{{ url('/Spa') }}">Spa</a></li>
-                                <li><a  href="{{ url('/contactos') }}">Contactos</a></li>
+                                <li id="inicio"><a href="{{ url('/') }}">Inicio</a></li>
+                                <li id="nos"><a href="{{ url('/nosotros') }}">Nosotros</a></li>
+                                <li id="hab"><a href="{{ url('/habitaciones') }}">Habitaciones</a></li>
+                                <li id="ser"><a href="{{ url('/servicios') }}">Servicios</a></li>
+                                <li id="sp"><a href="{{ url('/Spa') }}">Spa</a></li>
+                                <li id="con"><a  href="{{ url('/contactos') }}">Contactos</a></li>
                             </ul>
                         </nav>
 

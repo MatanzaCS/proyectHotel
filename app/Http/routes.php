@@ -20,9 +20,6 @@ Route::get('/habitaciones', function () {
 Route::get('/', function () {
 	    return view('index.inicio');
 	});
-Route::get('/habitaciones', function () {
-	    return view('index.habitaciones');
-	});
 Route::get('/servicios', function () {
 	    return view('index.servicios');
 	});
