@@ -17,8 +17,8 @@ Route::get('/', function () {
 Route::get('/habitaciones', function () {
 	    return view('index.habitaciones');
 	});
-Route::get('/', function () {
-	    return view('index.inicio');
+Route::get('/reportes', function () {
+	    return view('index.reportes');
 	});
 Route::get('/servicios', function () {
 	    return view('index.servicios');
