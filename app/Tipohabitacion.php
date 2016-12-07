@@ -8,6 +8,6 @@ class Tipohabitacion extends Model
 {
     public $timestamps = false;
     
-    protected $fillable = ['Nombre', 'Descripcion', 'precio_habitacion','caracteristicas_id','foto',];
+    protected $fillable = ['Nombre', 'Descripcion', 'precio_habitacion','caracteristicas_id','foto','caracteristica_id'];
 
 }
