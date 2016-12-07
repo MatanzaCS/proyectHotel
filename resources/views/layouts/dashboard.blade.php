@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="{{asset('panel/jqvmap/dist/jqvmap.min.css')}}" />
     <!-- Custom Theme Style -->
     <link rel="stylesheet" href="{{asset('panel/build/css/custom.min.css')}}" />
+    <link rel="stylesheet" href="{{asset('panel/build/css/estilo.css')}}" />
 
     <script type="text/javascript" src="../js/jquery.min.js"></script>
     <script src="../js/highcharts.js"></script>
@@ -108,7 +109,8 @@
                   </li>
                   <li><a><i class="fa fa-pie-chart"></i> Reportes <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="{{ url('admin/reportes') }}">Reporte Mensual -- Chart JS</a></li>
+                      <li><a href="{{ url('admin/ReporteMensual') }}">Reporte Mensual</a></li>
+                      <li><a href="{{ url('admin/ReporteAnual') }}">Reporte Anual</a></li>
                     </ul>
                   </li>
                   <li><a><i class="fa fa-users"></i>Usuarios <span class="fa fa-chevron-down"></span></a>

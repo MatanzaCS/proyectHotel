@@ -17,7 +17,7 @@ $(function () {
             x: -20 //center
         },
         subtitle: {
-            text: 'Reporte Mensual',
+            text: 'Reporte del año: ',
             x: -20
         },
         xAxis: {
@@ -87,7 +87,7 @@ $(function () {
             type: 'pie'
         },
         title: {
-            text: 'Reporte Mensual'
+            text: 'Reporte del año: '
         },
         tooltip: {
             pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
@@ -125,9 +125,13 @@ $(function () {
 		</script>
 	</head>
 	<body>
-<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
-<br><br><br><br><br><br><br><br><br><br><br><br><br>
-<div id="container2" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div>
+        <div style="margin-bottom:250px;">
+            <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+        </div>
+        <div>
+            <div id="container2" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div>
+        </div>
+
 	</body>
 </html>
 @endsection

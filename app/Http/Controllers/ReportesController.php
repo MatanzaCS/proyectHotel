@@ -18,14 +18,16 @@ class ReportesController extends Controller
         //$reportes = Reportes::all();
        // return view('gestor.reportes.diario');
     }
-    public function mostrar()
+    public function ReporteMensual()
     {
-        return view('gestor.reportes.diario');
+        return view('gestor.reportes.mensual');
+        echo "asd";
     }
-    public function tipoReporte($tipReporte)
+    public function ReporteAnual()
     {
-        
+        return view('gestor.reportes.anual');
     }
+
 
 
     /**
