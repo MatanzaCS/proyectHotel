@@ -134,40 +134,17 @@ $(function () {
         </div>
     </body>
     -->
-    
-    <table class="container-block">
-        <tr>
-            <td><img src="{{asset('images/habitaciones.jpg')}}" style="width:250px; margin:15px;    " class="img-responsive img-rounded" alt="">            
-            </td>
-            <td contenedor-info><p class="parrafo">Estos son los reportes de Habitaciones</p>
-            <button class="btn btn-info">Ver Reporte</button>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <img src="{{asset('images/servicios.jpg')}}" style="width:250px; margin:15px;"  class="img-responsive img-rounded" alt="">
-            </td>
-            <td><p class="parrafo">Estos son los reportes de Servicios</p>
-            <button class="btn btn-info">Ver Reporte</button>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <img src="{{asset('images/usuarios.jpg')}}" style="width:250px; margin:15px;" class="img-responsive img-rounded" alt="">
-            </td>
-            <td><p class="parrafo">Estos son los reportes de Usuario</p>
-            <button class="btn btn-info">Ver Reporte</button>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <img src="{{asset('images/reservas.jpg')}}" style="width:250px; margin:15px;" class="img-responsive img-rounded" alt="">
-            </td>
-            <td><p class="parrafo">Estos son los reportes de Reservas</p>
-            <button class="btn btn-info">Ver Reporte</button>
-            </td>
-        </tr>
-    </table>
-
-</html> 
+    <div class="container-uno">
+        <img src="{{asset('images/img.jpg')}}" class="img-responsive img-rounded" alt="">
+    </div>
+    <div class="container-dos">
+        <img src="{{asset('images/img.jpg')}}" class="img-responsive img-rounded" alt="">
+    </div>
+    <div>
+        <img src="{{asset('images/img.jpg')}}" class="img-responsive img-rounded" alt="">
+    </div>
+    <div>
+        <img src="{{asset('images/img.jpg')}}" class="img-responsive img-rounded" alt="">
+    </div>
+</html>
 @endsection

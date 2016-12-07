@@ -109,11 +109,8 @@
                   </li>
                   <li><a><i class="fa fa-pie-chart"></i> Reportes <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="{{ url('admin/MenuReportes') }}">Menu</a></li>
-                      <li><a href="{{ url('admin/ReporteHabitacion') }}">Reporte Habitaciones</a></li>
-                      <li><a href="{{ url('admin/ReporteServicios') }}">Reporte Servicios</a></li>
-                      <li><a href="{{ url('admin/ReporteUsuarios') }}">Reporte Usuarios</a></li>
-                      <li><a href="{{ url('admin/ReporteReservas') }}">Reporte Reservas</a></li>
+                      <li><a href="{{ url('admin/ReporteMensual') }}">Reporte Mensual</a></li>
+                      <li><a href="{{ url('admin/ReporteAnual') }}">Reporte Anual</a></li>
                     </ul>
                   </li>
                   <li><a><i class="fa fa-users"></i>Usuarios <span class="fa fa-chevron-down"></span></a>
@@ -163,7 +160,7 @@
                   <ul id="menu1" class="dropdown-menu list-unstyled msg_list" role="menu">
                     <li>
                       <a>
-                        <!--<span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>-->
+                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
                         <span>
                           <span>John Smith</span>
                           <span class="time">3 mins ago</span>

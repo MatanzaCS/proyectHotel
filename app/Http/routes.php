@@ -153,14 +153,9 @@ Route::group(['prefix'=> '/admin', 'middleware' => [ 'web', 'auth' ]], function(
 
 	
 	//Route::get('reportes/{tipReporte}','ReportesController@tipoReporte');
-	Route::get('MenuReportes','ReportesController@Menu');
-	/*Route::get('ReporteMensual','ReportesController@ReporteMensual');
+	Route::get('ReporteMensual','ReportesController@ReporteMensual');
 	Route::get('ReporteAnual','ReportesController@ReporteAnual');
-	*/
-	Route::get('ReporteHabitacion','ReportesController@ReporteHabitacion');
-	Route::get('ReporteServicios','ReportesController@ReporteServicios');
-	Route::get('ReporteUsuarios','ReportesController@ReporteUsuarios');
-	Route::get('ReporteReservas','ReportesController@ReporteReservas');
+	
 
 	Route::get('/', function () {
 	    return view('welcome');
