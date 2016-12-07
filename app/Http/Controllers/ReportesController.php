@@ -27,7 +27,26 @@ class ReportesController extends Controller
     {
         return view('gestor.reportes.anual');
     }
-
+    public function Menu()
+    {
+        return view('gestor.reportes.menu');
+    }
+    public function ReporteHabitacion()
+    {
+        return view('gestor.reportes.habitaciones');
+    }
+    public function ReporteServicios()
+    {
+        return view('gestor.reportes.servicios');
+    }
+    public function ReporteUsuarios()
+    {
+        return view('gestor.reportes.usuarios');
+    }
+    public function ReporteReservas()
+    {
+        return view('gestor.reportes.reservas');
+    }
 
 
     /**

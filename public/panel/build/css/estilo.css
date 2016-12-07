@@ -1,12 +1,26 @@
-.container-uno
+
+.container-block
 {
-    margin-top:70px;
-    width:550px; 
-    left: 10px;
+    margin:50px auto;
+    /*border-style: solid;
+    border-color:black;
+    border-radius:1em;*/
+    text-align:center;
+    
 }
-container-dos
+.container-left
 {
-    margin-top:70px;
-    width:550px; 
-    right: 10px;
+    border-style: solid;
+    border-color:black;
+    border-radius:1em;
+    width:450px;
+    margin:20px auto;
+    display:block;
+}
+.parrafo
+{
+    font-size:15px;
+    font-family: 'Times New Roman', Times, serif;
+    margin:15px;
+    align-content:inherit;
 }
