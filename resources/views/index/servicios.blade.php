@@ -1,6 +1,9 @@
 @extends('layouts.home')
 
 @section('content')
+
+@endsection
+
 <!DOCTYPE html>
 <html>
 <head>

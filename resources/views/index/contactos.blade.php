@@ -1,6 +1,13 @@
 @extends('layouts.home')
-
 @section('content')
+<script>
+$(document).ready(function() {
+  $('#con').addClass('current');
+});
+</script>
+@endsection
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
