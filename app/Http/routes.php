@@ -56,7 +56,10 @@ Route::group(['prefix'=> '/admin', 'middleware' => [ 'web', 'auth' ]], function(
 	Route::resource('cuentas', 'CuentasController');
 
 	Route::resource('habitaciones','HabitacionController');
-
+	Route::get('habitaciones/update/{id}',[
+		'uses'	=>	'HabitacionController@update',
+		'as'	=>	'admin.habitaciones.update'  
+	]);
 	Route::get('habitaciones/{id}/destroy',[
 		'uses'	=>	'HabitacionController@destroy',
 		'as'	=>	'admin.habitaciones.destroy'  
@@ -67,6 +70,11 @@ Route::group(['prefix'=> '/admin', 'middleware' => [ 'web', 'auth' ]], function(
 	Route::get('tipohab/editar', 'TipoHabController@vista');
 
 	Route::resource('tipohab','TipoHabController');
+		Route::get('tipohab/update/{id}',[
+			'uses' => 'TipoHabController@update',
+			'as' => 'admin.tipohab.update'
+		]);
+
 		Route::get('tipohab/{id}/destroy',[
 		'uses'	=>	'TipoHabController@destroy',
 		'as'	=>	'admin.tipohab.destroy'  

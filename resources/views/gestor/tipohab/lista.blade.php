@@ -19,6 +19,7 @@
 	            <tr>
 	                <td  style="max-width: 80px"><img src="../../imagen/tiposHabitaciones/{{$s->foto}}" class="img-responsive"></td>
 	                <td>{{$s->Nombre}} </td>
+					<td>{{$s->Descripcion}}</td>
 	                <td>{{$s->precio_habitacion}}</td>
 	                <td>
 	                	<a class="btn btn-success" href="{{ route('admin.tipohab.edit', $s->id) }}" >E</a>

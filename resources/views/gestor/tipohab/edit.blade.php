@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <h2>Editar Tipo habitacion {{$tipos->Nombre}}</h2>
-    <form class="row" method="PUT" action="{{route('admin.tipohab.create',$tipos->id)}}" ccept-charset="UTF-8" enctype="multipart/form-data" style="max-width: 350px">{{ csrf_field() }}
+    <form class="row" method="PUT" action="{{route('admin.tipohab.update',$tipos->id)}}" ccept-charset="UTF-8" enctype="multipart/form-data" style="max-width: 350px">{{ csrf_field() }}
         <div class="form-group">
             <label for="Nombre">Nombre</label>
             <input type="text" id="Nombre" name="Nombre" class="form-control" value="{{$tipos->Nombre}}" />

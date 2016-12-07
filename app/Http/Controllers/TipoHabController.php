@@ -88,12 +88,15 @@ class TipoHabController extends Controller
      */
     public function update(Request $request, $id)
     {
-                  
-           $tipos=Tipohabitacion::find($id);
-            $tipos =fill($request->all());
-            $tipos->save();
-         return redirect('admin/tipohab');
-      
+    
+         $tipos=Tipohabitacion::find($id);
+       
+        $tipos->Nombre=$request->Nombre;
+        $tipos->Descripcion=$request->Descripcion;
+        $tipos->precio_habitacion=$request->precio_habitacion;
+        $tipos->save();
+
+        return redirect('admin/tipohab');
 
 
 

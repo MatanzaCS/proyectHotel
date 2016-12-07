@@ -95,8 +95,11 @@ class HabitacionController extends Controller
          return redirect('admin/habitaciones');*/
 
         $habitaciones = Habitacion::find($id);
-        $data = Input::all();
-        $habitaciones->filla($data);
+        
+        $habitaciones->numero=$request->numero;
+        $habitaciones->piso=$request->piso;
+        $habitaciones->estado=$request->estado;
+      //  $habitaciones->TipoHabitacion_id=$request->TipoHabitacion_id;
         $habitaciones->save();
         return redirect('admin/habitaciones');
 
