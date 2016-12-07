@@ -37,7 +37,7 @@ class ReportesController extends Controller
      */
     public function create()
     {
-        return view('gestor.reportes.diario');
+        //return view('gestor.reportes.diario');
         //return "sadadsdad"; 
     }
 
