@@ -59,6 +59,12 @@ Route::group(['prefix'=> '/admin', 'middleware' => [ 'web', 'auth' ]], function(
 		'as'	=>	'admin.habitaciones.destroy'  
 	]);
 	
+	Route::resource('caracteristicas','CaracteristicaController');
+		Route::get('caracteristicas/{id}/destroy',[
+		'uses'	=>	'CaracteristicaController@destroy',
+		'as'	=>	'admin.caracteristicas.destroy'  
+	]);
+
 	//route: Controller tipoHabitacion
 	Route::resource('tipohab', 'TipoHabController');
 	Route::get('tipohab/editar', 'TipoHabController@vista');

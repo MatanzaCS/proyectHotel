@@ -70,6 +70,7 @@
                       <li><a href="{{ url('admin/habitaciones/create') }}">Agregar habitaciones</a></li>
                       <li><a href="{{ url('admin/habitaciones') }}">Listado de habitaciones</a></li>
                       <li><a href="{{ url('admin/tipohab') }}">Tipos de habitaciones</a></li>
+                       <li><a href="{{ url('admin/caracteristicas') }}">Caracteristicas Tipo Habitaicon</a></li>
                     </ul>
                   </li>
                   <li><a><i class="fa fa-user"></i> REGISTROS <span class="fa fa-chevron-down"></span></a>
