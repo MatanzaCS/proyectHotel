@@ -1,8 +1,11 @@
 @extends('layouts.home')
 
 @section('content')
-
-@endsection
+<script>
+$(document).ready(function() {
+  $('#ser').addClass('current');
+});
+</script>
 
 <!DOCTYPE html>
 <html>
