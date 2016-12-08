@@ -13,7 +13,7 @@ ${demo.css}
 $(function () {
     Highcharts.chart('container', {
         title: {
-            text: 'Reportes',
+            text: 'Reporte de Habitacion',
             x: -20 //center
         },
         subtitle: {
@@ -125,7 +125,7 @@ $(function () {
 		</script>
 	</head>
 	<body>
-        <div style="margin-bottom:250px;">
+        <div style="margin-bottom:100px;">
             <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
         </div>
         <div>

@@ -23,7 +23,6 @@ class ReportesController extends Controller
     public function ReporteMensual()
     {
         return view('gestor.reportes.mensual');
-        echo "asd";
     }
     public function ReporteAnual()
     {
