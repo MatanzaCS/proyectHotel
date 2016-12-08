@@ -10,7 +10,7 @@
         </div>
         <div class="form-group">
             <label for="fecha">fecha</label>
-            <input type="text" id="fecha" name="fecha" class="form-control" />
+            <input type="date" id="fecha" name="fecha" class="form-control" />
         </div>
         <div class="form-group">
             <label for="estado">estado</label>
