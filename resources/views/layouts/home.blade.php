@@ -40,7 +40,7 @@
 
                 </div>
     <a href="{{ url('/admin') }}" class="btn-sing">
-        <i class="fa fa-user" >Entrar</i>
+        <i>Iniciar Secion</i>
     </a>
     @yield('content')
 
