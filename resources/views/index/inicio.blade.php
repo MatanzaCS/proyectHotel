@@ -1,5 +1,9 @@
 @extends('layouts.home')
-
+<script>
+$(document).ready(function() {
+  $('#inicio').addClass('current');
+});
+</script>
 @section('content')
 
     <!-- Banner -->
