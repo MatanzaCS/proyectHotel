@@ -125,9 +125,9 @@ $(function () {
 -->
 
 
-        <a href="{{url('admin/ReporteAnual')}}"><button class="btn btn-danger">Grafica Reporte Anual</button></a>
-        <a href="{{url('admin/ReporteMensual')}}"><button class="btn btn-danger">Grafica Reporte Mensual</button></a>
-        <a href=""><button class="btn btn-info">Actualizar Reporte</button></a>
+        <a href="{{url('admin/ReporteHabitacionAnual')}}"><button class="btn btn-danger">Grafica Anual</button></a>
+        <a href="{{url('admin/ReporteHabitacionMensual')}}"><button class="btn btn-danger">Grafica Mensual</button></a>
+        <a href="#" onclick="location.reload()"><button class="btn btn-info">Actualizar Reporte</button></a>
         <div class="table-responsive">
             <table class="table">
                 <tr>

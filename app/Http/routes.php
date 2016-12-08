@@ -153,15 +153,25 @@ Route::group(['prefix'=> '/admin', 'middleware' => [ 'web', 'auth' ]], function(
 	Route::get('getalltipos', 'TipoCuentasController@getipos');
 
 	
-	//Route::get('reportes/{tipReporte}','ReportesController@tipoReporte');
-	Route::get('MenuReportes','ReportesController@Menu');
-	Route::get('ReporteMensual','ReportesController@ReporteMensual');
-	Route::get('ReporteAnual','ReportesController@ReporteAnual');
 	
+	//RUTAS PARA LOS REPORTES
+	Route::get('MenuReportes','ReportesController@Menu');
+	//Route::get('ReporteMensual','ReportesController@ReporteMensual');
+	//Route::get('ReporteAnual','ReportesController@ReporteAnual');
 	Route::get('ReporteHabitacion','ReportesController@ReporteHabitacion');
 	Route::get('ReporteServicios','ReportesController@ReporteServicios');
 	Route::get('ReporteUsuarios','ReportesController@ReporteUsuarios');
 	Route::get('ReporteReservas','ReportesController@ReporteReservas');
+	Route::get('ReporteHabitacionAnual','ReportesController@ReporteHabAnual');
+	Route::get('ReporteHabitacionMensual','ReportesController@ReporteHabAnual');
+	Route::get('ReporteServicioAnual','ReportesController@ReporteHabAnual');
+	Route::get('ReporteServicioMensual','ReportesController@ReporteHabAnual');
+	Route::get('ReporteUsuarioAnual','ReportesController@ReporteHabAnual');
+	Route::get('ReporteUsuarioMensual','ReportesController@ReporteHabAnual');
+	Route::get('ReporteReservaAnual','ReportesController@ReporteHabAnual');
+	Route::get('ReporteReservaMensual','ReportesController@ReporteHabAnual');
+
+
 
 	Route::get('/', function () {
 	    return view('welcome');

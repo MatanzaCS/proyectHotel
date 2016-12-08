@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="{{asset('panel/jqvmap/dist/jqvmap.min.css')}}" />
     <!-- Custom Theme Style -->
     <link rel="stylesheet" href="{{asset('panel/build/css/custom.min.css')}}" />
-    
+
     <link rel="stylesheet" href="{{asset('panel/build/css/estilo.css')}}" />
 
     <script type="text/javascript" src="../js/jquery.min.js"></script>
@@ -105,9 +105,9 @@
                       <li><a href="{{ url('admin/tiposer') }}">Tipos de servicio</a></li>
                     </ul>
                   </li>
-                  <li><a><i class="fa fa-pie-chart"></i> Reportes <span class="fa fa-chevron-down"></span></a>
+                  <li><a href="{{ url('admin/MenuReportes') }}"><i class="fa fa-pie-chart"></i> Reportes <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="{{ url('admin/MenuReportes') }}">Menu</a></li>
+                      <!--<li><a href="{{ url('admin/MenuReportes') }}">Menu</a></li>-->
                       <li><a href="{{ url('admin/ReporteHabitacion') }}">Reporte Habitaciones</a></li>
                       <li><a href="{{ url('admin/ReporteServicios') }}">Reporte Servicios</a></li>
                       <li><a href="{{ url('admin/ReporteUsuarios') }}">Reporte Usuarios</a></li>

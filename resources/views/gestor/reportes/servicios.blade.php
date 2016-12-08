@@ -9,31 +9,27 @@
 	</head>
 	<body>
 
-        <a href="{{url('admin/ReporteAnual')}}"><button class="btn btn-danger">Ver Graficas</button></a>
-        <a href="{{url('admin/ReporteMensual')}}"><button class="btn btn-info">Actualizar Reporte</button></a>
+        <a href="{{url('admin/ReporteServicioAnual')}}"><button class="btn btn-danger">Grafica Anual</button></a>
+        <a href="{{url('admin/ReporteServicioMensual')}}"><button class="btn btn-danger">Grafica Mensual</button></a>
+        <a href="#" onclick="location.reload()"><button class="btn btn-info">Actualizar Reporte</button></a>
         <div class="table-responsive">
             <table class="table">
                 <tr>
                     <td>ID</td>
                     <td>Nombre del Servicio</td>
-                    <td>Fecha</td>
-                    <td>Precio del Servicio</td>
+                    <!--<td>Fecha</td>-->
                     <td>Tipo del Servicio</td>
-                    <td>Id de la Reserva</td>
                 </tr>
+                @foreach($servicios as $data)
                 <tr>
-                    <td>@foreach($servicios as $data){{$data->id}}@endforeach</td>
-                    <td>@foreach($servicios as $data){{$data->nomservicio}}@endforeach</td>
-                    <td>@foreach($servicios as $data){{$data->fecha}}@endforeach</td>
-                    <td>@foreach($servicios as $data){{$data->Precio_Servicio}}@endforeach</td>
-                    <td>@foreach($servicios as $data){{$data->TipoServicio_id}}@endforeach</td>
-                    <td>@foreach($servicios as $data){{$data->reserva_id}}@endforeach</td>
-                    
+                    <td>{{$data->id}}</td>
+                    <td>{{$data->nomservicio}}</td>
+                    <!--<td>{{$data->fecha}}</td>-->
+                    <td>{{$data->TipoServicio_id}}</td>
                 </tr>
-
+                @endforeach
             </table>
         </div>
-
 	</body>
 </html>
 @endsection

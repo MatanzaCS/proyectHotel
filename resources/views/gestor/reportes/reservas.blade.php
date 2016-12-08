@@ -133,8 +133,9 @@ $(function () {
             <div id="container2" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div>
         </div>
         -->
-        <a href="{{url('admin/ReporteAnual')}}"><button class="btn btn-danger">Ver Graficas</button></a>
-        <a href="{{url('admin/ReporteMensual')}}"><button class="btn btn-info">Actualizar Reporte</button></a>
+        <a href="{{url('admin/ReporteReservaAnual')}}"><button class="btn btn-danger">Grafica Anual</button></a>
+        <a href="{{url('admin/ReporteReservaMensual')}}"><button class="btn btn-danger">Grafica Mensual</button></a>
+        <a href="#" onclick="location.reload()"><button class="btn btn-info">Actualizar Reporte</button></a>
         <div class="table-responsive">
             <table class="table">
                 <tr>
@@ -148,8 +149,8 @@ $(function () {
                     <td>Tipo de Comprobante</td>
                     <td>Estado</td>
                 </tr>
-                <tr>
                 @foreach($reservas as $data)
+                <tr>
                     <td>{{ $data->id }}</td>
                     <td>{{ $data->tipo_reserva }}</td>
                     <td>{{ $data->fecha_reserva }}</td>
@@ -159,10 +160,8 @@ $(function () {
                     <td>{{ $data->FechaPago }}</td>
                     <td>{{ $data->TipoComprobante_id }}</td>
                     <td>{{ $data->estado }}</td>
-                @endforeach
                 </tr>
-
-
+                @endforeach
             </table>
         </div>
 	</body>

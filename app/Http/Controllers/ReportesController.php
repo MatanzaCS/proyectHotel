@@ -20,6 +20,7 @@ class ReportesController extends Controller
         //$reportes = Reportes::all();
        // return view('gestor.reportes.diario');
     }
+    
     public function ReporteMensual()
     {
         return view('gestor.reportes.mensual');
@@ -55,7 +56,15 @@ class ReportesController extends Controller
         return view('gestor.reportes.reservas',compact('reservas'));
         //return view('gestor.reportes.reservas');
     }
-
+    public function ReporteHabAnual()
+    {
+        return view('gestor.reportes.anual');
+    }
+    public function ReporteHabMensual()
+    {
+        return view('gestor.reportes.mensual');
+    }
+    //Reporte
 
     /**
      * Show the form for creating a new resource.

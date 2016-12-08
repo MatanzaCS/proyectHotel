@@ -6,6 +6,8 @@
     border-color:black;
     border-radius:1em;*/
     text-align:center;
+    border-collapse: separate;
+    border-spacing:  100px 0px;
     
 }
 .container-left
