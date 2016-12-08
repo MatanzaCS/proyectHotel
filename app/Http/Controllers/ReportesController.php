@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
+use DB;
+
 class ReportesController extends Controller
 {
     /**
@@ -33,19 +35,26 @@ class ReportesController extends Controller
     }
     public function ReporteHabitacion()
     {
-        return view('gestor.reportes.habitaciones');
+        $habitaciones=DB::table('habitacions')->get();
+        return view('gestor.reportes.habitaciones',compact('habitaciones'));
     }
     public function ReporteServicios()
     {
-        return view('gestor.reportes.servicios');
+        $servicios=DB::table('servicios')->get();
+        return view('gestor.reportes.servicios',compact('servicios'));
+        //return view('gestor.reportes.servicios');
     }
     public function ReporteUsuarios()
     {
-        return view('gestor.reportes.usuarios');
+        $users=DB::table('users')->get();
+        return view('gestor.reportes.usuarios',compact('users'));
+        //return view('gestor.reportes.usuarios');
     }
     public function ReporteReservas()
     {
-        return view('gestor.reportes.reservas');
+        $reservas=DB::table('reservas')->get();
+        return view('gestor.reportes.reservas',compact('reservas'));
+        //return view('gestor.reportes.reservas');
     }
 
 

@@ -125,13 +125,51 @@ $(function () {
 		</script>
 	</head>
 	<body>
+    <!--
         <div style="margin-bottom:250px;">
             <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
         </div>
         <div>
             <div id="container2" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div>
         </div>
+    -->
+        <button class="btn btn-danger">Ver Grafica</button>
+        <button class="btn btn-info">Actualizar Reporte</button>
+        <div class="table-responsive">
+            <table class="table">
+                <tr>
+                    <td>ID</td>
+                    <td>Nombre de usuario</td>
+                    <td>Tipo de Usuario</td>
+                    <td>ID Persona</td>
+                </tr>
+                <tr>
+                    <td>@foreach($users as $data){{$data->id}}@endforeach</td>
+                    <td>@foreach($users as $data){{$data->username}}@endforeach</td>
+                    <td>@foreach($users as $data){{$data->tipousuario_id}}@endforeach</td>
+                    <td>@foreach($users as $data){{$data->persona_id}}@endforeach</td>
+                </tr>
+                <tr>
+                    <td>@foreach($users as $data){{$data->username}}@endforeach</td>
+                    <td>@foreach($users as $data){{$data->username}}@endforeach</td>
+                    <td>@foreach($users as $data){{$data->username}}@endforeach</td>
+                    <td>@foreach($users as $data){{$data->username}}@endforeach</td>
+                </tr>
+                <tr>
+                    <td>@foreach($users as $data){{$data->username}}@endforeach</td>
+                    <td>@foreach($users as $data){{$data->username}}@endforeach</td>
+                    <td>@foreach($users as $data){{$data->username}}@endforeach</td>
+                    <td>@foreach($users as $data){{$data->username}}@endforeach</td>
 
+                </tr>
+                <tr>
+                    <td>@foreach($users as $data){{$data->username}}@endforeach</td>
+                    <td>@foreach($users as $data){{$data->username}}@endforeach</td>
+                    <td>@foreach($users as $data){{$data->username}}@endforeach</td>
+                    <td>@foreach($users as $data){{$data->username}}@endforeach</td>
+                </tr>
+            </table>
+        </div>
 	</body>
 </html>
 @endsection

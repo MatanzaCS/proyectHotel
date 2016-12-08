@@ -125,13 +125,46 @@ $(function () {
 		</script>
 	</head>
 	<body>
+    <!--
         <div style="margin-bottom:250px;">
             <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
         </div>
         <div>
             <div id="container2" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div>
         </div>
+        -->
+        <button class="btn btn-danger">Ver Grafica</button>
+        <button class="btn btn-info">Actualizar Reporte</button>
+        <div class="table-responsive">
+            <table class="table">
+                <tr>
+                    <td>ID</td>
+                    <td>Tipo de Reserva</td>
+                    <td>Fecha de Reserva</td>
+                    <td>Fecha de Ingreso</td>
+                    <td>Fecha de Salida</td>
+                    <td>Costo de alojamiento</td>
+                    <td>Fecha de Pago</td>
+                    <td>Tipo de Comprobante</td>
+                    <td>Estado</td>
+                </tr>
+                <tr>
+                @foreach($reservas as $data)
+                    <td>{{ $data->id }}</td>
+                    <td>{{ $data->tipo_reserva }}</td>
+                    <td>{{ $data->fecha_reserva }}</td>
+                    <td>{{ $data->fecha_ingresa }}</td>
+                    <td>{{ $data->fecha_salida }}</td>
+                    <td>{{ $data->costo_alojamiento }}</td>
+                    <td>{{ $data->FechaPago }}</td>
+                    <td>{{ $data->TipoComprobante_id }}</td>
+                    <td>{{ $data->estado }}</td>
+                @endforeach
+                </tr>
 
+
+            </table>
+        </div>
 	</body>
 </html>
 @endsection

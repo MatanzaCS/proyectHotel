@@ -23,7 +23,7 @@
             <td><img src="{{asset('images/habitaciones.jpg')}}" style="width:250px; margin:15px;    " class="img-responsive img-rounded" alt="">            
             </td>
             <td contenedor-info><p class="parrafo">Estos son los reportes de Habitaciones</p>
-            <button class="btn btn-info">Ver Reporte</button>
+            <a href="{{url('admin/ReporteHabitacion')}}"><button class="btn btn-info">Ver Reporte</button></a>
             </td>
         </tr>
         <tr>
@@ -31,7 +31,7 @@
                 <img src="{{asset('images/servicios.jpg')}}" style="width:250px; margin:15px;"  class="img-responsive img-rounded" alt="">
             </td>
             <td><p class="parrafo">Estos son los reportes de Servicios</p>
-            <button class="btn btn-info">Ver Reporte</button>
+            <a href="{{url('admin/ReporteServicios')}}"><button class="btn btn-info">Ver Reporte</button></a>
             </td>
         </tr>
         <tr>
@@ -39,7 +39,7 @@
                 <img src="{{asset('images/usuarios.jpg')}}" style="width:250px; margin:15px;" class="img-responsive img-rounded" alt="">
             </td>
             <td><p class="parrafo">Estos son los reportes de Usuario</p>
-            <button class="btn btn-info">Ver Reporte</button>
+            <a href="{{url('admin/ReporteUsuarios')}}"><button class="btn btn-info">Ver Reporte</button></a>
             </td>
         </tr>
         <tr>
@@ -47,7 +47,7 @@
                 <img src="{{asset('images/reservas.jpg')}}" style="width:250px; margin:15px;" class="img-responsive img-rounded" alt="">
             </td>
             <td><p class="parrafo">Estos son los reportes de Reservas</p>
-            <button class="btn btn-info">Ver Reporte</button>
+            <a href="{{url('admin/ReporteReservas')}}"><button class="btn btn-info">Ver Reporte</button></a>
             </td>
         </tr>
     </table>

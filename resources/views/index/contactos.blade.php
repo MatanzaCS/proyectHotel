@@ -5,7 +5,7 @@ $(document).ready(function() {
   $('#con').addClass('current');
 });
 </script>
-@endsection
+
 
 
 <!DOCTYPE html>
