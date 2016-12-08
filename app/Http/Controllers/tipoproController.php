@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\TipoProducto;
+use App\tipo_producto;
 use App\Http\Requests;
 
 class tipoproController extends Controller
@@ -16,7 +16,7 @@ class tipoproController extends Controller
      */
     public function index()
     {
-        $tipos = TipoProducto::all();
+        $tipos = tipo_producto::all();
         $general[] =$tipos;
         return view('gestor.tipopro.lista')->with('datos', $general);
     }
@@ -47,7 +47,7 @@ class tipoproController extends Controller
             $file -> move($path,$name);
         }
 
-        $tipos = new TipoProducto($request->all());
+        $tipos = new tipo_producto($request->all());
         $tipos->foto = $name;
         $tipos->save();
         return redirect('admin/tipopro/create');
@@ -73,7 +73,7 @@ class tipoproController extends Controller
     public function edit($id)
     {
         
-        $tipos=TipoProducto::find($id);
+        $tipos=tipo_producto::find($id);
       
         
        return view('gestor.tipopro.edit')->with('tipos',$tipos);
@@ -90,7 +90,7 @@ class tipoproController extends Controller
     public function update(Request $request, $id)
     {
                   
-           $tipos=TipoProducto::find($id);
+           $tipos=tipo_producto::find($id);
             $tipos =fill($request->all());
             $tipos->save();
          return redirect('admin/tipopro');
@@ -109,7 +109,7 @@ class tipoproController extends Controller
     public function destroy($id)
     {
              
-      $tipos = TipoProducto::find($id);
+      $tipos = tipo_producto::find($id);
       $tipos->delete(); 
       return redirect('admin/tipopro');
     }

@@ -130,6 +130,7 @@ Route::group(['prefix'=> '/admin', 'middleware' => [ 'web', 'auth' ]], function(
 		'as'	=>	'admin.tiposer.destroy'
 		]);
 	//route: Controller TIPO PRODUCTO
+	Route::resource('tipo_producto','tipoproController');
 	Route::resource('tipopro','tipoproController');
 	Route::get('tipopro/editar', 'tipoproController@vista');
 	Route::get('tipopro/editar/{id}', 'tipoproController@editardatos');

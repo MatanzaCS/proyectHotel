@@ -74,21 +74,17 @@
                   </li>
                   <li><a><i class="fa fa-user"></i> REGISTROS <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
+                    <li><a href="{{ url('admin/cliente/create') }}">Consumos</a></li>
                     <li><a><i class="fa fa-user"></i> Clientes <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="{{ url('admin/cliente/create') }}">Agregar Cliente</a></li>
                       <li><a href="{{ url('admin/cliente') }}">Lista Clientes</a></li>
-                      <li><a href="{{ url('admin/tipodoc') }}">docuemtnos</a></li>
-                      <li><a href="{{ url('admin/cliente') }}">Clientes</a></li>
                       <li><a href="{{ url('admin/procedencia') }}">Procedencias</a></li></ul>
                       </li>
 
-                      <li><a><i class="fa fa-user"></i> Consumos <span class="fa fa-chevron-down"></span></a>
+                      <li><a><i class="fa fa-user"></i> Productos <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="{{ url('admin/cliente/create') }}">Agregar Cliente</a></li>
-                      <li><a href="{{ url('admin/cliente') }}">Lista Clientes</a></li>
-                      <li><a href="{{ url('admin/tipodoc') }}">docuemtnos</a></li>
-                      <li><a href="{{ url('admin/tipopro') }}">lista productos</a></li>
+                     <li><a href="{{ url('admin/tipopro') }}">lista productos</a></li>
                       <li><a href="{{ url('admin/tipopro/create') }}">Tipo Prodcuto</a></li></ul>
                       </li>
                     <li><a><i class="fa fa-user"></i> Datos Personas <span class="fa fa-chevron-down"></span></a>
