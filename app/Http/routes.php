@@ -17,6 +17,8 @@ Route::get('/', function () {
 Route::get('/habitaciones', function () {
 	    return view('index.habitaciones');
 	});
+Route::get('habitaciones', 'TipoHabController@principal');
+
 Route::get('/servicios', function () {
 	    return view('index.servicios');
 	});

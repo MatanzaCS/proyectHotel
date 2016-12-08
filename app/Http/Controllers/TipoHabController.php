@@ -19,6 +19,12 @@ class TipoHabController extends Controller
         $general[] =$tipos;
         return view('gestor.tipohab.lista')->with('datos', $general);
     }
+    public function principal()
+    {
+        $tipos = Tipohabitacion::all();
+        $general[] =$tipos;
+        return view('index.habitaciones')->with('datos', $general);
+    }
 
     /**
      * Show the form for creating a new resource.

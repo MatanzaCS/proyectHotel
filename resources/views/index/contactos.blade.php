@@ -26,7 +26,7 @@ $(document).ready(function() {
 
 	<div class="container">
 		<section class="main">
-			<article class="col-xs-12">
+			<article class="12u">
 				<p>
 				Si tienes alguna pregunta, por favor contáctanos vía email o telefónicamente. Te responderemos tan pronto como sea posible. Esperamos con interés su contacto.
 				</p>
@@ -34,13 +34,13 @@ $(document).ready(function() {
 		</section>
 	<!--Seccion Mapa-Numeros-->
 	<div class="row">
-			<div class="ol-md-6">
+			<div class="6u 12u">
 				<p>
 				Mediante  este  formulario  puede realizar cualquier consulta que  tenga con  respecto al hostal y sus servicios.
 				En este  formulario NO debe solicitar reservas, para ello esta el formulario.
 				</p>
 			</div>
-			<div class="col-md-6">
+			<div class="6u 12u">
 				<p>
 					Telefono: 053-470352
 					Celular: 953 660 708
