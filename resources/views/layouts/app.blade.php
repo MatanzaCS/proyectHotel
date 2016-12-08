@@ -13,6 +13,7 @@
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
     
     <link href="{{asset('auth/css/style.css')}}" rel='stylesheet' type='text/css'>
+    <link href="{{asset('panel/build/css/stil_login.css')}}" rel='stylesheet' type='text/css'>
 
 
 

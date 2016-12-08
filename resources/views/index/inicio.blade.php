@@ -28,7 +28,7 @@ $(document).ready(function() {
                             <section class="4u 12u(narrower)">
                                 <div class="box highlight">
                                     <i class="icon major fa-pencil"></i>
-                                    <h3>Also Important</h3>
+                                    <h3>kakaka</h3>
                                     <p>Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.</p>
                                 </div>
                             </section>

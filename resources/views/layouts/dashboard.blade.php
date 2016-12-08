@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="{{asset('panel/jqvmap/dist/jqvmap.min.css')}}" />
     <!-- Custom Theme Style -->
     <link rel="stylesheet" href="{{asset('panel/build/css/custom.min.css')}}" />
+    
     <link rel="stylesheet" href="{{asset('panel/build/css/estilo.css')}}" />
 
     <script type="text/javascript" src="../js/jquery.min.js"></script>

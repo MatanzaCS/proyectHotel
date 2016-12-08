@@ -16,6 +16,7 @@
         <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
         <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
     </head>
+    
     <body>
         <div id="page-wrapper">
 
@@ -38,7 +39,9 @@
                         </nav>
 
                 </div>
-
+    <a href="{{ url('/admin') }}" class="btn-sing">
+        <i class="fa fa-user" >Entrar</i>
+    </a>
     @yield('content')
 
    <!-- Footer -->
