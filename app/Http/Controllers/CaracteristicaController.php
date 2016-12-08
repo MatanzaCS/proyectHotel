@@ -41,16 +41,16 @@ class CaracteristicaController extends Controller
      */
     public function store(Request $request)
     {
-         if($request->file('icono'))
+         if($request->file('foto'))
         {
-            $file = $request -> file('icono');
-            $name = 'caracteristicas_'. time() . '.' .$file->getClientOriginalExtension();
+            $file = $request -> file('foto');
+            $name ='caracteristicas_'. time() . '.' .$file->getClientOriginalExtension();
             $path=public_path() . "/imagen/Caracteristicas/";
             $file -> move($path,$name);
         }
 
         $caracteristica = new Caracteristica($request->all());
-        $caracteristica->icono=$name;
+        $caracteristica->foto=$name;
         $caracteristica->save();
         return redirect('admin/caracteristicas');
     }
@@ -74,7 +74,10 @@ class CaracteristicaController extends Controller
      */
     public function edit($id)
     {
-        //
+        
+        $caracteristica=Caracteristica::find($id);
+      
+        return view('gestor.caracteristicas.edit')->with('caracteristica',$caracteristica);
     }
 
     /**
@@ -86,7 +89,23 @@ class CaracteristicaController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        
+         if($request->file('foto'))
+        {
+            $file = $request -> file('foto');
+            $name ='caracteristicas_'. time() . '.' .$file->getClientOriginalExtension();
+            $path=public_path() . "/imagen/Caracteristicas/";
+            $file->move($path,$name);
+        }
+        
+        $caracteristica =Caracteristica::find($id);
+        $caracteristica = $request->all();
+        $caracteristica->foto=$name;
+        $caracteristica->save();
+        return redirect('admin/caracteristicas');
+
+      
+         
     }
 
     /**

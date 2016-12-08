@@ -8,5 +8,5 @@ class Caracteristica extends Model
 {
     //
     public $timestamps= false;
-    protected $fillable = ['nombre','icono'];
+    protected $fillable = ['nombre','foto'];
 }

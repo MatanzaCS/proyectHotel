@@ -20,21 +20,21 @@ $(document).ready(function() {
                         <div class="row 200%">
                             <section class="4u 12u(narrower)">
                                 <div class="box highlight">
-                                    <i class="icon major fa-paper-plane"></i>
+                                    <i class="icon  fa-paper-plane"></i>
                                     <h3>This Is Important</h3>
                                     <p>Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.</p>
                                 </div>
                             </section>
                             <section class="4u 12u(narrower)">
                                 <div class="box highlight">
-                                    <i class="icon major fa-pencil"></i>
+                                    <i class="icon  fa-pencil"></i>
                                     <h3>kakaka</h3>
                                     <p>Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.</p>
                                 </div>
                             </section>
                             <section class="4u 12u(narrower)">
                                 <div class="box highlight">
-                                    <i class="icon major fa-wrench"></i>
+                                    <i class="icon  fa-wrench"></i>
                                     <h3>Probably Important</h3>
                                     <p>Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.</p>
                                 </div>
