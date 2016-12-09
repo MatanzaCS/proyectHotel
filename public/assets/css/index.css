@@ -1,3 +1,12 @@
+.img-responsive{
+	width: 100%;
+	height: auto;
+}
+.cont-hab{
+	width: 90%;
+	margin:20px 0;
+	
+}
 .cont-reserva{
 	display: block;
 	position: absolute;
@@ -29,8 +38,8 @@
 	position:fixed;
 	top:10px;
 	right:10px;
-	background-color: red;
-	width: 40px;
+	
+	width: 150px;
 	height: 40px;
 	border-radius: 5px;
 	padding: 10px;

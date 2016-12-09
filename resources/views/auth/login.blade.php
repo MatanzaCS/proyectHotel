@@ -31,7 +31,7 @@
                         </section>
                          <section class="row cont-inputs">
                             <div class="col-xs-3">
-                            <i class="fa fa-user st" aria-hidden="true"></i>
+                            <i class="fa fa-lock st" aria-hidden="true"></i></i>
                             </div>
                             <div class="col-xs-9">
                                 <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
@@ -53,9 +53,13 @@
 
                         <div class="form-group">
                             <div class="col-md-12">
+
+                            
                                 <button type="submit" class="btn btn-primary">
                                     <i class="fa fa-btn fa-sign-in"></i> Iniciar
                                 </button>
+
+
                                 <a href="/" class="btn btn-danger">
                                     <i class="fa fa-btn fa-sign-out"></i> Salir
                                 </a>

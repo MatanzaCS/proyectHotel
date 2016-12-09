@@ -9,8 +9,8 @@
             <input type="text" id="nombre" name="nombre" class="form-control" />
         </div>
        <div class="form-group">
-            <label for="icono">foto</label>
-            <input type="file" name="icono" class="" />
+            <label for="foto">foto</label>
+            <input type="file" name="foto" class="" />
         </div>
         
         <button type="submit">Guardar</button>
