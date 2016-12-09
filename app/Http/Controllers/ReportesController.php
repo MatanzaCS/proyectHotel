@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
+use App\Reportes;
+
 use DB;
 
 class ReportesController extends Controller
@@ -35,8 +37,17 @@ class ReportesController extends Controller
     }
     public function ReporteHabitacion()
     {
-        $habitaciones=DB::table('habitacions')->get();
-        return view('gestor.reportes.habitaciones',compact('habitaciones'));
+        
+        //$tipo_hab=Reportes::Buscar();
+        //$habitaciones=DB::table('habitacions')->get();
+        //return view('gestor.reportes.habitaciones',compact('tipo_hab'));
+        //return view('gestor.reportes.habitaciones')->with("tipo_hab",$tipo_hab);
+        $resultado =\DB::table('habitacions')
+            ->join('tipohabitacions','habitacions.TipoHabitacion_id','=','tipohabitacions.id')
+            ->select('habitacions.*','tipohabitacions.nombre')  
+            ->get();
+        //dd($resultado);
+        return view('gestor.reportes.habitaciones')->with("resultado",$resultado);
     }
     public function ReporteServicios()
     {

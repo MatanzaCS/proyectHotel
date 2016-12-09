@@ -18,8 +18,14 @@ class Reportes extends Model
         'fecha_salida',
         'estado'
     ];
-    public function scopeBuscar($id)
+    /*
+    public function scopeBuscar($query)
     {
-        
+        //"select habitacions.numero,tipohabitacions.Nombre from habitacions,tipohabitacions where habitacions.TipoHabitacion_id=tipohabitacions.id"
+        $resultado=$query->where('id',1);
+        //$resultado=$query->where('TipoHabitacion_id','=','1');
+        //return $resultado;
+        return $resultado;
     }
+    */
 }

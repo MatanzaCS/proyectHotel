@@ -21,7 +21,7 @@ $(function () {
             x: -20
         },
         xAxis: {
-            categories: [@foreach($habitaciones as $data){{ $data->id }}@endforeach]
+            categories: []
         },
         yAxis: {
             title: {
@@ -137,14 +137,15 @@ $(function () {
                     <td>Estado</td>
                     <td>Tipo de Habitacion</td>
                 </tr>
+                @foreach($resultado as $data)
                 <tr>
-                    <td>@foreach($habitaciones as $data){{$data->id}}@endforeach</td>
-                    <td>@foreach($habitaciones as $data){{$data->numero}}@endforeach</td>
-                    <td>@foreach($habitaciones as $data){{$data->piso}}@endforeach</td>
-                    <td>@foreach($habitaciones as $data){{$data->estado}}@endforeach</td>
-                    <td>@foreach($habitaciones as $data){{$data->TipoHabitacion_id}}@endforeach</td>
+                    <td>{{$data->id}}</td>
+                    <td>{{$data->numero}}</td>
+                    <td>{{$data->piso}}</td>
+                    <td>{{$data->estado}}</td>
+                    <td>{{$data->nombre}}</td>
                 </tr>
-
+                @endforeach
             </table>
         </div>
 	</body>
