@@ -64,7 +64,10 @@ class ReportesController extends Controller
     {
         return view('gestor.reportes.mensual');
     }
-    //Reporte
+    public function buscar_tipoHab($id)
+    {
+        $tipo_hab=DB::table('tipohabitacions')->get();
+    }
 
     /**
      * Show the form for creating a new resource.

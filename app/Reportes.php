@@ -18,4 +18,8 @@ class Reportes extends Model
         'fecha_salida',
         'estado'
     ];
+    public function scopeBuscar($id)
+    {
+        
+    }
 }
