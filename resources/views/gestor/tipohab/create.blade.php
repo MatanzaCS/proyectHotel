@@ -20,10 +20,7 @@
             <label for="foto">foto</label>
             <input type="file" name="foto" class="" />
         </div>
-        <div>
-            <label for="Descripcion">Caracteristicas de la Habitacion</label>
-            <input type="text" id="caracteristica_id" name="caracteristica_id" class="form-control" />
-        </div>
+        
         
         <button type="submit">Guardar</button>
     </form>

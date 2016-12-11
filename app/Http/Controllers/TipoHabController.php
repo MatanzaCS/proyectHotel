@@ -55,7 +55,7 @@ class TipoHabController extends Controller
         $tipos = new Tipohabitacion($request->all());
         $tipos->foto = $name;
         $tipos->save();
-        return redirect('admin/tipohab/create');
+        return redirect('admin/tipohab');
     }
 
     /**
@@ -96,7 +96,8 @@ class TipoHabController extends Controller
     {
     
          $tipos=Tipohabitacion::find($id);
-       
+        $name = 'tipohabitacion_'. time() . '.' .$file->getClientOriginalExtension();
+        $request-> file ('foto')->move('Imagen',$name);
         $tipos->Nombre=$request->Nombre;
         $tipos->Descripcion=$request->Descripcion;
         $tipos->precio_habitacion=$request->precio_habitacion;
