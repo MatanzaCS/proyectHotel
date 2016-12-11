@@ -33,7 +33,7 @@ Route::get('/nosotros', function () {
 	});
 // route de la fecha
 Route::post('/test/save', ['as' => 'save-date',
-                           'uses' => 'DateController@showDate', 
+                           'uses' => 'DateController@showDate',
                             function () {
                                 return '';
                             }]);
@@ -54,17 +54,17 @@ Route::group(['prefix'=> '/admin', 'middleware' => [ 'web', 'auth' ]], function(
 	Route::resource('habitaciones','HabitacionController');
 	Route::get('habitaciones/update/{id}',[
 		'uses'	=>	'HabitacionController@update',
-		'as'	=>	'admin.habitaciones.update'  
+		'as'	=>	'admin.habitaciones.update'
 	]);
 	Route::get('habitaciones/{id}/destroy',[
 		'uses'	=>	'HabitacionController@destroy',
-		'as'	=>	'admin.habitaciones.destroy'  
+		'as'	=>	'admin.habitaciones.destroy'
 	]);
-	
+
 	Route::resource('caracteristicas','CaracteristicaController');
 		Route::get('caracteristicas/{id}/destroy',[
 		'uses'	=>	'CaracteristicaController@destroy',
-		'as'	=>	'admin.caracteristicas.destroy'  
+		'as'	=>	'admin.caracteristicas.destroy'
 	]);
 		Route::get('caracteristicas/{id}/update',[
 			'uses'	=>	'CaracteristicaController@update',
@@ -83,7 +83,7 @@ Route::group(['prefix'=> '/admin', 'middleware' => [ 'web', 'auth' ]], function(
 
 		Route::get('tipohab/{id}/destroy',[
 		'uses'	=>	'TipoHabController@destroy',
-		'as'	=>	'admin.tipohab.destroy'  
+		'as'	=>	'admin.tipohab.destroy'
 	]);
 
 
@@ -97,7 +97,7 @@ Route::group(['prefix'=> '/admin', 'middleware' => [ 'web', 'auth' ]], function(
 	Route::resource('personas','personaController');
 		Route::get('personas/{id}/destroy',[
 		'uses'	=>	'personaController@destroy',
-		'as'	=>	'admin.personas.destroy'  
+		'as'	=>	'admin.personas.destroy'
 	]);
 
 
@@ -105,16 +105,16 @@ Route::group(['prefix'=> '/admin', 'middleware' => [ 'web', 'auth' ]], function(
 
 
 	Route::resource('Servicios','servicioController');
-	
+
 	Route::get('Servicios/{id}/destroy',[
 		'uses'	=>	'servicioController@destroy',
-		'as'	=>	'admin.Servicios.destroy'  
+		'as'	=>	'admin.Servicios.destroy'
 	]);
-	
+
 	//Route::put('habitaciones/update/{id}','HabitacionController@update');
 	// controlador de cliente
 	Route::resource('cliente','ClienteController');
-	
+
 	Route::get('cliente/{id}/destroy',[
 		'uses'	=>	'ClienteController@destroy',
 		'as'	=>	'admin.cliente.destroy'
@@ -122,7 +122,7 @@ Route::group(['prefix'=> '/admin', 'middleware' => [ 'web', 'auth' ]], function(
 
 	//route:Controller Procedencia
 	Route::resource('procedencia','ProcedenciaController');
-	
+
 	Route::get('procepencia/editar', 'ProcedenciaController@vista');
 	Route::get('procepencia/editar/{id}', 'ProcedenciaController@editardatos');
 	Route::get('procedencia/{id}/destroy',[
@@ -158,8 +158,8 @@ Route::group(['prefix'=> '/admin', 'middleware' => [ 'web', 'auth' ]], function(
 	Route::resource('proveedor', 'ProveedorController');
 	Route::get('getalltipos', 'TipoCuentasController@getipos');
 
-	
-	
+
+
 	//RUTAS PARA LOS REPORTES
 	Route::get('MenuReportes','ReportesController@Menu');
 	//Route::get('ReporteMensual','ReportesController@ReporteMensual');
@@ -182,8 +182,11 @@ Route::group(['prefix'=> '/admin', 'middleware' => [ 'web', 'auth' ]], function(
 	Route::get('/', function () {
 	    return view('welcome');
 	});
-	
+
 	Route::get('/home', 'HomeController@index');
 });
 
-
+Route::get('pdf', function () {
+		$pdf =PDF::loadview('vistapdf');
+		return $pdf->download('REPORTES.pdf');
+});
