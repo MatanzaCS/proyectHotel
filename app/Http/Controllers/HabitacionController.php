@@ -49,7 +49,7 @@ class HabitacionController extends Controller
          
         $tipos = new Habitacion($request->all());
         $tipos->save();
-        return redirect('admin/habitaciones/create');
+        return redirect('admin/habitaciones');
     }
 
     /**
@@ -72,10 +72,14 @@ class HabitacionController extends Controller
     public function edit($id)
     {
 
+       // $tipos = Tipohabitacion::all();
         $habitaciones= Habitacion::find($id);
-      
+        
+      //  $general[] = $tipos;
+      //  $general[]=$habitaciones;
+ 
         //return view('gestor.habitaciones.edit',['habitaciones'=>$habitaciones]);
-       return view('gestor.habitaciones.edit')->with('habitaciones',$habitaciones);
+      return view('gestor.habitaciones.edit')->with('habitaciones',$habitaciones);
         
     }
 

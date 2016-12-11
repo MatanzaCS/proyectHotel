@@ -2,7 +2,10 @@
 
 @section('content')
 <div class="container">
-    <h2>Crear habitacion</h2>
+
+                  
+    <h2>Crear habitacion </h2>
+
     <form class="row" method="POST" action="{{ url('admin/habitaciones') }}"  style="max-width: 350px">{{ csrf_field() }}
         <div class="form-group">
             <label for="Nombre">numero</label>
