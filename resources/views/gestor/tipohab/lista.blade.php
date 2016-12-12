@@ -10,6 +10,7 @@
 				<tr>
 					<th>Imagen</th>
 					<th>Nombre</th>
+					<th>Descripcion</th>
 					<th>Precio</th>
 					<th>Accion</th>
 				</tr>
@@ -21,7 +22,6 @@
 	                <td>{{$s->Nombre}} </td>
 					<td>{{$s->Descripcion}}</td>
 	                <td>{{$s->precio_habitacion}}</td>
-					<td></td>
 	                <td>
 	                	<a class="btn btn-success" href="{{ route('admin.tipohab.edit', $s->id) }}" >E</a>
 	                	 <a onclick="return confirm('¿Seguro que desea eliminarlo?')" class="btn btn-danger" href="{{ route('admin.tipohab.destroy', $s->id) }}"   >X</a>
