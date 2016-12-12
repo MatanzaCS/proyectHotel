@@ -73,6 +73,9 @@ class TipoServicioController extends Controller
     public function edit($id)
     {
         //
+         $tipos=Tiposervicio::find($id);
+      
+       return view('gestor.tiposer.edit')->with('tipos',$tipos);
     }
 
     /**
@@ -85,6 +88,15 @@ class TipoServicioController extends Controller
     public function update(Request $request, $id)
     {
         //
+        $tipos=Tiposervicio::find($id);
+        $name = 'tiposer_'. time() . '.' .$file->getClientOriginalExtension();
+        $request-> file ('foto')->move('Imagen',$name);
+        $tipos->Nombre=$request->Nombre;
+        $tipos->Descripcion=$request->Descripcion;
+        $tipos->precio=$request->precio;
+        $tipos->save();
+
+        return redirect('admin/tiposer');
     }
 
     /**
@@ -94,7 +106,21 @@ class TipoServicioController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
+       {
+              
+      $tipos = Tiposervicio::find($id);
+      $tipos->delete(); 
+      return redirect('admin/tiposer');
+    }
+
+    public function vista()
     {
-        //
+        return view('gestor.tiposer.create');
+        
+    }
+    public function editardatos($id)
+    {
+
+        
     }
 }

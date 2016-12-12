@@ -25,6 +25,9 @@
 	                <td>
 	               		  <a class="btn btn-info" href="{{route('admin.tiposer.edit', $s->id)}}"   >E</a>
 	                  	 <a onclick="return confirm('¿Seguro que desea eliminarlo?')" class="btn btn-danger" href="{{ route('admin.tiposer.destroy', $s->id) }}"   >X</a>
+
+	                  	  <a href="{{ route('admin.tiposer.show', $s->id) }}" class="btn btn-info">Ver</a>
+          				  <a href="{{ route('admin.tiposer.edit', $s->id) }}" class="btn btn-primary">Editar</a>
 	                	<!--<button class="btn btn-success" href="{{ url('admin/tiposer/editar/') }}">E</button>
 	                	<button class="btn btn-danger">X</button>-->
 	                </td>

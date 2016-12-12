@@ -131,13 +131,25 @@ Route::group(['prefix'=> '/admin', 'middleware' => [ 'web', 'auth' ]], function(
 		]);
 
 	//route: Controller tipoServicio
-	Route::resource('tiposer','TipoServicioController');
+	/*Route::resource('tiposer','TipoServicioController');
 	Route::get('tiposer/editar', 'TipoServicioController@vista');
 	Route::get('tiposer/editar/{id}', 'TipoServicioController@editardatos');
 	Route::get('tiposer/{id}/destroy',[
 		'uses'	=>	'tipoServicioController@destroy',
 		'as'	=>	'admin.tiposer.destroy'
+		]);*/
+	Route::resource('tiposer', 'TipoServicioController');
+	Route::get('tiposer/editar', 'TipoServicioController@vista');
+	Route::resource('tiposer','TipoServicioController');
+	Route::get('tiposer/update/{id}',[
+			'uses' => 'TipoServicioController@update',
+			'as' => 'admin.tiposer.update'
 		]);
+
+		Route::get('tiposer/{id}/destroy',[
+		'uses'	=>	'TipoServicioController@destroy',
+		'as'	=>	'admin.tiposer.destroy'
+	]);
 	//route: Controller TIPO PRODUCTO
 	Route::resource('tipo_producto','tipoproController');
 	Route::resource('tipopro','tipoproController');
