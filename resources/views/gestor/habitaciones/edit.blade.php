@@ -28,10 +28,10 @@
         
          <div class="form-group">
             <label for="TipoHabitacion_id">Tipo Habitacion</label>
-            <select name="TipoHabitacion_id" class="form-control" >
-               <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>  
+            <select name="TipoHabitacion_id" class="form-control"  >
+                 @foreach($tipos as $tipos)
+                    <option value="{{$tipos->id}}" >{{$tipos->Nombre}}</option>
+                @endforeach
             </select>             
         </div>
        

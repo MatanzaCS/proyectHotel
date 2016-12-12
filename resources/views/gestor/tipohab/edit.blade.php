@@ -10,7 +10,7 @@
         </div>
         <div class="form-group">
               <label for="Descripcion">Descripcion</label>
-            <textarea rows="4" cols="5" id="Descripcion" name="Descripcion"class="form-control" >{{$tipos->Descripcion}}</textarea>
+            <textarea rows="4" cols="5" id="Descripcion" name="Descripcion"class="form-control" style="resize:none" />{{$tipos->Descripcion}}</textarea>
             <label for="Descripcion">Descripcion</label>
             
         </div>

@@ -74,12 +74,12 @@ class HabitacionController extends Controller
 
        // $tipos = Tipohabitacion::all();
         $habitaciones= Habitacion::find($id);
-        
-      //  $general[] = $tipos;
-      //  $general[]=$habitaciones;
- 
-        //return view('gestor.habitaciones.edit',['habitaciones'=>$habitaciones]);
-      return view('gestor.habitaciones.edit')->with('habitaciones',$habitaciones);
+        $tipos= Tipohabitacion::all();
+         
+      return view('gestor.habitaciones.edit')
+      ->with('habitaciones',$habitaciones)  
+      ->with('tipos',$tipos);
+
         
     }
 
