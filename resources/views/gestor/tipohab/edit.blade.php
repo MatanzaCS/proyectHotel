@@ -9,8 +9,10 @@
             <input type="text" id="Nombre" name="Nombre" class="form-control" value="{{$tipos->Nombre}}" />
         </div>
         <div class="form-group">
+              <label for="Descripcion">Descripcion</label>
+            <textarea rows="4" cols="5" id="Descripcion" name="Descripcion"class="form-control" >{{$tipos->Descripcion}}</textarea>
             <label for="Descripcion">Descripcion</label>
-            <input type="text" id="Descripcion" name="Descripcion" class="form-control" value="{{$tipos->Descripcion}}" />
+            
         </div>
         <div class="form-group">
             <label for="precio_habitacion">Precio</label>
@@ -18,7 +20,7 @@
         </div>
         <div class="form-group">
             <label for="foto">foto</label>
-            <input type="file" name="foto" class="" />
+            <input type="file" name="foto" class="" id="foto" value="{{$tipos->foto}}"/>
         </div>
         
         <button type="submit">Editar</button>
