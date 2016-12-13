@@ -27,4 +27,5 @@ class PDFController extends Controller
         return $pdf->download('REPORTES.pdf');
         //return view('vistapdf');
     }
+    
 }

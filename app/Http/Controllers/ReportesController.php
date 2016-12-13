@@ -51,7 +51,6 @@ class ReportesController extends Controller
         $resultado=\DB::table('reportes')
             ->select('id','nombre','fecha_reporte','comentario','pdf')
             ->where('nombre','habitaciones')
-            ->where('pdf','<>','')
             ->get();
         return view('gestor.reportes.habitaciones')->with("resultado",$resultado);
     }
@@ -84,6 +83,25 @@ class ReportesController extends Controller
     public function buscar_tipoHab($id)
     {
         $tipo_hab=DB::table('tipohabitacions')->get();
+    }
+    public function crearReporteHabitacion($id)
+    {
+        $resultado=DB::table('reservas')
+            ->join('habitacions','reservas.habitacion_id','=','habitacions.id')
+            ->join('tipohabitacions','habitacions.TipoHabitacion_id','=','tipohabitacions.id')
+            ->select('reservas.*','habitacions.*','tipohabitacions.nombre')
+            //->where('habitacions.TipoHabitacion_id','reservas')
+            ->get();
+        return view('vistapdf')->with("resultado",$resultado);
+    }
+    public function graficarhabitacion($id)
+    {
+        $resultado=DB::table('reservas')
+            ->join('habitacions','reservas.habitacion_id','=','habitacions.id')
+            ->select('reservas.*','habitacions.numero')
+            ->where('reservas.habitacion_id',$id)
+            ->get();
+        return view('vistapdf')->with("resultado",$resultado);
     }
 
     /**

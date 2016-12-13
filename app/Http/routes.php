@@ -195,6 +195,14 @@ Route::group(['prefix'=> '/admin', 'middleware' => [ 'web', 'auth' ]], function(
 			'uses'	=>	'ReportesController@show',
 			'as'	=>	'admin.reportes.show'
 		]);
+	Route::get('ReporteHabitacion/reportes/graficar={id}',[
+			'uses'	=>	'ReportesController@graficar',
+			'as'	=>	'admin.reportes.graficar'
+		]);
+	Route::get('ReporteHabitacion/generar={id}',[
+			'uses'	=>	'ReportesController@crearReporteHabitacion',
+			'as'	=>	'admin.reportes.reportehabitacion'
+		]);
 
 
 	Route::get('/', function () {
