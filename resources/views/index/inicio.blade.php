@@ -7,48 +7,89 @@ $(document).ready(function() {
 @section('content')
 
     <!-- Banner -->
+  
+   
                 <section id="banner">
                     <header>
                         <h2><em>Hotel Hostal Keymar Spa Viva la Experiencia ...</em></h2>
                         <a href="#" class="button">Reserve Ahora</a>
                     </header>
                 </section>
-
+<!-- Gigantic Heading -->
+                <section class="wrapper style2">
+                    <div class="container">
+                        <header class="major">
+                            <h2>Contamos con los mejores servicios</h2>
+                            <p>Tenemos todo lo usted necesita a su alcance</p>
+                        </header>
+                    </div>
+                </section>
             <!-- Highlights -->
                 <section class="wrapper style1">
                     <div class="container">
-                        <div class="row 200%">
+                        <div class="row">
                             <section class="4u 12u(narrower)">
                                 <div class="box highlight">
-                                    <i class="icon  fa-paper-plane"></i>
-                                    <h3>This Is Important</h3>
-                                    <p>Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.</p>
+                                    <h3>Desayunos</h3>
+                                    <img id="imap" src="images/d01.jpg"><br><br>
+                                    <p>Desayuno Americano y Continental</p>
                                 </div>
                             </section>
                             <section class="4u 12u(narrower)">
                                 <div class="box highlight">
-                                    <i class="icon  fa-pencil"></i>
-                                    <h3>kakaka</h3>
-                                    <p>Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.</p>
+                                    <h3>Cafeteria</h3>
+                                    <img id="imap" src="images/d02.jpg"><br><br>
+                                <!--<img id="imap" src="../images/habitaciones.jpg">-->
+                                <p>Servicio de Cafeteria Bar</p>
                                 </div>
                             </section>
                             <section class="4u 12u(narrower)">
                                 <div class="box highlight">
-                                    <i class="icon  fa-wrench"></i>
-                                    <h3>Probably Important</h3>
-                                    <p>Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.</p>
+                                    <h3>Spa</h3>
+                                    <img id="imap" src="images/spa01.jpg"><br><br>
+                                    <p>Ofrecemos Exclusivo salon de Spa</p>
                                 </div>
                             </section>
+
+                         
                         </div>
                     </div>
                 </section>
+
+
+                
+        <!-- Feature 1 -->
+			<article id="first" class="container box01 style7 right">
+				<a href="#" class="image fit"><img src="images/pro01.jpg" alt="" /></a>
+				<div class="inner">
+					<header>
+						<center><h2>Tenemos<br />
+						Promociones para ti</h2></center>
+					</header>
+					
+				</div>
+			</article>
+
+		<!-- Feature 2 -->
+			<article class="container box01 style7 left">
+				<a href="#" class="image fit"><img src="images/pro02.jpg" alt="" /></a>
+				<div class="inner">
+					<header>
+						<center><h2>Descuentos<br />
+						por elegir nuestros servicios</h2></center>
+                        <p>todos los fines de semana los esperamos para nuestras promociones </p>                                                                                                         </p>
+					</header>
+					
+				</div>
+			</article>
+        
 
             <!-- Gigantic Heading -->
                 <section class="wrapper style2">
                     <div class="container">
                         <header class="major">
-                            <h2>A gigantic heading you can use for whatever</h2>
-                            <p>With a much smaller subtitle hanging out just below it</p>
+                            <h2>Tenemos todo tipo de habitaciones</h2>
+                            <p>visitanos estaremos esperandolo</p>
                         </header>
                     </div>
                 </section>
@@ -59,42 +100,28 @@ $(document).ready(function() {
                         <div class="row">
                             <section class="6u 12u(narrower)">
                                 <div class="box post">
-                                    <a href="#" class="image left"><img src="images/pic01.jpg" alt="" /></a>
+                                    <h3>Decoraciones</h3>
+                                    <a href="#" class="image left"><img src="images/dec04.jpg" alt="" /></a>
                                     <div class="inner">
-                                        <h3>The First Thing</h3>
-                                        <p>Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.</p>
-                                    </div>
+                            </div>
+                            
                                 </div>
+                                <p>Tenemos las mejores decoraciones para toda ocasion</p>
                             </section>
                             <section class="6u 12u(narrower)">
                                 <div class="box post">
-                                    <a href="#" class="image left"><img src="images/pic02.jpg" alt="" /></a>
+                                    <h3>Lujosas</h3>
+                                    <a href="#" class="image left"><img src="images/dec05.jpg" alt="" /></a>
                                     <div class="inner">
-                                        <h3>The Second Thing</h3>
-                                        <p>Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.</p>
+                                        
+                                        
                                     </div>
                                 </div>
+                                <p>Tenemos habitaciones espaciosas</p>
                             </section>
+                           
                         </div>
-                        <div class="row">
-                            <section class="6u 12u(narrower)">
-                                <div class="box post">
-                                    <a href="#" class="image left"><img src="images/pic03.jpg" alt="" /></a>
-                                    <div class="inner">
-                                        <h3>The Third Thing</h3>
-                                        <p>Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.</p>
-                                    </div>
-                                </div>
-                            </section>
-                            <section class="6u 12u(narrower)">
-                                <div class="box post">
-                                    <a href="#" class="image left"><img src="images/pic04.jpg" alt="" /></a>
-                                    <div class="inner">
-                                        <h3>The Fourth Thing</h3>
-                                        <p>Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.</p>
-                                    </div>
-                                </div>
-                            </section>
+                        
                         </div>
                     </div>
                 </section>
@@ -102,10 +129,8 @@ $(document).ready(function() {
             <!-- CTA -->
                 <section id="cta" class="wrapper style3">
                     <div class="container">
-                        <header>
-                            <h2>Are you ready to continue your quest?</h2>
-                            <a href="#" class="button">Insert Coin</a>
-                        </header>
+                        
                     </div>
                 </section>
+
 @endsection

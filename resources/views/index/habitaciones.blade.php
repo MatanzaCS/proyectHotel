@@ -11,9 +11,14 @@
 			<div>{{$s->Nombre}} </div>
 			<div>{{$s->Descripcion}}</div>
 	    	<div>{{$s->precio_habitacion}}</div>
+			
 		</div>
 	</div>
 	@endforeach
+
+	<p>Esto es un documento para mostrar cómo centrar una imagen.
+
+</p>
 </section>
 
 <script>

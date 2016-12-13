@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-md-12">
             <div class="">
-                <div class="titulo">Login</div>
+                <div class="titulo">Iniciar Sesion</div>
                 <div class="">
                     <form class="" role="form" method="POST" action="{{ url('/login') }}">
                         {{ csrf_field() }}
@@ -15,7 +15,7 @@
                             </div>
                             <div class="col-xs-9">
                                 <div class="form-group{{ $errors->has('username') ? ' has-error' : '' }}">
-                                    <label id="icon" for="username" class="col-md-4 control-label">usuario</label>
+                                    <label id="icon" for="username" class="col-md-4 control-label">Usuario</label>
 
                                     <div class="col-xs-12">
                                         <input id="usuario" type="text" class="form-control" name="username" value="{{ old('username') }}">

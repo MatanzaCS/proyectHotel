@@ -47,6 +47,63 @@
 	body {
 		-webkit-text-size-adjust: none;
 	}
+/*---nuevo estilo*/
+.box01.style7 {
+			
+			padding: 6em;
+		}
+.box01.style7 .image {
+				display: block;
+				position: absolute;
+				top: 20px;
+				width: 50%;
+				
+
+				overflow: hidden;
+			}
+
+.box01.style7 .inner > :last-child {
+				margin: 0;
+			}
+
+			.box01.style7.right .image {
+				
+			}
+
+			
+
+			.box01.style7.right .inner {
+				margin-left: 50%;
+				padding-left: 3em;
+			}
+
+			.box01.style7.left .image {
+				right: 0;
+			}
+
+				
+
+			.box01.style7.left .inner {
+				margin-right: 50%;
+				padding-right: 3em;
+			}	
+
+/* box01 */
+
+			.box01 {
+				position: relative;
+				/*margin-top:6em;*/
+			}
+
+
+			.box01.style7.left .inner {
+				padding-right: 2em;
+			}
+
+			.box01.style2 header {
+				padding: 2em;
+			}
+
 
 /* Box Model */
 
@@ -1792,7 +1849,7 @@
 /* Basic */
 
 	body {
-		background: #f7f7f7 url("images/bg01.png");
+		background: #333 url("images/bg01.png");
 	}
 
 		body.is-loading * {
@@ -1807,7 +1864,7 @@
 		}
 
 	body, input, select, textarea {
-		color: #474747;
+		color: #1eb8fb;
 		font-family: 'Source Sans Pro', sans-serif;
 		font-size: 16pt;
 		font-weight: 300;
@@ -1819,13 +1876,13 @@
 		-webkit-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out, opacity 0.2s ease-in-out;
 		-ms-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out, opacity 0.2s ease-in-out;
 		transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out, opacity 0.2s ease-in-out;
-		color: #37c0fb;
+		color: #1f1f1f;
 		text-decoration: none;
 		border-bottom: dotted 1px;
 	}
 
 		a:hover {
-			color: #37c0fb;
+			color: #1f1f1f;
 			border-bottom-color: transparent;
 		}
 
@@ -1897,11 +1954,10 @@
 	}
 
 	header p {
-		color: #999;
+		color: #F9F504;
 		font-size: 1.25em;
-		position: relative;
-		margin-top: -1.25em;
-		margin-bottom: 2.25em;
+		position: center;
+	
 	}
 
 	header.major {
@@ -2036,7 +2092,7 @@
 
 			.image.fit img {
 				display: block;
-				width: 100%;
+				width: 80%;
 			}
 
 		.image.featured {
@@ -2081,8 +2137,8 @@
 			color: #fff;
 			border-radius: 100%;
 			display: inline-block;
-			width: 5em;
-			height: 5em;
+			width: 10em;
+			height: 10em;
 			line-height: 5em;
 			box-shadow: 0 0 0 7px white, 0 0 0 8px #e0e0e0;
 			margin: 0 0 2em 0;
@@ -2226,7 +2282,7 @@
 		background-image: -ms-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.15)), url("images/bg01.png");
 		background-image: linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.15)), url("images/bg01.png");
 		background-color: #37c0fb;
-		border-radius: 5px;
+		border-radius: 0px;
 		border: 0;
 		color: #fff;
 		cursor: pointer;
@@ -2299,10 +2355,15 @@
 			font-size: 0.8em;
 		}
 
+
 /* Box */
 
 	.box.highlight {
 		text-align: center;
+	}
+	.box.highlight.imap{
+		width: 800px;
+		height: 900px;
 	}
 
 	.box.post {
@@ -2325,7 +2386,7 @@
 			}
 
 		.box.post .image {
-			width: 30%;
+			width: 80%;
 			margin: 0;
 		}
 
@@ -2520,16 +2581,13 @@
 
 /* Wrapper */
 
-	.wrapper {
-		padding: 5em 0 3em 0;
-	}
 
 		.wrapper.style1 {
-			background: #fff;
+			background: #082930;
 		}
 
 		.wrapper.style2 {
-			background-color: #fff;
+			background-color: #F34108;
 			background-image: url("images/bg02.png"), url("images/bg03.png"), url("images/bg01.png");
 			background-position: top left,						bottom left,					top left;
 			background-size: 100% 6em,						100% 6em,						auto;
@@ -2537,7 +2595,7 @@
 		}
 
 		.wrapper.style3 {
-			background-color: #37c0fb;
+			
 			background-image: -moz-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.15)), url("images/bg01.png");
 			background-image: -webkit-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.15)), url("images/bg01.png");
 			background-image: -ms-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.15)), url("images/bg01.png");
@@ -2675,9 +2733,7 @@
 
 		/* Wrapper */
 
-			.wrapper {
-				padding: 3em 0 1em 0;
-			}
+		
 
 		/* CTA */
 
@@ -2771,6 +2827,9 @@
 
 			.box.post .image {
 				width: 20%;
+			}
+			.box.highlight.imap{
+				
 			}
 
 		/* Header */
@@ -3109,7 +3168,7 @@
 		/* Box */
 
 			.box.highlight {
-				padding-left: calc(4em + 30px);
+				padding-left: calc(4em + 100px);
 			}
 
 			.box.post .inner {
