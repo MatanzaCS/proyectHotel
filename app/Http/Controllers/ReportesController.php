@@ -22,7 +22,7 @@ class ReportesController extends Controller
         //$reportes = Reportes::all();
        // return view('gestor.reportes.diario');
     }
-    
+
     public function ReporteMensual()
     {
         return view('gestor.reportes.mensual');
@@ -37,22 +37,23 @@ class ReportesController extends Controller
     }
     public function ReporteHabitacion()
     {
-        
+
         //$tipo_hab=Reportes::Buscar();
         //$habitaciones=DB::table('habitacions')->get();
         //return view('gestor.reportes.habitaciones',compact('tipo_hab'));
         //return view('gestor.reportes.habitaciones')->with("tipo_hab",$tipo_hab);
         /*$resultado =\DB::table('habitacions')
             ->join('tipohabitacions','habitacions.TipoHabitacion_id','=','tipohabitacions.id')
-            ->select('habitacions.*','tipohabitacions.nombre')  
+            ->select('habitacions.*','tipohabitacions.nombre')
             ->get();
-        */
+
         //dd($resultado);
         $resultado=\DB::table('reportes')
             ->select('id','nombre','fecha_reporte','comentario','pdf')
             ->where('nombre','habitaciones')
             ->get();
         return view('gestor.reportes.habitaciones')->with("resultado",$resultado);
+        */
     }
     public function ReporteServicios()
     {
@@ -112,7 +113,7 @@ class ReportesController extends Controller
     public function create()
     {
         //return view('gestor.reportes.diario');
-        //return "sadadsdad"; 
+        //return "sadadsdad";
     }
 
     /**
@@ -136,7 +137,7 @@ class ReportesController extends Controller
     {
         //
     }
-    
+
 
     /**
      * Show the form for editing the specified resource.
