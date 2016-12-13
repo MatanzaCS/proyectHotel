@@ -188,7 +188,7 @@ Route::group(['prefix'=> '/admin', 'middleware' => [ 'web', 'auth' ]], function(
 	Route::get('ReporteUsuarioMensual','ReportesController@ReporteHabAnual');
 	Route::get('ReporteReservaAnual','ReportesController@ReporteHabAnual');
 	Route::get('ReporteReservaMensual','ReportesController@ReporteHabAnual');
-	Route::resource('ReporteHabitacion/pdf','PDFController');
+	/*Route::resource('ReporteHabitacion/pdf','PDFController');
 
 
 	Route::get('ReporteHabitacion/reportes/show={id}',[
@@ -202,7 +202,7 @@ Route::group(['prefix'=> '/admin', 'middleware' => [ 'web', 'auth' ]], function(
 	Route::get('ReporteHabitacion/generar={id}',[
 			'uses'	=>	'ReportesController@crearReporteHabitacion',
 			'as'	=>	'admin.reportes.reportehabitacion'
-		]);
+		]);*/
 
 
 	Route::get('/', function () {
@@ -212,7 +212,7 @@ Route::group(['prefix'=> '/admin', 'middleware' => [ 'web', 'auth' ]], function(
 	Route::get('/home', 'HomeController@index');
 });
 
-Route::get('pdf', function () {
+/*Route::get('pdf', function () {
 		$pdf =PDF::loadview('vistapdf');
 		return $pdf->download('REPORTES.pdf');
-});
+});*/
