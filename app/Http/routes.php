@@ -188,7 +188,13 @@ Route::group(['prefix'=> '/admin', 'middleware' => [ 'web', 'auth' ]], function(
 	Route::get('ReporteUsuarioMensual','ReportesController@ReporteHabAnual');
 	Route::get('ReporteReservaAnual','ReportesController@ReporteHabAnual');
 	Route::get('ReporteReservaMensual','ReportesController@ReporteHabAnual');
+	Route::resource('ReporteHabitacion/pdf','PDFController');
 
+
+	Route::get('ReporteHabitacion/reportes/show={id}',[
+			'uses'	=>	'ReportesController@show',
+			'as'	=>	'admin.reportes.show'
+		]);
 
 
 	Route::get('/', function () {

@@ -105,7 +105,7 @@
                       <li><a href="{{ url('admin/tiposer') }}">Tipos de servicio</a></li>
                     </ul>
                   </li>
-                  <li><a href="{{ url('admin/MenuReportes') }}"><i class="fa fa-pie-chart"></i> Reportes <span class="fa fa-chevron-down"></span></a>
+                  <li><a href=""><i class="fa fa-pie-chart"></i> Reportes <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <!--<li><a href="{{ url('admin/MenuReportes') }}">Menu</a></li>-->
                       <li><a href="{{ url('admin/ReporteHabitacion') }}">Reporte Habitaciones</a></li>
