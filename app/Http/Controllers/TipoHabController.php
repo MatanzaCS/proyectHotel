@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
 use App\Tipohabitacion;
 use App\Http\Requests;
@@ -104,7 +103,7 @@ class TipoHabController extends Controller
         }
         
         $tipos=Tipohabitacion::find($id);
-        $tipos->foto = $name;
+     //   $tipos->foto = $name;
         $tipos->Nombre=$request->Nombre;
         $tipos->Descripcion=$request->Descripcion;
         $tipos->precio_habitacion=$request->precio_habitacion;
