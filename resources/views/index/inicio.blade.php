@@ -17,7 +17,7 @@ $(document).ready(function() {
                 </section>
 <!-- Gigantic Heading -->
                 <section class="wrapper style2">
-                    <div class="container">
+                    <div class="container" >
                         <header class="major">
                             <h2>Contamos con los mejores servicios</h2>
                             <p>Tenemos todo lo usted necesita a su alcance</p>

@@ -3,22 +3,25 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\tipo_producto;
+use App\producto;
+use App\CategoriaProducto;
 use App\Http\Requests;
 
-class tipoproController extends Controller
+class productoController extends Controller
 {
-    //productos
-    /**
+    //
+       /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        $tipos = tipo_producto::all();
-        $general[] =$tipos;
-        return view('gestor.tipopro.lista')->with('datos', $general);
+        $productos = producto::all();
+        $tipos = categoriaProducto::all();
+        $general[] = $productos;
+        $general[] = $tipos;
+        return view('gestor.productos.lista')->with('datos', $general);
     }
 
     /**
@@ -28,7 +31,10 @@ class tipoproController extends Controller
      */
     public function create()
     {
-         return view('gestor.tipopro.create');
+
+        $tipos = categoriaProducto::all();
+        $general[] = $tipos;
+        return view('gestor.productos.create')->with('datos',$general);
     }
 
     /**
@@ -39,18 +45,10 @@ class tipoproController extends Controller
      */
     public function store(Request $request)
     {
-         if($request->file('foto'))
-        {
-            $file = $request -> file('foto');
-            $name = 'tipoprodu_'. time() . '.' .$file->getClientOriginalExtension();
-            $path=public_path() . "/imagen/tipoproducto/";
-            $file -> move($path,$name);
-        }
-
-        $tipos = new tipo_producto($request->all());
-        $tipos->foto = $name;
+         
+        $tipos = new producto($request->all());
         $tipos->save();
-        return redirect('admin/tipopro/create');
+        return redirect('admin/productos');
     }
 
     /**
@@ -61,7 +59,7 @@ class tipoproController extends Controller
      */
     public function show($id)
     {
-        //
+        
     }
 
     /**
@@ -72,11 +70,15 @@ class tipoproController extends Controller
      */
     public function edit($id)
     {
-        
-        $tipos=tipo_producto::find($id);
-      
-        
-       return view('gestor.tipopro.edit')->with('tipos',$tipos);
+
+       //
+        $productos= producto::find($id);
+        $tipos= categoriaProducto::all();
+         
+      return view('gestor.productos.edit')
+      ->with('productos',$productos)  
+      ->with('tipos',$tipos);
+
         
     }
 
@@ -89,15 +91,18 @@ class tipoproController extends Controller
      */
     public function update(Request $request, $id)
     {
-                  
-           $tipos=tipo_producto::find($id);
-            $tipos =fill($request->all());
-            $tipos->save();
-         return redirect('admin/tipopro');
-      
 
+         $productos = producto::find($id);
+        
+        $productos->numero=$request->numero;
+        $productos->piso=$request->piso;
+        $productos->estado=$request->estado;
+      $productos->TipoHabitacion_id=$request->TipoHabitacion_id;
+        $productos->save();
+        return redirect('admin/productos');
 
-
+    
+ 
     }
 
     /**
@@ -106,22 +111,21 @@ class tipoproController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
+
+
+
+       public function vista()
+    {
+
+        
+    }
     public function destroy($id)
     {
-             
-      $tipos = tipo_producto::find($id);
-      $tipos->delete(); 
-      return redirect('admin/tipopro');
-    }
-
-    public function vista()
-    {
-        return view('gestor.tipopro.create');
-        
-    }
-    public function editardatos($id)
-    {
-
-        
+      
+      $productos = producto::find($id);
+      $productos->delete(); 
+      return redirect('admin/productos');
+     
     }
 }

@@ -100,10 +100,6 @@ Route::group(['prefix'=> '/admin', 'middleware' => [ 'web', 'auth' ]], function(
 		'as'	=>	'admin.personas.destroy'
 	]);
 
-
-
-
-
 	Route::resource('Servicios','servicioController');
 
 	Route::get('Servicios/{id}/destroy',[
@@ -123,21 +119,15 @@ Route::group(['prefix'=> '/admin', 'middleware' => [ 'web', 'auth' ]], function(
 	//route:Controller Procedencia
 	Route::resource('procedencia','ProcedenciaController');
 
-	Route::get('procepencia/editar', 'ProcedenciaController@vista');
-	Route::get('procepencia/editar/{id}', 'ProcedenciaController@editardatos');
+	Route::get('procedencia/editar', 'ProcedenciaController@vista');
+	Route::get('procedencia/editar/{id}', 'ProcedenciaController@editardatos');
 	Route::get('procedencia/{id}/destroy',[
 		'uses'	=>	'ProcedenciaController@destroy',
 		'as'	=>	'admin.procedencia.destroy'
 		]);
 
 	//route: Controller tipoServicio
-	/*Route::resource('tiposer','TipoServicioController');
-	Route::get('tiposer/editar', 'TipoServicioController@vista');
-	Route::get('tiposer/editar/{id}', 'TipoServicioController@editardatos');
-	Route::get('tiposer/{id}/destroy',[
-		'uses'	=>	'tipoServicioController@destroy',
-		'as'	=>	'admin.tiposer.destroy'
-		]);*/
+	
 	Route::resource('tiposer', 'TipoServicioController');
 	Route::get('tiposer/editar', 'TipoServicioController@vista');
 	Route::resource('tiposer','TipoServicioController');
@@ -150,16 +140,44 @@ Route::group(['prefix'=> '/admin', 'middleware' => [ 'web', 'auth' ]], function(
 		'uses'	=>	'TipoServicioController@destroy',
 		'as'	=>	'admin.tiposer.destroy'
 	]);
-	//route: Controller TIPO PRODUCTO
-	Route::resource('tipo_producto','tipoproController');
-	Route::resource('tipopro','tipoproController');
-	Route::get('tipopro/editar', 'tipoproController@vista');
-	Route::get('tipopro/editar/{id}', 'tipoproController@editardatos');
-	Route::get('tipopro/{id}/destroy',[
-		'uses'	=>	'tipoproController@destroy',
-		'as'	=>	'admin.tipopro.destroy'
+	//route: Controller caterogia
+	Route::resource('catpro','CategoriaController');
+
+	Route::get('catpro/editar', 'CategoriaController@vista');
+	Route::get('catpro/editar/{id}', 'CategoriaController@editardatos');
+	Route::get('catpro/{id}/destroy',[
+		'uses'	=>	'CategoriaController@destroy',
+		'as'	=>	'admin.catpro.destroy'
 		]);
 
+	//route: Controller Producto
+	Route::resource('productos','productoController');
+	Route::get('productos/update/{id}',[
+		'uses'	=>	'productoController@update',
+		'as'	=>	'admin.productos.update'
+	]);
+	Route::get('productos/{id}/destroy',[
+		'uses'	=>	'productoController@destroy',
+		'as'	=>	'admin.productos.destroy'
+	]);
+
+	//conmtroller consumo
+	Route::resource('consumos','consumoController');
+
+	Route::get('consumos/{id}/destroy',[
+		'uses'	=>	'consumoController@destroy',
+		'as'	=>	'admin.consumos.destroy'
+		]);
+
+	/*Route::resource('consumos','consumoController');
+	Route::get('consumos/update/{id}',[
+		'uses'	=>	'consumoController@update',
+		'as'	=>	'admin.consumos.update'
+	]);
+	Route::get('consumos/{id}/destroy',[
+		'uses'	=>	'consumoController@destroy',
+		'as'	=>	'admin.consumos.destroy'
+	]);*/
 
 
 	Route::resource('tipocuentas', 'TipoCuentasController');

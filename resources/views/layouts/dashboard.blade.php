@@ -74,9 +74,9 @@
                        <li><a href="{{ url('admin/caracteristicas') }}">Caracteristicas Tipo Habitaicon</a></li>
                     </ul>
                   </li>
-                  <li><a><i class="fa fa-user"></i> REGISTROS <span class="fa fa-chevron-down"></span></a>
+                  <li><a><i class="fa fa-user"></i> registros <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                    <li><a href="{{ url('admin/cliente/create') }}">Consumos</a></li>
+                    <li><a href="{{ url('admin/Consumos/create') }}">Consumos</a></li>
                     <li><a><i class="fa fa-user"></i> Clientes <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="{{ url('admin/cliente/create') }}">Agregar Cliente</a></li>
@@ -86,8 +86,9 @@
 
                       <li><a><i class="fa fa-user"></i> Productos <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                     <li><a href="{{ url('admin/tipopro') }}">lista productos</a></li>
-                      <li><a href="{{ url('admin/tipopro/create') }}">Tipo Prodcuto</a></li></ul>
+                     <li><a href="{{ url('admin/productos/create') }}">crear producto</a></li>
+                      <li><a href="{{ url('admin/productos') }}">lista producto</a></li>
+                      <li><a href="{{ url('admin/catpro') }}">lista categoria</a></li></ul>
                       </li>
                     <li><a><i class="fa fa-user"></i> Datos Personas <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
