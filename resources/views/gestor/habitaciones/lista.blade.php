@@ -12,6 +12,7 @@
 					<th>Numero</th>
 					<th>piso</th>
 					<th>estado</th>
+					<th>Tipo Habitacion</th>
 					<th>Acciones</th>
 					
 				</tr>
@@ -27,10 +28,15 @@
                     
 			        <td>{{$s->numero}} </td>
 	                <td>{{$s->piso}}</td>
-
-                    <td>{{$s->estado}}</td>
 					
-	                <td> 
+                    <td>{{$s->estado}}</td>
+					<td>
+				@foreach ($datos[1] as $o)
+					@if($o->id == $s->TipoHabitacion_id)
+						{{$o->Nombre}}</td>
+					@endif
+					 @endforeach
+					<td> 
 	    			   <a class="btn btn-info" href="{{route('admin.habitaciones.edit', $s->id)}}"   >E</a>
 	                   <a onclick="return confirm('¿Seguro que desea eliminarlo?')" class="btn btn-danger" href="{{ route('admin.habitaciones.destroy', $s->id) }}"   >X</a>
 	 		   

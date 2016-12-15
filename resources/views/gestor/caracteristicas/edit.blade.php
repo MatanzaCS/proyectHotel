@@ -1,5 +1,4 @@
 @extends('layouts.dashboard')
-
 @section('content')
 <div class="container">
     <h2>Editar caracteristicas {{$caracteristica->nombre}}</h2>
@@ -10,8 +9,7 @@
            <div class="form-group">
             <label for="foto">foto</label>
             <input type="file" name="foto" class="" />
-        </div>
-        
+        </div>        
         <button type="submit">Editar</button>
     </form>
 </div>
