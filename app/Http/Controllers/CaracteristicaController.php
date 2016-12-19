@@ -90,11 +90,13 @@ class CaracteristicaController extends Controller
     public function update(Request $request, $id)
     {
         
-        $foto= $request->file('foto');
-        $name=time(). '.' . $foto->getClientOriginalExtension();
-        $path=public_path() . "/imagen/Caracteristicas/";
-        $file -> move($path,$name);
-
+         if($request->file('foto'))
+        {
+            $file = $request -> file('foto');
+            $name ='caracteristicas_'. time() . '.' .$file->getClientOriginalExtension();
+            $path=public_path() . "/imagen/Caracteristicas/";
+            $file -> move($path,$name);
+        }
         $caracteristica =Caracteristica::find($id);
         $caracteristica = $request->all();
         $caracteristica->foto=$name;

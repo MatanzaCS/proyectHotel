@@ -8,7 +8,7 @@
             <input type="text" id="nombre" name="nombre" class="form-control" value="{{$caracteristica->nombre}}" />
            <div class="form-group">
             <label for="foto">foto</label>
-            <input type="file" name="foto" class="" />
+            <input type="file" name="foto" class="" value="{{$caracteristica->foto}}"/>
         </div>        
         <button type="submit">Editar</button>
     </form>

@@ -93,17 +93,20 @@ class TipoHabController extends Controller
      */
     public function update(Request $request, $id)
     {
-    
+      
        if($request->file('foto'))
         {
+            echo "si entra al if";
             $file = $request -> get('foto');
             $name = 'tipohabitacion_'. time() . '.' .$file->getClientOriginalExtension();
             $path=public_path() . "/imagen/tiposHabitaciones/";
             $file -> move($path,$name);
+          
         }
-        
+        echo "  si entra a la funcion";
+      /*  
         $tipos=Tipohabitacion::find($id);
-     //   $tipos->foto = $name;
+      $tipos->foto = $name;
         $tipos->Nombre=$request->Nombre;
         $tipos->Descripcion=$request->Descripcion;
         $tipos->precio_habitacion=$request->precio_habitacion;
@@ -111,7 +114,7 @@ class TipoHabController extends Controller
 
         return redirect('admin/tipohab');
 
-
+*/
 
     }
 
