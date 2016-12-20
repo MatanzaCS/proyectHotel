@@ -32,8 +32,10 @@ class productoController extends Controller
     public function create()
     {
 
-        $tipos = categoriaProducto::all();
+        $tipos = CategoriaProducto::all();
+        $productos = producto::all();
         $general[] = $tipos;
+        $general [] = $productos;
         return view('gestor.productos.create')->with('datos',$general);
     }
 
@@ -73,7 +75,7 @@ class productoController extends Controller
 
        //
         $productos= producto::find($id);
-        $tipos= categoriaProducto::all();
+        $tipos= CategoriaProducto::all();
          
       return view('gestor.productos.edit')
       ->with('productos',$productos)  

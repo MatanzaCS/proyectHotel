@@ -10,7 +10,7 @@ use App\Http\Requests;
 
 class consumoController extends Controller
 {
-    //
+//controlador de cliente
      /**
      * Display a listing of the resource.
      *
@@ -19,11 +19,7 @@ class consumoController extends Controller
     public function index()
     {
         $consumos = consumo::all();
-        $clientes = Cliente::all();
-        $productos = producto::all();
-        $general[] = $consumos;
-        $general[] = $clientes;
-        $general[] = $productos;
+        $general[] =$consumos; 
         return view('gestor.consumos.lista')->with('datos', $general);
     }
 
@@ -34,12 +30,15 @@ class consumoController extends Controller
      */
     public function create()
     {
-
-        $clientes = Cliente::all();
-        $general[] = $clientes;
+        $consumos= consumo::all();
         $productos = producto::all();
+        $tipos = Cliente::all();
+        $general[] = $consumos;
         $general[] = $productos;
+        $general[] = $tipos;
+        //dd($general);
         return view('gestor.consumos.create')->with('datos',$general);
+        
     }
 
     /**
@@ -51,7 +50,8 @@ class consumoController extends Controller
     public function store(Request $request)
     {
          
-        $consumos = new consumo($request->all());
+        $consumos = new consumo ($request->all());
+
         $consumos->save();
         return redirect('admin/consumos');
     }
@@ -64,7 +64,7 @@ class consumoController extends Controller
      */
     public function show($id)
     {
-        
+        //
     }
 
     /**
@@ -75,9 +75,7 @@ class consumoController extends Controller
      */
     public function edit($id)
     {
-
-     
-        
+        //
     }
 
     /**
@@ -89,18 +87,7 @@ class consumoController extends Controller
      */
     public function update(Request $request, $id)
     {
-
-         $consumos = consumo::find($id);
-        
-        $consumos->numero=$request->numero;
-        $consumos->piso=$request->piso;
-        $consumos->estado=$request->estado;
-      $consumos->TipoHabitacion_id=$request->TipoHabitacion_id;
-        $consumos->save();
-        return redirect('admin/consumos');
-
-    
- 
+        //
     }
 
     /**
@@ -109,21 +96,22 @@ class consumoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-
-
-
-
-       public function vista()
+    public function destroy($id)
+    {
+             
+      /*$tipos = Tipohabitacion::find($id);
+      $tipos->delete(); 
+      return redirect('admin/tipohab');*/
+    }
+    
+    public function vista()
+    {
+        return view('gestor.productos.create');
+        
+    }
+    public function editardatos($id)
     {
 
         
-    }
-    public function destroy($id)
-    {
-      
-      $consumos = consumo::find($id);
-      $consumos->delete(); 
-      return redirect('admin/consumos');
-     
     }
 }

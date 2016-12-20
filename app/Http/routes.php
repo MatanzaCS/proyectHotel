@@ -92,9 +92,6 @@ Route::group(['prefix'=> '/admin', 'middleware' => [ 'web', 'auth' ]], function(
 	]);
 
 
-
-
-
 // controlador de personas
 	Route::resource('personas', 'personaController');
 	Route::get('personas/editar', 'personaController@vista');
@@ -112,7 +109,7 @@ Route::group(['prefix'=> '/admin', 'middleware' => [ 'web', 'auth' ]], function(
 		'as'	=>	'admin.Servicios.destroy'
 	]);
 
-	//Route::put('habitaciones/update/{id}','HabitacionController@update');
+	
 	// controlador de cliente
 	Route::resource('cliente','ClienteController');
 
@@ -166,7 +163,7 @@ Route::group(['prefix'=> '/admin', 'middleware' => [ 'web', 'auth' ]], function(
 		'as'	=>	'admin.productos.destroy'
 	]);
 
-	//conmtroller consumo
+	//route: conmtroller consumo
 	Route::resource('consumos','consumoController');
 
 	Route::get('consumos/{id}/destroy',[
@@ -174,15 +171,6 @@ Route::group(['prefix'=> '/admin', 'middleware' => [ 'web', 'auth' ]], function(
 		'as'	=>	'admin.consumos.destroy'
 		]);
 
-	/*Route::resource('consumos','consumoController');
-	Route::get('consumos/update/{id}',[
-		'uses'	=>	'consumoController@update',
-		'as'	=>	'admin.consumos.update'
-	]);
-	Route::get('consumos/{id}/destroy',[
-		'uses'	=>	'consumoController@destroy',
-		'as'	=>	'admin.consumos.destroy'
-	]);*/
 
 
 	Route::resource('tipocuentas', 'TipoCuentasController');
@@ -211,21 +199,10 @@ Route::group(['prefix'=> '/admin', 'middleware' => [ 'web', 'auth' ]], function(
 	Route::get('ReporteUsuarioMensual','ReportesController@ReporteHabAnual');
 	Route::get('ReporteReservaAnual','ReportesController@ReporteHabAnual');
 	Route::get('ReporteReservaMensual','ReportesController@ReporteHabAnual');
-	/*Route::resource('ReporteHabitacion/pdf','PDFController');
+	//Route::resource('ReporteHabitacion/pdf','PDFController');
 
 
-	Route::get('ReporteHabitacion/reportes/show={id}',[
-			'uses'	=>	'ReportesController@show',
-			'as'	=>	'admin.reportes.show'
-		]);
-	Route::get('ReporteHabitacion/reportes/graficar={id}',[
-			'uses'	=>	'ReportesController@graficar',
-			'as'	=>	'admin.reportes.graficar'
-		]);
-	Route::get('ReporteHabitacion/generar={id}',[
-			'uses'	=>	'ReportesController@crearReporteHabitacion',
-			'as'	=>	'admin.reportes.reportehabitacion'
-		]);*/
+	
 
 
 	Route::get('/', function () {

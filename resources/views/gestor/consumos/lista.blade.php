@@ -12,8 +12,9 @@
 					<th>Estado </th>
 					<th>Fecha</th>
 					<th>Producto</th>
-					<th>Cliente</th>
 					<th>total</th>
+					<th>Cliente</th>
+					
 					<th>Accion</th>
 				</tr>
 			</thead>

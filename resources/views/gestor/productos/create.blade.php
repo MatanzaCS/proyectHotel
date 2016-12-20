@@ -2,11 +2,10 @@
 
 @section('content')
 <div class="container">
-
                   
     <h2>Crear producto </h2>
 
-    <form class="row" method="POST" action="{{ url('admin/productos/create') }}"  style="max-width: 350px">{{ csrf_field() }}
+    <form class="row" method="POST" action="{{ url('admin/productos') }}"  style="max-width: 350px">{{ csrf_field() }}
         <div class="form-group">
             <label for="Nombre">Nombre</label>
             <input type="text" id="Nombre" name="nombre" class="form-control" />
