@@ -20,9 +20,13 @@
         <div class="form-group">
             <label for="foto">foto</label>
             <input type="file" name="foto" class="" />
+            
         </div>
-        
-        
+        <div>
+    
+          
+       
+        </div>
         <button type="submit">Guardar</button>
     </form>
 </div>

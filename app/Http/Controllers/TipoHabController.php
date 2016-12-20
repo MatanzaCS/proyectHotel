@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Tipohabitacion;
 use App\Http\Requests;
+use App\Caracteristica;
 
 class TipoHabController extends Controller
 {
@@ -32,7 +33,14 @@ class TipoHabController extends Controller
      */
     public function create()
     {
-         return view('gestor.tipohab.create');
+       $tipohabitacion = Tipohabitacion::find(“1”);
+        foreach ( $tipohabitacion->caracteristicas as $caracteristicas) {
+        $caracteristicas->nombre;
+            }
+        
+         return view('gestor.tipohab.create')->with('caracteristicas',$caracteristicas)
+                                             ->with('tipos',$tipos);
+                                             
     }
 
     /**
@@ -94,17 +102,16 @@ class TipoHabController extends Controller
     public function update(Request $request, $id)
     {
       
-       if($request->file('foto'))
+      /* if($request->file('foto'))
         {
-            echo "si entra al if";
+        
             $file = $request -> get('foto');
             $name = 'tipohabitacion_'. time() . '.' .$file->getClientOriginalExtension();
             $path=public_path() . "/imagen/tiposHabitaciones/";
             $file -> move($path,$name);
           
-        }
-        echo "  si entra a la funcion";
-      /*  
+        }*/
+             
         $tipos=Tipohabitacion::find($id);
       $tipos->foto = $name;
         $tipos->Nombre=$request->Nombre;
@@ -113,8 +120,6 @@ class TipoHabController extends Controller
         $tipos->save();
 
         return redirect('admin/tipohab');
-
-*/
 
     }
 
