@@ -1,25 +1,31 @@
 @extends('layouts.dashboard')
 
 @section('content')
-    <h1>Listado de cuentas</h1>
+    <h1>Listado de Reservas</h1>
     <table class="table">
         <thead>
         <tr>
-            <th>Codigo</th>
-            <th>Apellidos y nombres</th>
-            <th>Correo</th>
+            <th>Numero de Reserva</th>
+            <th>Cliente</th>
+            <th>Habitacion</th>
+            <th>Fecha de Reserva</th>
+            <th>Fecha de Ingreso</th>
+            <th>Fecha de Salida</th>
             <th>Estado</th>
         </tr>
         </thead>
         <tbody>
-            @foreach ($datos[0] as $s)
+          @foreach($resultado as $dato)
             <tr>
-                <td>{{$s->Codigo}}</td>
-                <td>{{$s->Apellidos}} {{$s->Nombres}}</td>
-                <td>{{$s->CorreoElect}}</td>
-                <td>{{$s->estado}}</td>
+                <td>{{$dato->id}}</td>
+                <td>{{$dato->nombre}}</td>
+                <td>{{$dato->numero}}</td>
+                <td>{{$dato->fecha_reserva}}</td>
+                <td>{{$dato->fecha_ingresa}}</td>
+                <td>{{$dato->fecha_salida}}</td>
+                <td>{{$dato->estado}}</td>
             </tr>
-            @endforeach
+          @endforeach
         </tbody>
     </table>
 @endsection

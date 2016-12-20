@@ -62,8 +62,8 @@
                 <ul class="nav side-menu">
                   <li><a><i class="fa fa-calendar"></i> Reservas <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="{{url('admin/reservas/show')}}">Listado</a></li>
-                      <li><a href="{{url('admin/reservas/create')}}">Crear</a></li>
+                      <li><a href="{{url('admin/reservas/show')}}">Lista de Reservas</a></li>
+                      <li><a href="{{url('admin/reservas/create')}}">Crear Reserva</a></li>
                     </ul>
                   </li>
                   <li><a><i class="fa fa-bed"></i> Habitaciones <span class="fa fa-chevron-down"></span></a>
@@ -98,7 +98,7 @@
 
                     </ul>
                   </li>
-                 
+
                   <li><a><i class="fa fa-tags"></i> Servicios <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="{{ url('admin/Servicios/create') }}">Agregar Servicio</a></li>
@@ -225,7 +225,7 @@
         <!-- /top navigation -->
 
         <!-- page content -->
-        
+
         <div class="right_col" role="main" style="min-height: 750px">
           @yield('content')
         </div>
@@ -376,7 +376,7 @@
     </script>
     <!-- /Skycons -->
     <!-- /Doughnut Chart -->
-    
+
     <!-- bootstrap-daterangepicker -->
     <script>
       $(document).ready(function() {
