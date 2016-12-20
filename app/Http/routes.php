@@ -11,6 +11,8 @@
 |
 */
 
+
+
 Route::get('/', function () {
 	    return view('index.inicio');
 	});
@@ -44,6 +46,9 @@ Route::post('/test/save', ['as' => 'save-date',
 
 Route::auth();
 Route::group(['prefix'=> '/admin', 'middleware' => [ 'web', 'auth' ]], function(){
+	
+	Route::get('reservas/show','ReservasController@show');	
+	Route::get('reservas/create','ReservasController@create');
 
 	//Route::get('getUsuarios', 'UsuariosController@getUsuarios');
 	Route::post('usuarios/{id}', 'UsuariosController@update');
