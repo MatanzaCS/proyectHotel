@@ -7,7 +7,6 @@
         <tr>
             <th>Numero de Reserva</th>
             <th>Cliente</th>
-            <th>Habitacion</th>
             <th>Fecha de Reserva</th>
             <th>Fecha de Ingreso</th>
             <th>Fecha de Salida</th>
@@ -19,7 +18,6 @@
             <tr>
                 <td>{{$dato->id}}</td>
                 <td>{{$dato->nombre}}</td>
-                <td>{{$dato->numero}}</td>
                 <td>{{$dato->fecha_reserva}}</td>
                 <td>{{$dato->fecha_ingresa}}</td>
                 <td>{{$dato->fecha_salida}}</td>

@@ -41,7 +41,7 @@
 
                 </div>
     <a href="{{ url('/admin') }}" class="btn-sing">
-        <i>Iniciar Secion</i>
+        <i>Iniciar Sesion</i>
     </a>
     @yield('content')
 

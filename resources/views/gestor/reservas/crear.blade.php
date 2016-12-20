@@ -5,8 +5,7 @@
     <h2>Reservar</h2>
     <form class="row" method="POST" action="{{ url('proveedor') }}" style="max-width: 350px">{{ csrf_field() }}
         <div class="form-group">
-            <label for="DNI">DNI</label>
-            <input type="text" id="DNI" name="DNI" class="form-control" />
+            @include('gestor.reservas.search')
         </div>
         <div class="form-group">
             <label for="DNI">Nombre</label>
@@ -23,7 +22,10 @@
         <div class="form-group">
             <label for="Tipoproveedor_id">Habitacion</label>
             <select class="form-control" name="Tipoproveedor_id">
-
+                <option value="simple">simple</option>
+                <option value="doble">doble</option>
+                <option value="matrimonial">matrimonial</option>
+                <option value="presidencial">presidencial</option>
             </select>
         </div>
         <div class="form-group">
