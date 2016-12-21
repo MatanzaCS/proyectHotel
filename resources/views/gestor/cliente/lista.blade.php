@@ -12,6 +12,7 @@
 					<th>Fecha salida</th>
 					<th>Persona</th>
 					<th>Procedencia</th>
+					<th>Nombre Completo</th>
 					<th>Accion</th>
 				</tr>
 			</thead>
@@ -22,6 +23,7 @@
 	                <td>{{$s->fechaout}} </td>
 	                <td>{{$s->persona_id}} </td>
 	                <td>{{$s->Procedencia_id}} </td>
+	                <td>{{$s->nomcompleto}} </td>
 
 	                <td>
 	               		  <a class="btn btn-info" href="{{route('admin.cliente.edit', $s->id)}}">E</a>

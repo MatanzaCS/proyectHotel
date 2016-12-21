@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\User;
 use App\Tipousuario;
+use App\persona;
 use App\Http\Requests;
 
 class UsuariosController extends Controller
@@ -29,7 +30,9 @@ class UsuariosController extends Controller
     public function create()
     {
         $tipos = Tipousuario::all();
+        $persona = persona::all();
         $general[] =$tipos;
+        $general[] = $persona;
         return view('gestor.usuarios.crear')->with('datos', $general);
     }
 

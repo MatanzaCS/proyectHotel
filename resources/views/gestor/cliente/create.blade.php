@@ -30,6 +30,10 @@
                 @endforeach
             </select>              
         </div>
+        <div class="form-group">
+            <label for="nomcompleto">Nombre Completo </label>
+            <input type="text" id="nomcompleto" name="nomcompleto" class="form-control" />
+        </div>
         
         <button type="submit">Guardar</button>
     </form>

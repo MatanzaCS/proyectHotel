@@ -53,6 +53,7 @@ Route::group(['prefix'=> '/admin', 'middleware' => [ 'web', 'auth' ]], function(
 	//Route::get('getUsuarios', 'UsuariosController@getUsuarios');
 	Route::post('usuarios/{id}', 'UsuariosController@update');
 	Route::resource('usuarios', 'UsuariosController');
+	
 
 	Route::resource('cuentas', 'CuentasController');
 
