@@ -33,8 +33,11 @@ class UsuariosController extends Controller
         $persona = persona::all();
         $general[] =$tipos;
         $general[] = $persona;
+
         return view('gestor.usuarios.crear')->with('datos', $general);
     }
+
+ 
 
     /**
      * Store a newly created resource in storage.
