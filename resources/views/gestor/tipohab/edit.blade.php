@@ -22,7 +22,7 @@
             <label for="foto">foto</label>
             <input type="file" name="foto" class="" id="foto" value="{{$tipos->foto}}"/>
         </div>
-        
+     
         <button type="submit">Editar</button>
     </form>
 </div>

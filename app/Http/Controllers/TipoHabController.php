@@ -5,6 +5,7 @@ use Illuminate\Http\Request;
 use App\Tipohabitacion;
 use App\Http\Requests;
 use App\Caracteristica;
+use DB;
 
 class TipoHabController extends Controller
 {
@@ -15,9 +16,11 @@ class TipoHabController extends Controller
      */
     public function index()
     {
+       
         $tipos = Tipohabitacion::all();
         $general[] =$tipos;
         return view('gestor.tipohab.lista')->with('datos', $general);
+                                       
     }
     public function principal()
     {
@@ -33,13 +36,9 @@ class TipoHabController extends Controller
      */
     public function create()
     {
-       $tipohabitacion = Tipohabitacion::find(“1”);
-        foreach ( $tipohabitacion->caracteristicas as $caracteristicas) {
-        $caracteristicas->nombre;
-            }
+       $caracteristicas = Caracteristica::find(2);
         
-         return view('gestor.tipohab.create')->with('caracteristicas',$caracteristicas)
-                                             ->with('tipos',$tipos);
+         return view('gestor.tipohab.create')->with('caracteristicas',$caracteristicas);
                                              
     }
 

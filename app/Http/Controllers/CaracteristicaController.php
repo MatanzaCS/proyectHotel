@@ -97,6 +97,7 @@ class CaracteristicaController extends Controller
             $path=public_path() . "/imagen/Caracteristicas/";
             $file -> move($path,$name);
         }
+        
         $caracteristica =Caracteristica::find($id);
         $caracteristica = $request->all();
         $caracteristica->foto=$name;
