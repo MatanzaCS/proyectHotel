@@ -25,7 +25,7 @@
        <div>
            <select name="" class="form-control">
                 
-                    <option value="">{{$caracteristicas->nombre}}</option>
+                   
             
             </select>     
        </div>

@@ -78,7 +78,7 @@ Route::group(['prefix'=> '/admin', 'middleware' => [ 'web', 'auth' ]], function(
 
 	//route: Controller tipoHabitacion
 	Route::resource('tipohab', 'TipoHabController');
-	Route::get('tipohab/editar', 'TipoHabController@vista');
+	//Route::get('tipohab/editar', 'TipoHabController@vista');
 
 	Route::resource('tipohab','TipoHabController');
 		Route::get('tipohab/update/{id}',[
@@ -96,11 +96,17 @@ Route::group(['prefix'=> '/admin', 'middleware' => [ 'web', 'auth' ]], function(
 	Route::resource('personas', 'personaController');
 	Route::get('personas/editar', 'personaController@vista');
 
+
 	Route::resource('personas','personaController');
 		Route::get('personas/{id}/destroy',[
 		'uses'	=>	'personaController@destroy',
 		'as'	=>	'admin.personas.destroy'
 	]);
+		Route::get('personas/update/{id}',[
+			'uses' => 'personaController@update',
+			'as' => 'admin.personas.update'
+		]);
+
 
 	Route::resource('Servicios','servicioController');
 
@@ -150,6 +156,10 @@ Route::group(['prefix'=> '/admin', 'middleware' => [ 'web', 'auth' ]], function(
 	Route::get('catpro/{id}/destroy',[
 		'uses'	=>	'CategoriaController@destroy',
 		'as'	=>	'admin.catpro.destroy'
+		]);
+				Route::get('catpro/update/{id}',[
+			'uses' => 'CategoriaController@update',
+			'as' => 'admin.catpro.update'
 		]);
 
 	//route: Controller Producto

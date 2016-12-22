@@ -90,13 +90,11 @@ class personaController extends Controller
          return redirect('admin/habitaciones');*/
 
         $personas = persona::find($id);
-        $data = Input::all();
-        $personas->filla($data);
+        $personas->fill($request->all());
         $personas->save();
         return redirect('admin/personas');
 
-    
- 
+
     }
 
     /**

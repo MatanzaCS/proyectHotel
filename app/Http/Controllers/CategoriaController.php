@@ -79,10 +79,10 @@ class CategoriaController extends Controller
     public function edit($id)
     {
         
-        $tipos=CategoriaProducto::find($id);
+        $catpro=CategoriaProducto::find($id);
       
         //return view('gestor.habitaciones.edit',['habitaciones'=>$habitaciones]);
-       return view('gestor.catpro.edit')->with('tipos',$tipos);
+       return view('gestor.catpro.edit')->with('catpro',$catpro);
         
     }
 
@@ -107,8 +107,6 @@ class CategoriaController extends Controller
         $tipos=CategoriaProducto::find($id);
      //   $tipos->foto = $name;
         $tipos->Nombre=$request->Nombre;
-        $tipos->Descripcion=$request->Descripcion;
-        $tipos->precio_habitacion=$request->precio_habitacion;
         $tipos->save();
 
         return redirect('admin/catpro');

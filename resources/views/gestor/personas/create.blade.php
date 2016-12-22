@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-    <h2>registrar datos</h2>
+    <h2>registrar datos de persona</h2>
     <form class="row" method="POST" action="{{ url('admin/personas') }}"  style="max-width: 350px">{{ csrf_field() }}
         <div class="form-group">
             <label for="Nombres">Nombres</label>
