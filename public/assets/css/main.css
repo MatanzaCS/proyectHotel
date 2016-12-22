@@ -1954,7 +1954,7 @@
 	}
 
 	header p {
-		color: #F9F504;
+		color: #117DF6;
 		font-size: 1.25em;
 		position: center;
 	
@@ -2583,11 +2583,11 @@
 
 
 		.wrapper.style1 {
-			background: #082930;
+			background: #0C0B0D;
 		}
 
 		.wrapper.style2 {
-			background-color: #F34108;
+			background-color: #FFFEFE;
 			background-image: url("images/bg02.png"), url("images/bg03.png"), url("images/bg01.png");
 			background-position: top left,						bottom left,					top left;
 			background-size: 100% 6em,						100% 6em,						auto;
