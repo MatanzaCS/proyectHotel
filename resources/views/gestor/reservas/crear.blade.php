@@ -33,7 +33,11 @@
         </div>
         <div class="form-group">
             <label for="clientes_id">Cliente</label>
-            <input type="text" id="clientes_id" name="clientes_id" class="form-control" />
+            <select class="form-control" name="clientes_id">
+                @foreach($resultado as $dato)
+                    <option value="{{$dato->id}}">{{$dato->nombre}}</option>
+                @endforeach
+            </select>
         </div>
         <button class="btn btn-primary" type="submit">Guardar</button>
     </form>

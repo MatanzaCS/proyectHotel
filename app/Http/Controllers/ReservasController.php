@@ -37,7 +37,10 @@ class ReservasController extends Controller
     }
     public function create()
     {
-        return view('gestor.reservas.crear');
+        $resultado=DB::table('personas')
+            ->select('id','nombre','apellidos')
+            ->get();
+        return view('gestor.reservas.crear')->with('resultado',$resultado);
     }
 
     public function store(Request $request)
