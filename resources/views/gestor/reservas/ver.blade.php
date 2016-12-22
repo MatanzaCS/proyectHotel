@@ -14,7 +14,7 @@
         </tr>
         </thead>
         <tbody>
-          @foreach($resultado as $dato)
+          @foreach($resultado[0] as $dato)
             <tr>
                 <td>{{$dato->id}}</td>
                 <td>{{$dato->nombre}}</td>

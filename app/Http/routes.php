@@ -47,8 +47,8 @@ Route::post('/test/save', ['as' => 'save-date',
 Route::auth();
 Route::group(['prefix'=> '/admin', 'middleware' => [ 'web', 'auth' ]], function(){
 	
-	Route::get('reservas/show','ReservasController@show');	
-	Route::get('reservas/create','ReservasController@create');
+	Route::resource('reservas', 'ReservasController');
+	//Route::get('reservas/create','ReservasController@create');
 
 	//Route::get('getUsuarios', 'UsuariosController@getUsuarios');
 	Route::post('usuarios/{id}', 'UsuariosController@update');
@@ -221,8 +221,3 @@ Route::group(['prefix'=> '/admin', 'middleware' => [ 'web', 'auth' ]], function(
 
 	Route::get('/home', 'HomeController@index');
 });
-
-/*Route::get('pdf', function () {
-		$pdf =PDF::loadview('vistapdf');
-		return $pdf->download('REPORTES.pdf');
-});*/
