@@ -52,11 +52,13 @@ class TipoHabController extends Controller
     {
          if($request->file('foto'))
         {
-            $file = $request -> file('foto');
+            $file = $request ->file('foto');
             $name = 'tipohabitacion_'. time() . '.' .$file->getClientOriginalExtension();
             $path=public_path() . "/imagen/tiposHabitaciones/";
             $file -> move($path,$name);
         }
+
+  
 
         $tipos = new Tipohabitacion($request->all());
         $tipos->foto = $name;
@@ -101,24 +103,28 @@ class TipoHabController extends Controller
     public function update(Request $request, $id)
     {
       
-      /* if($request->file('foto'))
-        {
-        
-            $file = $request -> get('foto');
-            $name = 'tipohabitacion_'. time() . '.' .$file->getClientOriginalExtension();
-            $path=public_path() . "/imagen/tiposHabitaciones/";
-            $file -> move($path,$name);
-          
-        }*/
-             
+  
+      
+
         $tipos=Tipohabitacion::find($id);
-     // $tipos->foto = $name;
+      
         $tipos->Nombre=$request->Nombre;
         $tipos->Descripcion=$request->Descripcion;
         $tipos->precio_habitacion=$request->precio_habitacion;
         $tipos->save();
-
-        return redirect('admin/tipohab');
+         return redirect('admin/tipohab');
+ 
+        $img=$request->file('foto');
+        $file_route=time().'_'.$img->getClientOriginalName();
+        Storage::disk('/imagen/tiposHabitaciones')->put($file_route,file_get_contents($img->getRealPath()));
+        Storage::disk('/imagen/tiposHabitaciones')->delete($request->img);
+        $tipos->foto=$file_route;
+        if($tipos->save()){
+                   return redirect('admin/tipohab');
+         }else{
+             return redirect('admin/tipohab/create');
+         }
+    
 
     }
 

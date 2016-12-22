@@ -19,7 +19,7 @@
 				 @foreach ($datos[0] as $s)
 	            <tr>
 	                <td  style="max-width: 80px"><img src="../../imagen/tiposHabitaciones/{{$s->foto}}" class="img-responsive"></td>
-	                <td {{$s->Nombre}} </td>
+	                <td> {{$s->Nombre}} </td>
 					<td> <textarea rows="4"  cols="5" id="Descripcion"  name="Descripcion" class="form-control" style="resize:none"/>{{$s->Descripcion}}</textarea></td>
 	                <td>{{$s->precio_habitacion}}</td>
 	                <td>

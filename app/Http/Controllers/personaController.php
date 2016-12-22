@@ -44,7 +44,7 @@ class personaController extends Controller
          
         $tipos = new persona($request->all());
         $tipos->save();
-        return redirect('admin/personas/create');
+        return redirect('admin/personas');
     }
 
     /**
