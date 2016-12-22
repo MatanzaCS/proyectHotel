@@ -8,14 +8,20 @@ use App\Http\Requests;
 
 use DB;
 
+use Illuminate\Support\Facades\Redirect;
+
 use App\Reserva;
 
 class ReservasController extends Controller
 {
     public function index()
     {
-        $reservas = Reserva::all();
-        $general[] = $reservas;
+        $resultado=DB::table('reservas')
+            ->join('clientes','reservas.clientes_id','=','clientes.id')
+            ->join('personas','clientes.persona_id','=','personas.id')
+            ->select('reservas.*','personas.nombre')
+            ->get();
+        $general[] = $resultado;
         return view('gestor.reservas.ver')->with('resultado', $general);
     }
     public function show()
@@ -38,14 +44,15 @@ class ReservasController extends Controller
     {
          $reserva=new Reserva;
          $reserva->tipo_reserva=$request->get('tipo_reserva');
-         $reserva->fecha_reserva='22/12/2016';
          $reserva->fecha_ingresa=$request->get('fecha_ingresa');
          $reserva->fecha_salida=$request->get('fecha_salida');
          $reserva->costo_alojamiento=$request->get('costo_alojamiento');
-         $reserva->FechaPago="23/12/2016";
          $reserva->estado=$request->get('estado');
+         if ($request->get('estado')!='Pagado'){
+            $reserva->FechaPago='0000-00-00 00:00:00';
+         }
          $reserva->clientes_id=$request->get('clientes_id');
          $reserva->save();
-         return Redirect::to('reservas/crear');
+         return Redirect::to('admin/reservas');
     }
 }
