@@ -31,9 +31,10 @@ class UsuariosController extends Controller
     {
         $tipos = Tipousuario::all();
         $persona = persona::all();
-        $general[] =$tipos;
-        $general[] = $persona;
-        return view('gestor.usuarios.crear')->with('datos', $general);
+    
+        return view('gestor.usuarios.crear')
+        ->with('tipos', $tipos)
+          ->with('persona', $persona);
     }
 
     /**

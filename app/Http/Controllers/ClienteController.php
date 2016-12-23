@@ -18,9 +18,16 @@ class ClienteController extends Controller
      */
     public function index()
     {
-        $Procedencias = Cliente::all();
-        $general[] =$Procedencias; 
-        return view('gestor.cliente.lista')->with('datos', $general);
+        $clientes = Cliente::all();
+        $Procedencias= Procedencia::all();
+        $personas = persona::all();
+        
+       
+
+        return view('gestor.cliente.lista')->with('clientes', $clientes)
+        ->with('Procedencias', $Procedencias)
+        ->with('personas', $personas);
+
     }
 
     /**
@@ -75,7 +82,7 @@ class ClienteController extends Controller
      */
     public function edit($id)
     {
-        //
+        
     }
 
     /**

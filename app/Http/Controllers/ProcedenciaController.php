@@ -65,7 +65,12 @@ class ProcedenciaController extends Controller
      */
     public function edit($id)
     {
-        //
+        $procedencias= Procedencia::find($id);
+     
+         
+      return view('gestor.procedencia.edit')
+      ->with('procedencias',$procedencias)  ;
+  
     }
 
     /**
