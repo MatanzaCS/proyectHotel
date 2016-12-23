@@ -11,6 +11,6 @@ class Reserva extends Model
     protected $primarykey="id";
     public $timestamps = false;
 
-    protected $fillable =['tipo_reserva','fecha_reserva','fecha_ingresa','fecha_salida','costo_alojamiento','FechaPago','estado','clientes_id'];
+    protected $fillable =['tipo_reserva','fecha_ingresa','fecha_salida','costo_alojamiento','FechaPago','estado','clientes_id'];
 
 }

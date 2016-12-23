@@ -16,11 +16,11 @@ $(document).ready(function() {
                     </header>
                 </section>
 <!-- Gigantic Heading -->
-                <section class="wrapper style2">
+                <section class="wrapper style3">
                     <div class="container" >
                         <header class="major">
                             <h2>Contamos con los mejores servicios</h2>
-                            <p>Tenemos todo lo usted necesita a su alcance</p>
+
                         </header>
                     </div>
                 </section>
@@ -59,7 +59,15 @@ $(document).ready(function() {
 
                 
         <!-- Feature 1 -->
-			<article id="first" class="container box01 style7 right">
+			<section class="wrapper style3">
+                    <div class="container" >
+                        <header class="major">
+                            <h2>Ofrecemos las mejores promociones</h2>
+                            
+                        </header>
+                    </div>
+                </section>
+            <article id="first" class="container box01 style7 right">
 				<a href="#" class="image fit"><img src="images/pro01.jpg" alt="" /></a>
 				<div class="inner">
 					<header>
@@ -85,11 +93,11 @@ $(document).ready(function() {
         
 
             <!-- Gigantic Heading -->
-                <section class="wrapper style2">
+                <section class="wrapper style3">
                     <div class="container">
                         <header class="major">
                             <h2>Tenemos todo tipo de habitaciones</h2>
-                            <p>visitanos estaremos esperandolo</p>
+                   
                         </header>
                     </div>
                 </section>

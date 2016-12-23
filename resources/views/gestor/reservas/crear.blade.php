@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <h2>Reservar</h2>
-    <form class="row" autocomplete="off" method="POST" action="{{ url('reservas') }}" style="max-width: 350px">{{ csrf_field() }}
+    <form class="row" autocomplete="off" method="POST" action="{{ url('admin/reservas') }}" style="max-width: 350px">{{ csrf_field() }}
         <div class="form-group">
             <label for="tipo_reserva">Tipo de Reserva</label>
             <select class="form-control" name="tipo_reserva">
@@ -22,15 +22,22 @@
         </div>
         <div class="form-group">
             <label for="costo_alojamiento">Costo de Alojamiento</label>
-            <input type="date" id="costo_alojamiento" name="costo_alojamiento" class="form-control" />
+            <input type="text" id="costo_alojamiento" name="costo_alojamiento" class="form-control" />
         </div>
         <div class="form-group">
             <label for="estado">Estado</label>
-            <input type="date" id="estado" name="estado" class="form-control" />
+            <select class="form-control" name="estado">
+                <option value="Por pagar">Por pagar</option>
+                <option value="Pagado">Pagado</option>
+            </select>
         </div>
         <div class="form-group">
             <label for="clientes_id">Cliente</label>
-            <input type="date" id="clientes_id" name="clientes_id" class="form-control" />
+            <select class="form-control" name="clientes_id">
+                @foreach($resultado as $dato)
+                    <option value="{{$dato->id}}">{{$dato->nombre}}</option>
+                @endforeach
+            </select>
         </div>
         <button class="btn btn-primary" type="submit">Guardar</button>
     </form>

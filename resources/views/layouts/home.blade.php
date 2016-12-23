@@ -34,7 +34,7 @@
                                 <li id="nos"><a href="{{ url('/nosotros') }}">Nosotros</a></li>
                                 <li id="hab"><a href="{{ url('/habitaciones') }}">Habitaciones</a></li>
                                 <li id="ser"><a href="{{ url('/servicios') }}">Servicios</a></li>
-                                <li id="sp"><a href="{{ url('/Spa') }}">Spa</a></li>
+                                <li id="sp"><a href="{{ url('/Spa') }}">Promociones</a></li>
                                 <li id="con"><a  href="{{ url('/contactos') }}">Contactos</a></li>
                             </ul>
                         </nav>
